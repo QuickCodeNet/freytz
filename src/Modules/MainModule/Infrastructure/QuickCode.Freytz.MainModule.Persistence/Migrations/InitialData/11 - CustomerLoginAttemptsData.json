@@ -1,0 +1,40 @@
+﻿{
+  "CUSTOMER_LOGIN_ATTEMPTS": [
+    {
+      "CUSTOMER_ID": 5,
+      "CLIENT_IP": "Verified Area 1",
+      "LOGIN_DATE": "2024-07-09T10:40:02.241531Z",
+      "ATTEMPT_RESULT": "Locked"
+    },
+    {
+      "CUSTOMER_ID": 2,
+      "CLIENT_IP": "Standard Package 2",
+      "LOGIN_DATE": "2024-01-24T14:57:49.3072718Z",
+      "ATTEMPT_RESULT": "Success"
+    },
+    {
+      "CUSTOMER_ID": 2,
+      "CLIENT_IP": "Secure Batch 3",
+      "LOGIN_DATE": "2024-02-01T16:03:07.3925597Z",
+      "ATTEMPT_RESULT": "Success"
+    },
+    {
+      "CUSTOMER_ID": 6,
+      "CLIENT_IP": "Legacy Type 4",
+      "LOGIN_DATE": "2025-08-21T06:02:17.6228001Z",
+      "ATTEMPT_RESULT": "Locked"
+    },
+    {
+      "CUSTOMER_ID": 5,
+      "CLIENT_IP": "Critical Region 5",
+      "LOGIN_DATE": "2024-11-15T03:30:37.1411173Z",
+      "ATTEMPT_RESULT": "Locked"
+    },
+    {
+      "CUSTOMER_ID": 1,
+      "CLIENT_IP": "Secondary Release 6",
+      "LOGIN_DATE": "2025-11-04T12:24:28.5892789Z",
+      "ATTEMPT_RESULT": "Failed"
+    }
+  ]
+}

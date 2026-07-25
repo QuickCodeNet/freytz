@@ -1,0 +1,46 @@
+﻿{
+  "SHIPMENT_PACKAGES": [
+    {
+      "SHIPMENT_ID": 6,
+      "PACKAGE_PHOTO": "https://picsum.photos/seed/196/400/300",
+      "PACKAGE_DESCRIPTION": "Result coupon meeting segment publish event inventory cycle agenda archived.",
+      "RECIPIENT_ID": 1,
+      "SENDER_ID": 5
+    },
+    {
+      "SHIPMENT_ID": 4,
+      "PACKAGE_PHOTO": "https://picsum.photos/seed/670/400/300",
+      "PACKAGE_DESCRIPTION": "Agreement invoice invoice template response comment active report response.",
+      "RECIPIENT_ID": 4,
+      "SENDER_ID": 3
+    },
+    {
+      "SHIPMENT_ID": 2,
+      "PACKAGE_PHOTO": "https://picsum.photos/seed/438/400/300",
+      "PACKAGE_DESCRIPTION": "Channel margin template value project filter agreement.",
+      "RECIPIENT_ID": 6,
+      "SENDER_ID": 1
+    },
+    {
+      "SHIPMENT_ID": 1,
+      "PACKAGE_PHOTO": "https://picsum.photos/seed/174/400/300",
+      "PACKAGE_DESCRIPTION": "Reject widget result credit refund alert alpha segment vendor balance discount.",
+      "RECIPIENT_ID": 2,
+      "SENDER_ID": 1
+    },
+    {
+      "SHIPMENT_ID": 6,
+      "PACKAGE_PHOTO": "https://picsum.photos/seed/891/400/300",
+      "PACKAGE_DESCRIPTION": "Review forecast module dashboard ledger archived import reminder supplier pipeline.",
+      "RECIPIENT_ID": 2,
+      "SENDER_ID": 2
+    },
+    {
+      "SHIPMENT_ID": 3,
+      "PACKAGE_PHOTO": "https://picsum.photos/seed/331/400/300",
+      "PACKAGE_DESCRIPTION": "Channel reject inventory response account active contract.",
+      "RECIPIENT_ID": 4,
+      "SENDER_ID": 5
+    }
+  ]
+}

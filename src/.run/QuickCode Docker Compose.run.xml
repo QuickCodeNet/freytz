@@ -1,0 +1,32 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="true" name="QuickCode Docker Compose" type="docker-deploy" factoryName="docker-compose.yml" server-name="Docker">
+    <deployment type="docker-compose.yml">
+      <settings>
+        <option name="composeProjectName" value="quickcode-freytz-container" />
+        <option name="configurationFiles">
+          <list>
+            <option value="docker-compose.yml" />
+            <option value="docker-compose.override.yml" />
+          </list>
+        </option>
+        <option name="envFilePath" value="$PROJECT_DIR$/.env" />
+        <option name="envFilePaths">
+          <list>
+            <option value="$PROJECT_DIR$/.env" />
+          </list>
+        </option>
+        <option name="secondarySourceFiles">
+          <list>
+            <option value="$PROJECT_DIR$/docker-compose.override.yml" />
+          </list>
+        </option>
+        <option name="sourceFilePath" value="docker-compose.yml" />
+        <option name="upDetach" value="true" />
+        <option name="upForceRecreate" value="false" />
+        <option name="upRebuild" value="false" />
+      </settings>
+    </deployment>
+    <EXTENSION ID="com.jetbrains.rider.docker.debug" isFastModeEnabled="false" isSslEnabled="false" />
+    <method v="2" />
+  </configuration>
+</component>

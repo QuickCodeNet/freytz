@@ -1,0 +1,60 @@
+﻿{
+  "VEHICLE_TYPES": [
+    {
+      "NAME": "Default Rule 1",
+      "CAPACITY": 909,
+      "IS_DELETED": false,
+      "ORDER": 211,
+      "IMAGE_PATH": "https://picsum.photos/seed/134/400/300"
+    },
+    {
+      "NAME": "Limited Template 2",
+      "CAPACITY": 35,
+      "IS_DELETED": false,
+      "ORDER": 773,
+      "IMAGE_PATH": "https://picsum.photos/seed/660/400/300"
+    },
+    {
+      "NAME": "Popular Source 3",
+      "CAPACITY": 811,
+      "IS_DELETED": true,
+      "ORDER": 568,
+      "IMAGE_PATH": "https://picsum.photos/seed/199/400/300"
+    },
+    {
+      "NAME": "Recommended Channel 4",
+      "CAPACITY": 789,
+      "IS_DELETED": false,
+      "ORDER": 884,
+      "IMAGE_PATH": "https://picsum.photos/seed/107/400/300"
+    },
+    {
+      "NAME": "Modern Lot 5",
+      "CAPACITY": 226,
+      "IS_DELETED": true,
+      "ORDER": 527,
+      "IMAGE_PATH": "https://picsum.photos/seed/362/400/300"
+    },
+    {
+      "NAME": "Premium Sector 6",
+      "CAPACITY": 559,
+      "IS_DELETED": false,
+      "ORDER": 795,
+      "IMAGE_PATH": "https://picsum.photos/seed/522/400/300"
+    },
+    {
+      "NAME": "Internal Style 7",
+      "CAPACITY": 854,
+      "IS_DELETED": true,
+      "ORDER": 609,
+      "IMAGE_PATH": "https://picsum.photos/seed/19/400/300"
+    },
+    {
+      "NAME": "Recommended Entity 8",
+      "CAPACITY": 51,
+      "IS_DELETED": true,
+      "ORDER": 456,
+      "IMAGE_PATH": "https://picsum.photos/seed/254/400/300"
+    }
+  ]
+}

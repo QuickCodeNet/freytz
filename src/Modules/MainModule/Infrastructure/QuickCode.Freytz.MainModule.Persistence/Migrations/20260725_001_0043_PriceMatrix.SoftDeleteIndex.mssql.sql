@@ -1,0 +1,4 @@
+﻿IF NOT EXISTS (SELECT 1 FROM sys.indexes WHERE object_id = OBJECT_ID(N'dbo.PRICE_MATRICES', N'U') AND name = N'IX_PRICE_MATRICES_IsDeleted')
+BEGIN
+    CREATE INDEX [IX_PRICE_MATRICES_IsDeleted] ON [dbo].[PRICE_MATRICES] ([IsDeleted]);
+END

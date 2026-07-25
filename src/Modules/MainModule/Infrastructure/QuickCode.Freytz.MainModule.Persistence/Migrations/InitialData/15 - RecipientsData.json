@@ -1,0 +1,52 @@
+﻿{
+  "RECIPIENTS": [
+    {
+      "CUSTOMER_ID": 1,
+      "NAME": "Plus Setting 1",
+      "GSM": "+1-770-373-6445",
+      "EMAIL": "ralph.jimenez@corp.example",
+      "INSTRUCTIONS": "Primary Format 1",
+      "IS_STORED": true
+    },
+    {
+      "CUSTOMER_ID": 5,
+      "NAME": "Public Permission 2",
+      "GSM": "+1-429-367-7538",
+      "EMAIL": "ralph.brown@fabrikam.example",
+      "INSTRUCTIONS": "Updated Method 2",
+      "IS_STORED": true
+    },
+    {
+      "CUSTOMER_ID": 1,
+      "NAME": "Starter Type 3",
+      "GSM": "+1-785-960-2968",
+      "EMAIL": "julie.munoz@workmail.test",
+      "INSTRUCTIONS": "Local Model 3",
+      "IS_STORED": true
+    },
+    {
+      "CUSTOMER_ID": 2,
+      "NAME": "General Region 4",
+      "GSM": "+1-215-347-6615",
+      "EMAIL": "amy.olson@team.local",
+      "INSTRUCTIONS": "External Sector 4",
+      "IS_STORED": false
+    },
+    {
+      "CUSTOMER_ID": 3,
+      "NAME": "Custom Channel 5",
+      "GSM": "+1-875-653-3991",
+      "EMAIL": "steven.adams@test.org",
+      "INSTRUCTIONS": "Modern Edition 5",
+      "IS_STORED": false
+    },
+    {
+      "CUSTOMER_ID": 4,
+      "NAME": "Compact Theme 6",
+      "GSM": "+1-466-585-9693",
+      "EMAIL": "timothy.woods@sample.net",
+      "INSTRUCTIONS": "Default Plan 6",
+      "IS_STORED": true
+    }
+  ]
+}

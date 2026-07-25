@@ -1,0 +1,4 @@
+﻿IF NOT EXISTS (SELECT 1 FROM sys.indexes WHERE object_id = OBJECT_ID(N'dbo.RECIPIENTS', N'U') AND name = N'IX_RECIPIENTS_IsDeleted')
+BEGIN
+    CREATE INDEX [IX_RECIPIENTS_IsDeleted] ON [dbo].[RECIPIENTS] ([IsDeleted]);
+END

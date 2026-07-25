@@ -1,0 +1,350 @@
+/* Portal list pages — light 2026 polish (aligned with entity modals) */
+:root {
+  --pl-ink: #0f172a;
+  --pl-muted: #64748b;
+  --pl-line: #e8edf3;
+  --pl-line-soft: #f1f5f9;
+  --pl-surface: #ffffff;
+  --pl-canvas: #f4f6f9;
+  --pl-header: #1e293b;
+  --pl-accent: #2f3d78;
+  --pl-accent-soft: rgba(47, 61, 120, 0.12);
+  --pl-radius: 14px;
+  --pl-radius-sm: 10px;
+}
+
+/* List shell card */
+.content-area .container-fluid > form#formList > .card,
+.content-area form#formList > .card {
+  border: 1px solid var(--pl-line);
+  border-radius: var(--pl-radius);
+  box-shadow: 0 10px 28px rgba(15, 23, 42, 0.06);
+  background: var(--pl-surface);
+}
+
+.content-area form#formList > .card > .card-body {
+  padding: 1.15rem 1.25rem 1.35rem;
+}
+
+.content-area form#formList .card-title {
+  margin: 0 0 0.25rem;
+  font-size: 1.35rem;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  color: var(--pl-ink);
+  line-height: 1.25;
+}
+
+.content-area form#formList .card-text {
+  margin-bottom: 0.85rem;
+  color: var(--pl-muted);
+  font-size: 0.92rem;
+}
+
+.content-area form#formList > .card > .card-body > hr {
+  margin: 0.85rem 0 1rem;
+  border: 0;
+  border-top: 1px solid var(--pl-line);
+  opacity: 1;
+}
+
+.content-area form#formList > .card > .card-footer {
+  background: var(--pl-canvas);
+  border-top: 1px solid var(--pl-line);
+  padding: 0.85rem 1.25rem;
+}
+
+/* Insert CTA — never treat as icon-only */
+.content-area form#formList .opButtonInsert,
+.content-area form#formList button.opButtonInsert {
+  width: auto !important;
+  min-width: auto !important;
+  height: auto !important;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  white-space: nowrap;
+  border-radius: 10px;
+  border: 0;
+  background: var(--pl-accent);
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.9rem;
+  line-height: 1.2;
+  padding: 0.55rem 1rem !important;
+  box-shadow: none;
+}
+
+.content-area form#formList .opButtonInsert:hover,
+.content-area form#formList button.opButtonInsert:hover {
+  filter: brightness(1.06);
+  color: #fff;
+}
+
+.content-area form#formList .opButtonInsert i {
+  margin-right: 0 !important;
+}
+
+/* Pager — undo template negative margin that overlaps the table */
+.content-area form#formList .card-body > .d-flex.justify-content-between {
+  margin-bottom: 0.9rem !important;
+  align-items: center;
+  gap: 0.75rem;
+  position: relative;
+  z-index: 1;
+}
+
+.content-area form#formList .pagination {
+  gap: 0.25rem;
+  margin-bottom: 0;
+  flex-wrap: wrap;
+}
+
+.content-area form#formList .pagination .page-link {
+  min-width: 2rem;
+  height: 2rem;
+  padding: 0 0.55rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--pl-line);
+  border-radius: 8px !important;
+  color: var(--pl-accent);
+  background: #fff;
+  font-size: 0.82rem;
+  font-weight: 600;
+  transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+
+.content-area form#formList .pagination .page-link:hover {
+  background: var(--pl-line-soft);
+  border-color: #cbd5e1;
+  color: var(--pl-ink);
+}
+
+.content-area form#formList .pagination .page-item.active .page-link {
+  background: var(--pl-accent);
+  border-color: var(--pl-accent);
+  color: #fff;
+}
+
+.content-area form#formList .pagination .page-item.disabled .page-link {
+  background: var(--pl-line-soft);
+  border-color: var(--pl-line);
+  color: #94a3b8;
+}
+
+.content-area form#formList .d-flex.justify-content-between > .p-2:first-child {
+  color: var(--pl-muted);
+  font-size: 0.86rem;
+  font-weight: 500;
+  padding-left: 0 !important;
+}
+
+/* Data table — radius lives on the scroll shell so corners stay soft while scrolling */
+.content-area form#formList .portal-table-scroll {
+  border: 1px solid var(--pl-line);
+  border-radius: var(--pl-radius-sm);
+  background: #fff;
+  overflow: auto;
+}
+
+.content-area form#formList table.table,
+.content-area form#formList table.table-responsive {
+  margin-bottom: 0;
+  border-collapse: separate;
+  border-spacing: 0;
+  width: 100%;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+}
+
+.content-area form#formList table thead th,
+.content-area form#formList table thead td {
+  background: var(--pl-header) !important;
+  color: #f8fafc !important;
+  border: 0 !important;
+  border-bottom: 1px solid #0f172a !important;
+  font-size: 0.68rem;
+  font-weight: 650;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  padding: 0.7rem 0.75rem !important;
+  vertical-align: middle;
+}
+
+.content-area form#formList table tbody td {
+  border-color: var(--pl-line-soft) !important;
+  color: var(--pl-ink);
+  font-size: 0.875rem;
+  padding: 0.65rem 0.75rem !important;
+  vertical-align: middle;
+  background-clip: padding-box;
+}
+
+.content-area form#formList table.table {
+  /* Bootstrap tints rows via --bs-table-accent-bg box-shadow, not background-color */
+  --bs-table-hover-bg: rgba(47, 61, 120, 0.08);
+  --bs-table-hover-color: var(--pl-ink);
+  --bs-table-striped-bg: rgba(15, 23, 42, 0.035);
+}
+
+.content-area form#formList table.table-striped > tbody > tr:nth-of-type(odd) > * {
+  background-color: #fff;
+}
+
+.content-area form#formList table.table-striped > tbody > tr:nth-of-type(even) > * {
+  background-color: #f8fafc;
+}
+
+.content-area form#formList table.table-hover > tbody > tr:hover {
+  --bs-table-accent-bg: rgba(47, 61, 120, 0.08);
+  color: var(--pl-ink);
+}
+
+.content-area form#formList table.table-hover > tbody > tr:hover > * {
+  background-color: #f3f5fa !important;
+  box-shadow: inset 0 0 0 9999px rgba(47, 61, 120, 0.07) !important;
+}
+
+.content-area form#formList table.table-hover > tbody > tr:hover > *:first-child {
+  box-shadow:
+    inset 3px 0 0 0 var(--pl-accent),
+    inset 0 0 0 9999px rgba(47, 61, 120, 0.07) !important;
+}
+
+/* Operations column — width follows button count (1 narrow, 3 wider) */
+.content-area form#formList table .portal-ops-cell,
+.content-area form#formList table th.portal-ops-cell,
+.content-area form#formList table td.portal-ops-cell,
+.content-area form#formList table tbody td:has(.opButtonDetail),
+.content-area form#formList table tbody td:has(.opButtonUpdate),
+.content-area form#formList table tbody td:has(.opButtonDelete),
+.content-area form#formList table tbody td[style*="width:150px"] {
+  width: 1% !important;
+  min-width: 0 !important;
+  max-width: max-content;
+  white-space: nowrap;
+  padding-left: 0.55rem !important;
+  padding-right: 0.55rem !important;
+  vertical-align: middle;
+}
+
+.content-area form#formList table th.portal-ops-cell {
+  text-align: center;
+  letter-spacing: 0.04em;
+}
+
+.content-area form#formList table tbody td .portal-ops-group,
+.content-area form#formList table tbody td .btn-group,
+.content-area form#formList table tbody td button-group,
+.content-area form#formList table tbody td [class*="btn-group"] {
+  display: inline-flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  width: max-content;
+  gap: 0.35rem;
+}
+
+/* Fallback sizing when data-ops-count is present */
+.content-area form#formList table .portal-ops-cell[data-ops-count="1"] .portal-ops-group {
+  min-width: 2rem;
+}
+
+.content-area form#formList table .portal-ops-cell[data-ops-count="2"] .portal-ops-group {
+  min-width: calc(2 * 2rem + 0.35rem);
+}
+
+.content-area form#formList table .portal-ops-cell[data-ops-count="3"] .portal-ops-group {
+  min-width: calc(3 * 2rem + 2 * 0.35rem);
+}
+
+.content-area form#formList .opButtonDetail,
+.content-area form#formList .opButtonUpdate,
+.content-area form#formList .opButtonDelete,
+.content-area form#formList button.opButtonDetail,
+.content-area form#formList button.opButtonUpdate,
+.content-area form#formList button.opButtonDelete {
+  width: 2rem;
+  min-width: 2rem;
+  height: 2rem;
+  padding: 0 !important;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  border-radius: 8px;
+  border: 0;
+  color: #fff;
+  box-shadow: none;
+  line-height: 1;
+  transition: filter 0.15s ease, background-color 0.15s ease;
+}
+
+.content-area form#formList .opButtonDetail:hover,
+.content-area form#formList .opButtonUpdate:hover,
+.content-area form#formList .opButtonDelete:hover {
+  filter: brightness(1.06);
+  color: #fff;
+}
+
+/* Op colors from original Primary / Warning / Danger buttons */
+.content-area form#formList .opButtonDetail,
+.content-area form#formList button.opButtonDetail,
+.content-area form#formList .opButtonDetail.btn-primary {
+  background: #3e4889;
+}
+
+.content-area form#formList .opButtonUpdate,
+.content-area form#formList button.opButtonUpdate,
+.content-area form#formList .opButtonUpdate.btn-warning {
+  background: #f5c345;
+  color: #fff;
+}
+
+.content-area form#formList .opButtonDelete,
+.content-area form#formList button.opButtonDelete,
+.content-area form#formList .opButtonDelete.btn-danger {
+  background: #d65644;
+}
+
+.content-area form#formList thead .opButtonDetail,
+.content-area form#formList thead .opButtonUpdate,
+.content-area form#formList thead .opButtonDelete {
+  background: transparent;
+  color: #cbd5e1;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.content-area form#formList thead .opButtonDetail:hover,
+.content-area form#formList thead .opButtonUpdate:hover,
+.content-area form#formList thead .opButtonDelete:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  filter: none;
+}
+
+.content-area form#formList .alert {
+  border-radius: var(--pl-radius-sm);
+  border: 1px solid var(--pl-line);
+}
+
+@media (max-width: 767.98px) {
+  .content-area form#formList > .card > .card-body {
+    padding: 1rem;
+  }
+
+  .content-area form#formList .card-title {
+    font-size: 1.15rem;
+  }
+
+  .content-area form#formList .opButtonInsert,
+  .content-area form#formList button.opButtonInsert {
+    max-width: 100%;
+    white-space: normal;
+    text-align: left;
+  }
+}

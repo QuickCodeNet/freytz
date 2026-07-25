@@ -1,0 +1,46 @@
+﻿{
+  "SM_OTP_VALIDATIONS": [
+    {
+      "GSM_NUMBER": "+1-279-843-8424",
+      "USER_SMS_CODE": "REG-0001",
+      "SMS_OTP_ID": 8,
+      "TRY_COUNT": 14,
+      "RESULT": "Failed"
+    },
+    {
+      "GSM_NUMBER": "+1-344-722-7199",
+      "USER_SMS_CODE": "PRI-0002",
+      "SMS_OTP_ID": 5,
+      "TRY_COUNT": 49,
+      "RESULT": "Success"
+    },
+    {
+      "GSM_NUMBER": "+1-503-494-8516",
+      "USER_SMS_CODE": "PRI-0003",
+      "SMS_OTP_ID": 5,
+      "TRY_COUNT": 18,
+      "RESULT": "Success"
+    },
+    {
+      "GSM_NUMBER": "+1-533-720-5350",
+      "USER_SMS_CODE": "SPE-0004",
+      "SMS_OTP_ID": 5,
+      "TRY_COUNT": 71,
+      "RESULT": "Success"
+    },
+    {
+      "GSM_NUMBER": "+1-647-210-8951",
+      "USER_SMS_CODE": "OPT-0005",
+      "SMS_OTP_ID": 5,
+      "TRY_COUNT": 80,
+      "RESULT": "Success"
+    },
+    {
+      "GSM_NUMBER": "+1-477-266-7374",
+      "USER_SMS_CODE": "EXT-0006",
+      "SMS_OTP_ID": 7,
+      "TRY_COUNT": 11,
+      "RESULT": "Expired"
+    }
+  ]
+}

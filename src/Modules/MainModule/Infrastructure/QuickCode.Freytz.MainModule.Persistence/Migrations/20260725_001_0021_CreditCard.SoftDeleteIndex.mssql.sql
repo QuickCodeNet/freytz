@@ -1,0 +1,4 @@
+﻿IF NOT EXISTS (SELECT 1 FROM sys.indexes WHERE object_id = OBJECT_ID(N'dbo.CREDIT_CARDS', N'U') AND name = N'IX_CREDIT_CARDS_IsDeleted')
+BEGIN
+    CREATE INDEX [IX_CREDIT_CARDS_IsDeleted] ON [dbo].[CREDIT_CARDS] ([IsDeleted]);
+END

@@ -1,0 +1,137 @@
+name: Gateway - Build and Deploy
+
+on:
+  workflow_call:
+        
+env:
+  PROJECT_ID: main-quickcode
+  GAR_LOCATION: europe-west1
+  SERVICE: freytz-gateway
+  REGION: europe-west1
+  REPO: main-quickcode-docker-repo
+  WIF_PROVIDER: ${{ secrets.WIF_PROVIDER }}
+  WIF_SERVICE_ACCOUNT: ${{ secrets.WIF_SERVICE_ACCOUNT }}
+  QUICKCODE_SESSION_ID: ${{ secrets.QUICKCODE_SESSION_ID }}
+  QUICKCODE_RUN_ID: ${{ secrets.QUICKCODE_RUN_ID }}
+  BUILD_STEP_NAME: BuildAndPushContainerGateway
+  DEPLOY_STEP_NAME: DeployToCloudRunGateway
+  STEP_PARAMS: ''
+  ELASTIC_CONNECTION_STRING: ${{ secrets.QUICKCODE_GATEWAY_ELASTIC }}
+  QUICKCODE_GATEWAY_JWT_PRIVATE_KEY: ${{ secrets.QUICKCODE_GATEWAY_JWT_PRIVATE_KEY }}
+  QUICKCODE_GATEWAY_INTERNAL_TOKEN_KEY: ${{ secrets.QUICKCODE_GATEWAY_INTERNAL_TOKEN_KEY }}
+  DOCKER_IMAGE_NAME: 'freytz_gateway_'
+  DOCKER_REPO_NAME: portal
+  DOCKER_FILE_PATH: 'src/Presentation/QuickCode.Freytz.Gateway/'
+
+jobs:
+  deploy:
+    permissions:
+      contents: 'read'
+      id-token: 'write'
+
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set project name
+        run: echo "PROJECT_NAME=${GITHUB_REPOSITORY#*/}" >> $GITHUB_ENV
+
+      - name: Changes
+        uses: dorny/paths-filter@v2
+        id: changes
+        with:
+          filters: |
+            src:
+              - '.github/**'
+              - 'src/Shared/**'
+              - 'src/Presentation/QuickCode.Freytz.Gateway/**'
+
+      - name: Google Auth
+        id: auth
+        uses: 'google-github-actions/auth@v2'
+        with:
+          token_format: 'access_token'
+          workload_identity_provider: '${{ env.WIF_PROVIDER }}' 
+          service_account: '${{ env.WIF_SERVICE_ACCOUNT }}' 
+          
+      - name: Docker Auth
+        id: docker-auth
+        uses: 'docker/login-action@v3'
+        with:
+          username: 'oauth2accesstoken'
+          password: '${{ steps.auth.outputs.access_token }}'
+          registry: '${{ env.GAR_LOCATION }}-docker.pkg.dev'
+          
+      - name: Build and Push Container Started
+        if: always()
+        run: |
+          curl -f -S --connect-timeout 15 --max-time 60 --retry 3 --retry-delay 5 "https://api.quickcode.net/api/GenerateSite/UpdateGeneratorActionByProject?projectName=${{ env.PROJECT_NAME }}&step=${{ env.BUILD_STEP_NAME }}&stepParameters=${{ env.STEP_PARAMS }}&isCompleted=false&message=InProgress&runId=${{ env.QUICKCODE_RUN_ID }}"
+          echo "Build started notification sent"
+
+      - name: Build and Push Container
+        id: build
+        if: steps.changes.outputs.src == 'true'
+        continue-on-error: true
+        run: |-
+          docker buildx build \
+            --file ${{ env.DOCKER_FILE_PATH }}Dockerfile \
+            -t "${{ env.GAR_LOCATION }}-docker.pkg.dev/${{ env.PROJECT_ID }}/${{ env.REPO }}/${{ env.DOCKER_REPO_NAME }}:${{ env.DOCKER_IMAGE_NAME }}${{ github.sha }}" \
+            --push \
+            src/
+          
+      - name: Build and Push Container Finished
+        id: notify_build_done
+        if: always()
+        run: |
+          curl -f -S --connect-timeout 15 --max-time 60 --retry 3 --retry-delay 5 "https://api.quickcode.net/api/GenerateSite/UpdateGeneratorActionByProject?projectName=${{ env.PROJECT_NAME }}&step=${{ env.BUILD_STEP_NAME }}&stepParameters=${{ env.STEP_PARAMS }}&isCompleted=true&message=Completed&runId=${{ env.QUICKCODE_RUN_ID }}"
+          echo "Build finished notification sent"
+
+      - name: Deploy to Cloud Run Started
+        if: always()
+        run: |
+          curl -f -S --connect-timeout 15 --max-time 60 --retry 3 --retry-delay 5 "https://api.quickcode.net/api/GenerateSite/UpdateGeneratorActionByProject?projectName=${{ env.PROJECT_NAME }}&step=${{ env.DEPLOY_STEP_NAME }}&stepParameters=${{ env.STEP_PARAMS }}&isCompleted=false&message=InProgress&runId=${{ env.QUICKCODE_RUN_ID }}"
+          echo "Deploy started notification sent"
+
+      - name: Deploy to Cloud Run
+        id: deploy
+        if: steps.build.outcome == 'success'
+        uses: google-github-actions/deploy-cloudrun@v1
+        with:
+          service: ${{ env.SERVICE }}
+          region: ${{ env.REGION }}
+          env_vars: |
+            ASPNETCORE_ENVIRONMENT=CloudRun 
+            ASPNETCORE_URLS=http://+
+            ELASTIC_CONNECTION_STRING=${{env.ELASTIC_CONNECTION_STRING}}
+            DOTNET_SYSTEM_NET_HTTP_SOCKETSHTTPHANDLER_HTTP3SUPPORT=false 
+            QUICKCODE_GATEWAY_JWT_PRIVATE_KEY=${{env.QUICKCODE_GATEWAY_JWT_PRIVATE_KEY}}
+            QUICKCODE_GATEWAY_INTERNAL_TOKEN_KEY=${{env.QUICKCODE_GATEWAY_INTERNAL_TOKEN_KEY}}
+          image: ${{ env.GAR_LOCATION }}-docker.pkg.dev/${{ env.PROJECT_ID }}/${{ env.REPO }}/${{ env.DOCKER_REPO_NAME }}:${{ env.DOCKER_IMAGE_NAME }}${{ github.sha }}
+          flags: |
+            --port=80
+            --allow-unauthenticated
+      - name: Deploy to Cloud Run Finished
+        id: notify_deploy_done
+        if: always()
+        run: |
+          curl -f -S --connect-timeout 15 --max-time 60 --retry 3 --retry-delay 5 "https://api.quickcode.net/api/GenerateSite/UpdateGeneratorActionByProject?projectName=${{ env.PROJECT_NAME }}&step=${{ env.DEPLOY_STEP_NAME }}&stepParameters=${{ env.STEP_PARAMS }}&isCompleted=true&message=Deployed&runId=${{ env.QUICKCODE_RUN_ID }}"
+          echo "Deploy finished notification sent"
+
+      - name: Notify job completed (fallback)
+        if: always() && (steps.notify_build_done.outcome == 'failure' || steps.notify_deploy_done.outcome == 'failure')
+        run: |
+          for i in 1 2 3; do
+            curl -f -S --connect-timeout 15 --max-time 30 --retry 2 --retry-delay 3 "https://api.quickcode.net/api/GenerateSite/UpdateGeneratorActionByProject?projectName=${{ env.PROJECT_NAME }}&step=${{ env.BUILD_STEP_NAME }}&stepParameters=${{ env.STEP_PARAMS }}&isCompleted=true&message=Completed&runId=${{ env.QUICKCODE_RUN_ID }}" && \
+            curl -f -S --connect-timeout 15 --max-time 30 --retry 2 --retry-delay 3 "https://api.quickcode.net/api/GenerateSite/UpdateGeneratorActionByProject?projectName=${{ env.PROJECT_NAME }}&step=${{ env.DEPLOY_STEP_NAME }}&stepParameters=${{ env.STEP_PARAMS }}&isCompleted=true&message=Deployed&runId=${{ env.QUICKCODE_RUN_ID }}" && break
+            sleep 5
+          done
+        continue-on-error: true
+          
+      - name: Show Output
+        run: echo ${{ steps.deploy.outputs.url }}
+
+
+
+
+

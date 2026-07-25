@@ -1,0 +1,73 @@
+@model LoginData
+@{
+    ViewData["Title"] = "Sign in";
+    var queryCollection = Context.Request.Query;
+    var routeData = new Dictionary<string, string>(queryCollection.Select(x => new KeyValuePair<string, string>(x.Key, x.Value!)));
+}
+
+<section class="auth-card">
+    <div class="auth-card__inner">
+        <p class="auth-card__eyebrow">Portal access</p>
+        <h1 class="auth-card__title">Sign in</h1>
+        <p class="auth-card__lead">Sign in to continue to Freytz.</p>
+
+        <form class="auth-form" asp-action="Index" asp-all-route-data="routeData" novalidate>
+            <div class="auth-field">
+                <label class="auth-field__label" asp-for="Username">Email</label>
+                <input asp-for="Username"
+                       class="auth-field__input"
+                       type="email"
+                       autocomplete="username"
+                       inputmode="email"
+                       placeholder="name@company.com"
+                       aria-required="true" />
+                <span asp-validation-for="Username" class="auth-field__hint"></span>
+            </div>
+
+            <div class="auth-field">
+                <label class="auth-field__label" asp-for="Password">Password</label>
+                <div class="auth-password">
+                    <input asp-for="Password"
+                           id="login-password"
+                           class="auth-field__input"
+                           type="password"
+                           autocomplete="current-password"
+                           placeholder="Enter your password"
+                           aria-required="true" />
+                    <button type="button"
+                            class="auth-password__toggle"
+                            data-auth-password-toggle
+                            aria-controls="login-password"
+                            aria-pressed="false"
+                            aria-label="Show password">
+                        <i class="far fa-eye" aria-hidden="true"></i>
+                    </button>
+                </div>
+                <span asp-validation-for="Password" class="auth-field__hint"></span>
+            </div>
+
+            <div class="auth-row">
+                <label class="auth-check" for="rememberMe">
+                    <input type="checkbox" id="rememberMe" asp-for="RememberMe" />
+                    <span>Keep me signed in</span>
+                </label>
+                <a class="auth-link" asp-action="ForgotPassword" asp-controller="Login">Forgot password?</a>
+            </div>
+
+            <button type="submit" class="auth-btn">Sign in</button>
+
+            @if (!string.IsNullOrEmpty(Model.ErrorMessage))
+            {
+                <div class="auth-alert auth-alert--error" role="alert">@Model.ErrorMessage</div>
+            }
+        </form>
+
+        <div class="auth-footer">
+            <span>New here? <a class="auth-link" asp-action="Register" asp-controller="Login">Create an account</a></span>
+        </div>
+    </div>
+</section>
+
+@section Scripts {
+    @{ await Html.RenderPartialAsync("_ValidationScriptsPartial"); }
+}

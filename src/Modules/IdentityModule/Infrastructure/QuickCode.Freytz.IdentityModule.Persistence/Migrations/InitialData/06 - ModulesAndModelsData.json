@@ -1,0 +1,239 @@
+﻿{
+  "Modules": [
+    {
+      "Name": "IdentityModule",
+      "Description": "IdentityModule"
+    },
+    {
+      "Name": "MainModule",
+      "Description": "MainModule"
+    }
+  ],
+  "Models": [
+    {
+      "Name": "ApiMethodAccessGrants",
+      "ModuleName": "IdentityModule",
+      "Description": "IdentityModule - ApiMethodAccessGrant"
+    },
+    {
+      "Name": "ApiMethodDefinitions",
+      "ModuleName": "IdentityModule",
+      "Description": "IdentityModule - ApiMethodDefinition"
+    },
+    {
+      "Name": "AspNetRoles",
+      "ModuleName": "IdentityModule",
+      "Description": "IdentityModule - AspNetRole"
+    },
+    {
+      "Name": "AspNetRoleClaims",
+      "ModuleName": "IdentityModule",
+      "Description": "IdentityModule - AspNetRoleClaim"
+    },
+    {
+      "Name": "AspNetUsers",
+      "ModuleName": "IdentityModule",
+      "Description": "IdentityModule - AspNetUser"
+    },
+    {
+      "Name": "AspNetUserClaims",
+      "ModuleName": "IdentityModule",
+      "Description": "IdentityModule - AspNetUserClaim"
+    },
+    {
+      "Name": "AspNetUserLogins",
+      "ModuleName": "IdentityModule",
+      "Description": "IdentityModule - AspNetUserLogin"
+    },
+    {
+      "Name": "AspNetUserRoles",
+      "ModuleName": "IdentityModule",
+      "Description": "IdentityModule - AspNetUserRole"
+    },
+    {
+      "Name": "AspNetUserTokens",
+      "ModuleName": "IdentityModule",
+      "Description": "IdentityModule - AspNetUserToken"
+    },
+    {
+      "Name": "AuditLogs",
+      "ModuleName": "IdentityModule",
+      "Description": "IdentityModule - AuditLog"
+    },
+    {
+      "Name": "ColumnTypes",
+      "ModuleName": "IdentityModule",
+      "Description": "IdentityModule - ColumnType"
+    },
+    {
+      "Name": "KafkaEvents",
+      "ModuleName": "IdentityModule",
+      "Description": "IdentityModule - KafkaEvent"
+    },
+    {
+      "Name": "Models",
+      "ModuleName": "IdentityModule",
+      "Description": "IdentityModule - Model"
+    },
+    {
+      "Name": "Modules",
+      "ModuleName": "IdentityModule",
+      "Description": "IdentityModule - Module"
+    },
+    {
+      "Name": "PermissionGroups",
+      "ModuleName": "IdentityModule",
+      "Description": "IdentityModule - PermissionGroup"
+    },
+    {
+      "Name": "PortalMenus",
+      "ModuleName": "IdentityModule",
+      "Description": "IdentityModule - PortalMenu"
+    },
+    {
+      "Name": "PortalPageAccessGrants",
+      "ModuleName": "IdentityModule",
+      "Description": "IdentityModule - PortalPageAccessGrant"
+    },
+    {
+      "Name": "PortalPageDefinitions",
+      "ModuleName": "IdentityModule",
+      "Description": "IdentityModule - PortalPageDefinition"
+    },
+    {
+      "Name": "RefreshTokens",
+      "ModuleName": "IdentityModule",
+      "Description": "IdentityModule - RefreshToken"
+    },
+    {
+      "Name": "TableComboboxSettings",
+      "ModuleName": "IdentityModule",
+      "Description": "IdentityModule - TableComboboxSetting"
+    },
+    {
+      "Name": "TopicWorkflows",
+      "ModuleName": "IdentityModule",
+      "Description": "IdentityModule - TopicWorkflow"
+    },
+    {
+      "Name": "AuditLogs",
+      "ModuleName": "MainModule",
+      "Description": "MainModule - AuditLog"
+    },
+    {
+      "Name": "CreditCards",
+      "ModuleName": "MainModule",
+      "Description": "MainModule - CreditCard"
+    },
+    {
+      "Name": "Customers",
+      "ModuleName": "MainModule",
+      "Description": "MainModule - Customer"
+    },
+    {
+      "Name": "CustomerLoginAttempts",
+      "ModuleName": "MainModule",
+      "Description": "MainModule - CustomerLoginAttempt"
+    },
+    {
+      "Name": "Drivers",
+      "ModuleName": "MainModule",
+      "Description": "MainModule - Driver"
+    },
+    {
+      "Name": "DriverCommissions",
+      "ModuleName": "MainModule",
+      "Description": "MainModule - DriverCommission"
+    },
+    {
+      "Name": "DriverLocations",
+      "ModuleName": "MainModule",
+      "Description": "MainModule - DriverLocation"
+    },
+    {
+      "Name": "DriverPayments",
+      "ModuleName": "MainModule",
+      "Description": "MainModule - DriverPayment"
+    },
+    {
+      "Name": "DriverPaymentShipments",
+      "ModuleName": "MainModule",
+      "Description": "MainModule - DriverPaymentShipment"
+    },
+    {
+      "Name": "Locations",
+      "ModuleName": "MainModule",
+      "Description": "MainModule - Location"
+    },
+    {
+      "Name": "Payments",
+      "ModuleName": "MainModule",
+      "Description": "MainModule - Payment"
+    },
+    {
+      "Name": "PriceMatrices",
+      "ModuleName": "MainModule",
+      "Description": "MainModule - PriceMatrix"
+    },
+    {
+      "Name": "Recipients",
+      "ModuleName": "MainModule",
+      "Description": "MainModule - Recipient"
+    },
+    {
+      "Name": "Senders",
+      "ModuleName": "MainModule",
+      "Description": "MainModule - Sender"
+    },
+    {
+      "Name": "Shipments",
+      "ModuleName": "MainModule",
+      "Description": "MainModule - Shipment"
+    },
+    {
+      "Name": "ShipmentLocations",
+      "ModuleName": "MainModule",
+      "Description": "MainModule - ShipmentLocation"
+    },
+    {
+      "Name": "ShipmentPackages",
+      "ModuleName": "MainModule",
+      "Description": "MainModule - ShipmentPackage"
+    },
+    {
+      "Name": "SmInfos",
+      "ModuleName": "MainModule",
+      "Description": "MainModule - SmInfo"
+    },
+    {
+      "Name": "SmOtps",
+      "ModuleName": "MainModule",
+      "Description": "MainModule - SmOtp"
+    },
+    {
+      "Name": "SmOtpValidations",
+      "ModuleName": "MainModule",
+      "Description": "MainModule - SmOtpValidation"
+    },
+    {
+      "Name": "States",
+      "ModuleName": "MainModule",
+      "Description": "MainModule - State"
+    },
+    {
+      "Name": "UserStates",
+      "ModuleName": "MainModule",
+      "Description": "MainModule - UserState"
+    },
+    {
+      "Name": "VehicleTypes",
+      "ModuleName": "MainModule",
+      "Description": "MainModule - VehicleType"
+    },
+    {
+      "Name": "Authentications",
+      "ModuleName": "IdentityModule",
+      "Description": "IdentityModule- Authentications"
+    }
+  ]
+}

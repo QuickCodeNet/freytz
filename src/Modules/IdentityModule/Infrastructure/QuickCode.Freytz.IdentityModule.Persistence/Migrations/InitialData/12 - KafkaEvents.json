@@ -1,0 +1,1049 @@
+﻿{
+"KafkaEvents": [
+  {
+    "ApiMethodDefinitionKey": "PostapiidentitymodulemodulesModulesController",
+    "TopicName": "freytz.identity_module.modules_post",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PutapiidentitymodulemodulesnameModulesController",
+    "TopicName": "freytz.identity_module.modules_put",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "DeleteapiidentitymodulemodulesnameModulesController",
+    "TopicName": "freytz.identity_module.modules_delete",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "DeleteapiidentitymodulemodelsdeletemodelswithmodulenamemodelmodulenameModelsController",
+    "TopicName": "freytz.identity_module.models.delete_models_with_module_name_delete",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PostapiidentitymodulemodelsModelsController",
+    "TopicName": "freytz.identity_module.models_post",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PutapiidentitymodulemodelsnamemodulenameModelsController",
+    "TopicName": "freytz.identity_module.models_put",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "DeleteapiidentitymodulemodelsnamemodulenameModelsController",
+    "TopicName": "freytz.identity_module.models_delete",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PostapiidentitymodulepermissiongroupsPermissionGroupsController",
+    "TopicName": "freytz.identity_module.permission_groups_post",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PutapiidentitymodulepermissiongroupsnamePermissionGroupsController",
+    "TopicName": "freytz.identity_module.permission_groups_put",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "DeleteapiidentitymodulepermissiongroupsnamePermissionGroupsController",
+    "TopicName": "freytz.identity_module.permission_groups_delete",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "DeleteapiidentitymoduleapimethoddefinitionsdeleteapimethoddefinitionswithmodulenameapimethoddefinitionmodulenameApiMethodDefinitionsController",
+    "TopicName": "freytz.identity_module.api_method_definitions.delete_api_method_definitions_with_module_name_delete",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "DeleteapiidentitymoduleapimethoddefinitionsdeleteapimethoddefinitionswithmodelnameapimethoddefinitionmodelnameApiMethodDefinitionsController",
+    "TopicName": "freytz.identity_module.api_method_definitions.delete_api_method_definitions_with_model_name_delete",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PostapiidentitymoduleapimethoddefinitionsApiMethodDefinitionsController",
+    "TopicName": "freytz.identity_module.api_method_definitions_post",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PutapiidentitymoduleapimethoddefinitionskeyApiMethodDefinitionsController",
+    "TopicName": "freytz.identity_module.api_method_definitions_put",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "DeleteapiidentitymoduleapimethoddefinitionskeyApiMethodDefinitionsController",
+    "TopicName": "freytz.identity_module.api_method_definitions_delete",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "DeleteapiidentitymoduleportalpagedefinitionsdeleteportalpagedefinitionswithmodulenameportalpagedefinitionmodulenamePortalPageDefinitionsController",
+    "TopicName": "freytz.identity_module.portal_page_definitions.delete_portal_page_definitions_with_module_name_delete",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "DeleteapiidentitymoduleportalpagedefinitionsdeleteportalpagedefinitionswithmodelnameportalpagedefinitionmodelnamePortalPageDefinitionsController",
+    "TopicName": "freytz.identity_module.portal_page_definitions.delete_portal_page_definitions_with_model_name_delete",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PostapiidentitymoduleportalpagedefinitionsPortalPageDefinitionsController",
+    "TopicName": "freytz.identity_module.portal_page_definitions_post",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PutapiidentitymoduleportalpagedefinitionskeyPortalPageDefinitionsController",
+    "TopicName": "freytz.identity_module.portal_page_definitions_put",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "DeleteapiidentitymoduleportalpagedefinitionskeyPortalPageDefinitionsController",
+    "TopicName": "freytz.identity_module.portal_page_definitions_delete",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "DeleteapiidentitymoduleapimethodaccessgrantsclearapimethodaccessgrantsApiMethodAccessGrantsController",
+    "TopicName": "freytz.identity_module.api_method_access_grants.clear_api_method_access_grants_delete",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PostapiidentitymoduleapimethodaccessgrantsApiMethodAccessGrantsController",
+    "TopicName": "freytz.identity_module.api_method_access_grants_post",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PutapiidentitymoduleapimethodaccessgrantspermissiongroupnameapimethoddefinitionkeyApiMethodAccessGrantsController",
+    "TopicName": "freytz.identity_module.api_method_access_grants_put",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "DeleteapiidentitymoduleapimethodaccessgrantspermissiongroupnameapimethoddefinitionkeyApiMethodAccessGrantsController",
+    "TopicName": "freytz.identity_module.api_method_access_grants_delete",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "DeleteapiidentitymoduleportalpageaccessgrantsclearportalpageaccessgrantsPortalPageAccessGrantsController",
+    "TopicName": "freytz.identity_module.portal_page_access_grants.clear_portal_page_access_grants_delete",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PostapiidentitymoduleportalpageaccessgrantsPortalPageAccessGrantsController",
+    "TopicName": "freytz.identity_module.portal_page_access_grants_post",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PutapiidentitymoduleportalpageaccessgrantspermissiongroupnameportalpagedefinitionkeypageactionPortalPageAccessGrantsController",
+    "TopicName": "freytz.identity_module.portal_page_access_grants_put",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "DeleteapiidentitymoduleportalpageaccessgrantspermissiongroupnameportalpagedefinitionkeypageactionPortalPageAccessGrantsController",
+    "TopicName": "freytz.identity_module.portal_page_access_grants_delete",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "DeleteapiidentitymoduleportalmenusdeleteportalmenuitemswithmodulenameportalmenukeyPortalMenusController",
+    "TopicName": "freytz.identity_module.portal_menus.delete_portal_menu_items_with_module_name_delete",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "DeleteapiidentitymoduleportalmenusdeleteportalmenuitemswithmodelnameportalmenukeyportalmenunamePortalMenusController",
+    "TopicName": "freytz.identity_module.portal_menus.delete_portal_menu_items_with_model_name_delete",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PostapiidentitymoduleportalmenusPortalMenusController",
+    "TopicName": "freytz.identity_module.portal_menus_post",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PutapiidentitymoduleportalmenuskeyPortalMenusController",
+    "TopicName": "freytz.identity_module.portal_menus_put",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "DeleteapiidentitymoduleportalmenuskeyPortalMenusController",
+    "TopicName": "freytz.identity_module.portal_menus_delete",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PostapiidentitymodulecolumntypesColumnTypesController",
+    "TopicName": "freytz.identity_module.column_types_post",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PutapiidentitymodulecolumntypesidintColumnTypesController",
+    "TopicName": "freytz.identity_module.column_types_put",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "DeleteapiidentitymodulecolumntypesidintColumnTypesController",
+    "TopicName": "freytz.identity_module.column_types_delete",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PostapiidentitymoduletablecomboboxsettingsTableComboboxSettingsController",
+    "TopicName": "freytz.identity_module.table_combobox_settings_post",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PutapiidentitymoduletablecomboboxsettingstablenameTableComboboxSettingsController",
+    "TopicName": "freytz.identity_module.table_combobox_settings_put",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "DeleteapiidentitymoduletablecomboboxsettingstablenameTableComboboxSettingsController",
+    "TopicName": "freytz.identity_module.table_combobox_settings_delete",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "DeleteapiidentitymodulekafkaeventscleankafkaeventswithmodulenameapimethoddefinitionsmodulenameKafkaEventsController",
+    "TopicName": "freytz.identity_module.kafka_events.clean_kafka_events_with_module_name_delete",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "DeleteapiidentitymodulekafkaeventscleankafkaeventswithmodelnameapimethoddefinitionsmodelnameKafkaEventsController",
+    "TopicName": "freytz.identity_module.kafka_events.clean_kafka_events_with_model_name_delete",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PostapiidentitymodulekafkaeventsKafkaEventsController",
+    "TopicName": "freytz.identity_module.kafka_events_post",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PutapiidentitymodulekafkaeventstopicnameKafkaEventsController",
+    "TopicName": "freytz.identity_module.kafka_events_put",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "DeleteapiidentitymodulekafkaeventstopicnameKafkaEventsController",
+    "TopicName": "freytz.identity_module.kafka_events_delete",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PostapiidentitymoduletopicworkflowsTopicWorkflowsController",
+    "TopicName": "freytz.identity_module.topic_workflows_post",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PutapiidentitymoduletopicworkflowsidintTopicWorkflowsController",
+    "TopicName": "freytz.identity_module.topic_workflows_put",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "DeleteapiidentitymoduletopicworkflowsidintTopicWorkflowsController",
+    "TopicName": "freytz.identity_module.topic_workflows_delete",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PostapiidentitymoduleaspnetrolesAspNetRolesController",
+    "TopicName": "freytz.identity_module.asp_net_roles_post",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PutapiidentitymoduleaspnetrolesidAspNetRolesController",
+    "TopicName": "freytz.identity_module.asp_net_roles_put",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "DeleteapiidentitymoduleaspnetrolesidAspNetRolesController",
+    "TopicName": "freytz.identity_module.asp_net_roles_delete",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PostapiidentitymoduleaspnetusersAspNetUsersController",
+    "TopicName": "freytz.identity_module.asp_net_users_post",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PutapiidentitymoduleaspnetusersidAspNetUsersController",
+    "TopicName": "freytz.identity_module.asp_net_users_put",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "DeleteapiidentitymoduleaspnetusersidAspNetUsersController",
+    "TopicName": "freytz.identity_module.asp_net_users_delete",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PatchapiidentitymodulerefreshtokensupdaterefreshtokensrefreshtokentokenRefreshTokensController",
+    "TopicName": "freytz.identity_module.refresh_tokens.update_refresh_tokens_patch",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PostapiidentitymodulerefreshtokensRefreshTokensController",
+    "TopicName": "freytz.identity_module.refresh_tokens_post",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PutapiidentitymodulerefreshtokensidintRefreshTokensController",
+    "TopicName": "freytz.identity_module.refresh_tokens_put",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "DeleteapiidentitymodulerefreshtokensidintRefreshTokensController",
+    "TopicName": "freytz.identity_module.refresh_tokens_delete",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PostapiidentitymoduleaspnetroleclaimsAspNetRoleClaimsController",
+    "TopicName": "freytz.identity_module.asp_net_role_claims_post",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PutapiidentitymoduleaspnetroleclaimsidintAspNetRoleClaimsController",
+    "TopicName": "freytz.identity_module.asp_net_role_claims_put",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "DeleteapiidentitymoduleaspnetroleclaimsidintAspNetRoleClaimsController",
+    "TopicName": "freytz.identity_module.asp_net_role_claims_delete",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PostapiidentitymoduleaspnetuserclaimsAspNetUserClaimsController",
+    "TopicName": "freytz.identity_module.asp_net_user_claims_post",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PutapiidentitymoduleaspnetuserclaimsidintAspNetUserClaimsController",
+    "TopicName": "freytz.identity_module.asp_net_user_claims_put",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "DeleteapiidentitymoduleaspnetuserclaimsidintAspNetUserClaimsController",
+    "TopicName": "freytz.identity_module.asp_net_user_claims_delete",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PostapiidentitymoduleaspnetuserloginsAspNetUserLoginsController",
+    "TopicName": "freytz.identity_module.asp_net_user_logins_post",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PutapiidentitymoduleaspnetuserloginsloginproviderproviderkeyAspNetUserLoginsController",
+    "TopicName": "freytz.identity_module.asp_net_user_logins_put",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "DeleteapiidentitymoduleaspnetuserloginsloginproviderproviderkeyAspNetUserLoginsController",
+    "TopicName": "freytz.identity_module.asp_net_user_logins_delete",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PostapiidentitymoduleaspnetuserrolesAspNetUserRolesController",
+    "TopicName": "freytz.identity_module.asp_net_user_roles_post",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PutapiidentitymoduleaspnetuserrolesuseridroleidAspNetUserRolesController",
+    "TopicName": "freytz.identity_module.asp_net_user_roles_put",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "DeleteapiidentitymoduleaspnetuserrolesuseridroleidAspNetUserRolesController",
+    "TopicName": "freytz.identity_module.asp_net_user_roles_delete",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PostapiidentitymoduleaspnetusertokensAspNetUserTokensController",
+    "TopicName": "freytz.identity_module.asp_net_user_tokens_post",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PutapiidentitymoduleaspnetusertokensuseridAspNetUserTokensController",
+    "TopicName": "freytz.identity_module.asp_net_user_tokens_put",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "DeleteapiidentitymoduleaspnetusertokensuseridAspNetUserTokensController",
+    "TopicName": "freytz.identity_module.asp_net_user_tokens_delete",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PostapiidentitymoduleauditlogsAuditLogsController",
+    "TopicName": "freytz.identity_module.audit_logs_post",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PutapiidentitymoduleauditlogsidguidAuditLogsController",
+    "TopicName": "freytz.identity_module.audit_logs_put",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "DeleteapiidentitymoduleauditlogsidguidAuditLogsController",
+    "TopicName": "freytz.identity_module.audit_logs_delete",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PatchapimainmodulestatesdeactivatestateidintStatesController",
+    "TopicName": "freytz.main_module.states.deactivate_patch",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PatchapimainmodulestatesactivatestateidintStatesController",
+    "TopicName": "freytz.main_module.states.activate_patch",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PostapimainmodulestatesStatesController",
+    "TopicName": "freytz.main_module.states_post",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PutapimainmodulestatesidintStatesController",
+    "TopicName": "freytz.main_module.states_put",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "DeleteapimainmodulestatesidintStatesController",
+    "TopicName": "freytz.main_module.states_delete",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PatchapimainmodulevehicletypessoftdeletevehicletypeidintVehicleTypesController",
+    "TopicName": "freytz.main_module.vehicle_types.soft_delete_patch",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PatchapimainmodulevehicletypesrestorevehicletypeidintVehicleTypesController",
+    "TopicName": "freytz.main_module.vehicle_types.restore_patch",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PostapimainmodulevehicletypesVehicleTypesController",
+    "TopicName": "freytz.main_module.vehicle_types_post",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PutapimainmodulevehicletypesidintVehicleTypesController",
+    "TopicName": "freytz.main_module.vehicle_types_put",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "DeleteapimainmodulevehicletypesidintVehicleTypesController",
+    "TopicName": "freytz.main_module.vehicle_types_delete",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PatchapimainmodulecustomersupdatestatuscustomeridintCustomersController",
+    "TopicName": "freytz.main_module.customers.update_status_patch",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PatchapimainmodulecustomersactivatecustomeridintCustomersController",
+    "TopicName": "freytz.main_module.customers.activate_patch",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PatchapimainmodulecustomersdeactivatecustomeridintCustomersController",
+    "TopicName": "freytz.main_module.customers.deactivate_patch",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PatchapimainmodulecustomersupdatedevicecustomeridintCustomersController",
+    "TopicName": "freytz.main_module.customers.update_device_patch",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PatchapimainmodulecustomersupdatefirebaseidcustomeridintCustomersController",
+    "TopicName": "freytz.main_module.customers.update_firebase_id_patch",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PatchapimainmodulecustomersupdatepasswordcustomeridintCustomersController",
+    "TopicName": "freytz.main_module.customers.update_password_patch",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PatchapimainmodulecustomersupdateprofilecustomeridintCustomersController",
+    "TopicName": "freytz.main_module.customers.update_profile_patch",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PatchapimainmodulecustomersupdateprofileidcustomeridintCustomersController",
+    "TopicName": "freytz.main_module.customers.update_profile_id_patch",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PostapimainmodulecustomersCustomersController",
+    "TopicName": "freytz.main_module.customers_post",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PutapimainmodulecustomersidintCustomersController",
+    "TopicName": "freytz.main_module.customers_put",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "DeleteapimainmodulecustomersidintCustomersController",
+    "TopicName": "freytz.main_module.customers_delete",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PostapimainmodulecustomerloginattemptsCustomerLoginAttemptsController",
+    "TopicName": "freytz.main_module.customer_login_attempts_post",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PutapimainmodulecustomerloginattemptsidintCustomerLoginAttemptsController",
+    "TopicName": "freytz.main_module.customer_login_attempts_put",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "DeleteapimainmodulecustomerloginattemptsidintCustomerLoginAttemptsController",
+    "TopicName": "freytz.main_module.customer_login_attempts_delete",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PatchapimainmoduledriversupdatedriverstatusdriveridintDriversController",
+    "TopicName": "freytz.main_module.drivers.update_driver_status_patch",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PatchapimainmoduledriverssetavailabledriveridintDriversController",
+    "TopicName": "freytz.main_module.drivers.set_available_patch",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PatchapimainmoduledriverssetbusydriveridintDriversController",
+    "TopicName": "freytz.main_module.drivers.set_busy_patch",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PatchapimainmoduledriversupdatestatusdriveridintDriversController",
+    "TopicName": "freytz.main_module.drivers.update_status_patch",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PatchapimainmoduledriversupdatedevicedriveridintDriversController",
+    "TopicName": "freytz.main_module.drivers.update_device_patch",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PatchapimainmoduledriversupdatefirebaseiddriveridintDriversController",
+    "TopicName": "freytz.main_module.drivers.update_firebase_id_patch",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PatchapimainmoduledriversupdatepassworddriveridintDriversController",
+    "TopicName": "freytz.main_module.drivers.update_password_patch",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PatchapimainmoduledriversupdateprofiledriveridintDriversController",
+    "TopicName": "freytz.main_module.drivers.update_profile_patch",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PatchapimainmoduledriversupdatephotodriveridintDriversController",
+    "TopicName": "freytz.main_module.drivers.update_photo_patch",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PatchapimainmoduledriversupdatemaxdistancedriveridintDriversController",
+    "TopicName": "freytz.main_module.drivers.update_max_distance_patch",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PatchapimainmoduledriversupdatelastlocationdriveridintDriversController",
+    "TopicName": "freytz.main_module.drivers.update_last_location_patch",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PatchapimainmoduledriversupdatepaymentaccountdriveridintDriversController",
+    "TopicName": "freytz.main_module.drivers.update_payment_account_patch",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PostapimainmoduledriversDriversController",
+    "TopicName": "freytz.main_module.drivers_post",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PutapimainmoduledriversidintDriversController",
+    "TopicName": "freytz.main_module.drivers_put",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "DeleteapimainmoduledriversidintDriversController",
+    "TopicName": "freytz.main_module.drivers_delete",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PostapimainmoduledriverlocationsDriverLocationsController",
+    "TopicName": "freytz.main_module.driver_locations_post",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PutapimainmoduledriverlocationsidintDriverLocationsController",
+    "TopicName": "freytz.main_module.driver_locations_put",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "DeleteapimainmoduledriverlocationsidintDriverLocationsController",
+    "TopicName": "freytz.main_module.driver_locations_delete",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PostapimainmoduledrivercommissionsDriverCommissionsController",
+    "TopicName": "freytz.main_module.driver_commissions_post",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PutapimainmoduledrivercommissionsidintDriverCommissionsController",
+    "TopicName": "freytz.main_module.driver_commissions_put",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "DeleteapimainmoduledrivercommissionsidintDriverCommissionsController",
+    "TopicName": "freytz.main_module.driver_commissions_delete",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "DeleteapimainmodulelocationsdeletefavoritelocationidintlocationcustomeridintLocationsController",
+    "TopicName": "freytz.main_module.locations.delete_favorite_delete",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PostapimainmodulelocationsLocationsController",
+    "TopicName": "freytz.main_module.locations_post",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PutapimainmodulelocationsidintLocationsController",
+    "TopicName": "freytz.main_module.locations_put",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "DeleteapimainmodulelocationsidintLocationsController",
+    "TopicName": "freytz.main_module.locations_delete",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PatchapimainmodulecreditcardssetstoredcreditcardidintCreditCardsController",
+    "TopicName": "freytz.main_module.credit_cards.set_stored_patch",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PatchapimainmodulecreditcardsunsetstoredcreditcardidintCreditCardsController",
+    "TopicName": "freytz.main_module.credit_cards.unset_stored_patch",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "DeleteapimainmodulecreditcardsdeletecustomercreditcardcreditcardidintcreditcardcustomeridintCreditCardsController",
+    "TopicName": "freytz.main_module.credit_cards.delete_customer_credit_card_delete",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PostapimainmodulecreditcardsCreditCardsController",
+    "TopicName": "freytz.main_module.credit_cards_post",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PutapimainmodulecreditcardsidintCreditCardsController",
+    "TopicName": "freytz.main_module.credit_cards_put",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "DeleteapimainmodulecreditcardsidintCreditCardsController",
+    "TopicName": "freytz.main_module.credit_cards_delete",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PatchapimainmodulepaymentsupdatestatuspaymentidintPaymentsController",
+    "TopicName": "freytz.main_module.payments.update_status_patch",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PatchapimainmodulepaymentsmarkcapturedpaymentidintPaymentsController",
+    "TopicName": "freytz.main_module.payments.mark_captured_patch",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PatchapimainmodulepaymentsmarkfailedpaymentidintPaymentsController",
+    "TopicName": "freytz.main_module.payments.mark_failed_patch",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PatchapimainmodulepaymentssetpaymentrefpaymentidintPaymentsController",
+    "TopicName": "freytz.main_module.payments.set_payment_ref_patch",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PostapimainmodulepaymentsPaymentsController",
+    "TopicName": "freytz.main_module.payments_post",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PutapimainmodulepaymentsidintPaymentsController",
+    "TopicName": "freytz.main_module.payments_put",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "DeleteapimainmodulepaymentsidintPaymentsController",
+    "TopicName": "freytz.main_module.payments_delete",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PatchapimainmodulerecipientssetstoredrecipientidintRecipientsController",
+    "TopicName": "freytz.main_module.recipients.set_stored_patch",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "DeleteapimainmodulerecipientsdeletecustomerrecipientrecipientidintrecipientcustomeridintRecipientsController",
+    "TopicName": "freytz.main_module.recipients.delete_customer_recipient_delete",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PostapimainmodulerecipientsRecipientsController",
+    "TopicName": "freytz.main_module.recipients_post",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PutapimainmodulerecipientsidintRecipientsController",
+    "TopicName": "freytz.main_module.recipients_put",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "DeleteapimainmodulerecipientsidintRecipientsController",
+    "TopicName": "freytz.main_module.recipients_delete",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PatchapimainmodulesenderssetstoredsenderidintSendersController",
+    "TopicName": "freytz.main_module.senders.set_stored_patch",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "DeleteapimainmodulesendersdeletecustomersendersenderidintsendercustomeridintSendersController",
+    "TopicName": "freytz.main_module.senders.delete_customer_sender_delete",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PostapimainmodulesendersSendersController",
+    "TopicName": "freytz.main_module.senders_post",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PutapimainmodulesendersidintSendersController",
+    "TopicName": "freytz.main_module.senders_put",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "DeleteapimainmodulesendersidintSendersController",
+    "TopicName": "freytz.main_module.senders_delete",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PatchapimainmoduleshipmentsupdatestatusshipmentidintShipmentsController",
+    "TopicName": "freytz.main_module.shipments.update_status_patch",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PatchapimainmoduleshipmentsupdateshipmentstatusshipmentidintShipmentsController",
+    "TopicName": "freytz.main_module.shipments.update_shipment_status_patch",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PatchapimainmoduleshipmentsassigndrivershipmentidintShipmentsController",
+    "TopicName": "freytz.main_module.shipments.assign_driver_patch",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PatchapimainmoduleshipmentsstartshipmentidintShipmentsController",
+    "TopicName": "freytz.main_module.shipments.start_patch",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PatchapimainmoduleshipmentscompleteshipmentidintShipmentsController",
+    "TopicName": "freytz.main_module.shipments.complete_patch",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PatchapimainmoduleshipmentscancelshipmentidintShipmentsController",
+    "TopicName": "freytz.main_module.shipments.cancel_patch",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PatchapimainmoduleshipmentssetpaymentshipmentidintShipmentsController",
+    "TopicName": "freytz.main_module.shipments.set_payment_patch",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PostapimainmoduleshipmentsShipmentsController",
+    "TopicName": "freytz.main_module.shipments_post",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PutapimainmoduleshipmentsidintShipmentsController",
+    "TopicName": "freytz.main_module.shipments_put",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "DeleteapimainmoduleshipmentsidintShipmentsController",
+    "TopicName": "freytz.main_module.shipments_delete",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PatchapimainmoduleshipmentlocationsmarkcompletedshipmentlocationshipmentidintshipmentlocationlocationidintshipmentlocationshipmentorderintShipmentLocationsController",
+    "TopicName": "freytz.main_module.shipment_locations.mark_completed_patch",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PatchapimainmoduleshipmentlocationsupdatelocationstatusshipmentlocationshipmentidintshipmentlocationlocationidintshipmentlocationshipmentorderintShipmentLocationsController",
+    "TopicName": "freytz.main_module.shipment_locations.update_location_status_patch",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PatchapimainmoduleshipmentlocationsmarkarrivedshipmentlocationshipmentidintshipmentlocationlocationidintshipmentlocationshipmentorderintShipmentLocationsController",
+    "TopicName": "freytz.main_module.shipment_locations.mark_arrived_patch",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PatchapimainmoduleshipmentlocationscancellocationshipmentlocationshipmentidintshipmentlocationlocationidintshipmentlocationshipmentorderintShipmentLocationsController",
+    "TopicName": "freytz.main_module.shipment_locations.cancel_location_patch",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PostapimainmoduleshipmentlocationsShipmentLocationsController",
+    "TopicName": "freytz.main_module.shipment_locations_post",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PutapimainmoduleshipmentlocationsidintShipmentLocationsController",
+    "TopicName": "freytz.main_module.shipment_locations_put",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "DeleteapimainmoduleshipmentlocationsidintShipmentLocationsController",
+    "TopicName": "freytz.main_module.shipment_locations_delete",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PostapimainmoduleshipmentpackagesShipmentPackagesController",
+    "TopicName": "freytz.main_module.shipment_packages_post",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PutapimainmoduleshipmentpackagesidintShipmentPackagesController",
+    "TopicName": "freytz.main_module.shipment_packages_put",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "DeleteapimainmoduleshipmentpackagesidintShipmentPackagesController",
+    "TopicName": "freytz.main_module.shipment_packages_delete",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PatchapimainmoduledriverpaymentsupdatedescriptiondriverpaymentidintDriverPaymentsController",
+    "TopicName": "freytz.main_module.driver_payments.update_description_patch",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PostapimainmoduledriverpaymentsDriverPaymentsController",
+    "TopicName": "freytz.main_module.driver_payments_post",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PutapimainmoduledriverpaymentsidintDriverPaymentsController",
+    "TopicName": "freytz.main_module.driver_payments_put",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "DeleteapimainmoduledriverpaymentsidintDriverPaymentsController",
+    "TopicName": "freytz.main_module.driver_payments_delete",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "DeleteapimainmoduledriverpaymentshipmentsunlinkdriverpaymentshipmentdriverpaymentidintdriverpaymentshipmentshipmentidintDriverPaymentShipmentsController",
+    "TopicName": "freytz.main_module.driver_payment_shipments.unlink_delete",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PostapimainmoduledriverpaymentshipmentsDriverPaymentShipmentsController",
+    "TopicName": "freytz.main_module.driver_payment_shipments_post",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PutapimainmoduledriverpaymentshipmentsdriverpaymentidintshipmentidintDriverPaymentShipmentsController",
+    "TopicName": "freytz.main_module.driver_payment_shipments_put",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "DeleteapimainmoduledriverpaymentshipmentsdriverpaymentidintshipmentidintDriverPaymentShipmentsController",
+    "TopicName": "freytz.main_module.driver_payment_shipments_delete",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PostapimainmodulepricematricesPriceMatricesController",
+    "TopicName": "freytz.main_module.price_matrices_post",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PutapimainmodulepricematricesidintPriceMatricesController",
+    "TopicName": "freytz.main_module.price_matrices_put",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "DeleteapimainmodulepricematricesidintPriceMatricesController",
+    "TopicName": "freytz.main_module.price_matrices_delete",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "DeleteapimainmoduleuserstatesunlinkuserstatestateidintuserstateuseridintUserStatesController",
+    "TopicName": "freytz.main_module.user_states.unlink_delete",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PostapimainmoduleuserstatesUserStatesController",
+    "TopicName": "freytz.main_module.user_states_post",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PutapimainmoduleuserstatesstateidintuseridintUserStatesController",
+    "TopicName": "freytz.main_module.user_states_put",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "DeleteapimainmoduleuserstatesstateidintuseridintUserStatesController",
+    "TopicName": "freytz.main_module.user_states_delete",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PostapimainmodulesminfosSmInfosController",
+    "TopicName": "freytz.main_module.sm_infos_post",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PutapimainmodulesminfosidintSmInfosController",
+    "TopicName": "freytz.main_module.sm_infos_put",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "DeleteapimainmodulesminfosidintSmInfosController",
+    "TopicName": "freytz.main_module.sm_infos_delete",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PostapimainmodulesmotpsSmOtpsController",
+    "TopicName": "freytz.main_module.sm_otps_post",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PutapimainmodulesmotpsidintSmOtpsController",
+    "TopicName": "freytz.main_module.sm_otps_put",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "DeleteapimainmodulesmotpsidintSmOtpsController",
+    "TopicName": "freytz.main_module.sm_otps_delete",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PatchapimainmodulesmotpvalidationsincrementtrysmotpvalidationidintSmOtpValidationsController",
+    "TopicName": "freytz.main_module.sm_otp_validations.increment_try_patch",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PatchapimainmodulesmotpvalidationssetresultsmotpvalidationidintSmOtpValidationsController",
+    "TopicName": "freytz.main_module.sm_otp_validations.set_result_patch",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PatchapimainmodulesmotpvalidationsmarksuccesssmotpvalidationidintSmOtpValidationsController",
+    "TopicName": "freytz.main_module.sm_otp_validations.mark_success_patch",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PatchapimainmodulesmotpvalidationsmarkfailedsmotpvalidationidintSmOtpValidationsController",
+    "TopicName": "freytz.main_module.sm_otp_validations.mark_failed_patch",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PostapimainmodulesmotpvalidationsSmOtpValidationsController",
+    "TopicName": "freytz.main_module.sm_otp_validations_post",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PutapimainmodulesmotpvalidationsidintSmOtpValidationsController",
+    "TopicName": "freytz.main_module.sm_otp_validations_put",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "DeleteapimainmodulesmotpvalidationsidintSmOtpValidationsController",
+    "TopicName": "freytz.main_module.sm_otp_validations_delete",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PostapimainmoduleauditlogsAuditLogsController",
+    "TopicName": "freytz.main_module.audit_logs_post",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PutapimainmoduleauditlogsidguidAuditLogsController",
+    "TopicName": "freytz.main_module.audit_logs_put",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "DeleteapimainmoduleauditlogsidguidAuditLogsController",
+    "TopicName": "freytz.main_module.audit_logs_delete",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PostapiidentitymoduleportalpagedefinitionsupdateportalpagepermissionPortalPageDefinitionsController",
+    "TopicName": "freytz.identity_module.portal_page_definitions.update_portal_page_permission_post",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PostapiidentitymoduleapimethoddefinitionsupdateapipermissionApiMethodDefinitionsController",
+    "TopicName": "freytz.identity_module.api_method_definitions.update_api_permission_post",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PostapiauthregisterAuthenticationsController",
+    "TopicName": "freytz.auth.register_post",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PostapiauthloginAuthenticationsController",
+    "TopicName": "freytz.auth.login_post",
+    "IsActive": true
+  },
+  {
+    "ApiMethodDefinitionKey": "PostapiauthvalidateAuthenticationsController",
+    "TopicName": "freytz.auth.validate_post",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PostapiauthrefreshAuthenticationsController",
+    "TopicName": "freytz.auth.refresh_post",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PostapiauthresendconfirmationemailAuthenticationsController",
+    "TopicName": "freytz.auth.resendconfirmationemail_post",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PostapiauthforgotpasswordAuthenticationsController",
+    "TopicName": "freytz.auth.forgotpassword_post",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PostapiauthresetpasswordAuthenticationsController",
+    "TopicName": "freytz.auth.resetpassword_post",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "Postapiauthmanageuser2faAuthenticationsController",
+    "TopicName": "freytz.auth.manage.user2fa_post",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PostapiauthmanageinfoAuthenticationsController",
+    "TopicName": "freytz.auth.manage.info_post",
+    "IsActive": false
+  }
+]
+}

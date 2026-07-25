@@ -1,0 +1,28 @@
+﻿{
+  "USER_STATES": [
+    {
+      "STATE_ID": 4,
+      "USER_ID": 719
+    },
+    {
+      "STATE_ID": 2,
+      "USER_ID": 86
+    },
+    {
+      "STATE_ID": 1,
+      "USER_ID": 220
+    },
+    {
+      "STATE_ID": 6,
+      "USER_ID": 93
+    },
+    {
+      "STATE_ID": 1,
+      "USER_ID": 250
+    },
+    {
+      "STATE_ID": 5,
+      "USER_ID": 25
+    }
+  ]
+}

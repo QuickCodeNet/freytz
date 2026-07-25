@@ -1,0 +1,64 @@
+﻿{
+  "SHIPMENT_LOCATIONS": [
+    {
+      "SHIPMENT_ID": 2,
+      "LOCATION_ID": 4,
+      "SHIPMENT_ORDER": 247,
+      "LOCATION_STATUS": "Completed",
+      "ACTIVITY_TIME": "2025-10-11T13:58:29.568582Z",
+      "IS_COMPLETED": false,
+      "PACKAGE_ID": 63,
+      "PACKAGE_ACTIVITY": "Return"
+    },
+    {
+      "SHIPMENT_ID": 5,
+      "LOCATION_ID": 4,
+      "SHIPMENT_ORDER": 837,
+      "LOCATION_STATUS": "Skipped",
+      "ACTIVITY_TIME": "2024-04-28T07:16:55.6261938Z",
+      "IS_COMPLETED": false,
+      "PACKAGE_ID": 53,
+      "PACKAGE_ACTIVITY": "Pickup"
+    },
+    {
+      "SHIPMENT_ID": 1,
+      "LOCATION_ID": 5,
+      "SHIPMENT_ORDER": 95,
+      "LOCATION_STATUS": "Skipped",
+      "ACTIVITY_TIME": "2024-03-24T23:24:31.5475728Z",
+      "IS_COMPLETED": false,
+      "PACKAGE_ID": 88,
+      "PACKAGE_ACTIVITY": "Pickup"
+    },
+    {
+      "SHIPMENT_ID": 5,
+      "LOCATION_ID": 2,
+      "SHIPMENT_ORDER": 40,
+      "LOCATION_STATUS": "Completed",
+      "ACTIVITY_TIME": "2024-06-08T03:02:26.6111189Z",
+      "IS_COMPLETED": true,
+      "PACKAGE_ID": 91,
+      "PACKAGE_ACTIVITY": "Pickup"
+    },
+    {
+      "SHIPMENT_ID": 4,
+      "LOCATION_ID": 6,
+      "SHIPMENT_ORDER": 544,
+      "LOCATION_STATUS": "Failed",
+      "ACTIVITY_TIME": "2024-04-06T21:46:33.1496821Z",
+      "IS_COMPLETED": true,
+      "PACKAGE_ID": 10,
+      "PACKAGE_ACTIVITY": "Pickup"
+    },
+    {
+      "SHIPMENT_ID": 6,
+      "LOCATION_ID": 4,
+      "SHIPMENT_ORDER": 290,
+      "LOCATION_STATUS": "Failed",
+      "ACTIVITY_TIME": "2025-02-18T21:11:51.6430474Z",
+      "IS_COMPLETED": false,
+      "PACKAGE_ID": 3,
+      "PACKAGE_ACTIVITY": "Pickup"
+    }
+  ]
+}

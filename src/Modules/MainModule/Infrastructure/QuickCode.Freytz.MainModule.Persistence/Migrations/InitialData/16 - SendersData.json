@@ -1,0 +1,46 @@
+﻿{
+  "SENDERS": [
+    {
+      "CUSTOMER_ID": 3,
+      "NAME": "Preferred Version 1",
+      "GSM": "+1-517-515-2135",
+      "EMAIL": "martha.thompson@inbox.dev",
+      "IS_STORED": true
+    },
+    {
+      "CUSTOMER_ID": 2,
+      "NAME": "Extended Policy 2",
+      "GSM": "+1-828-981-6398",
+      "EMAIL": "emma.palmer@sample.net",
+      "IS_STORED": false
+    },
+    {
+      "CUSTOMER_ID": 3,
+      "NAME": "Classic Source 3",
+      "GSM": "+1-547-735-3090",
+      "EMAIL": "ralph.jackson@contoso.test",
+      "IS_STORED": true
+    },
+    {
+      "CUSTOMER_ID": 5,
+      "NAME": "Public Mode 4",
+      "GSM": "+1-485-554-7265",
+      "EMAIL": "jordan.castro@workmail.test",
+      "IS_STORED": true
+    },
+    {
+      "CUSTOMER_ID": 2,
+      "NAME": "Standard Entity 5",
+      "GSM": "+1-326-569-2721",
+      "EMAIL": "terry.stone@corp.example",
+      "IS_STORED": false
+    },
+    {
+      "CUSTOMER_ID": 6,
+      "NAME": "Shared Tier 6",
+      "GSM": "+1-463-676-7960",
+      "EMAIL": "jeffrey.ellis@quickmail.test",
+      "IS_STORED": true
+    }
+  ]
+}

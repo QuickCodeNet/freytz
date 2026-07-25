@@ -1,0 +1,58 @@
+﻿{
+  "CREDIT_CARDS": [
+    {
+      "CUSTOMER_ID": 6,
+      "CC_OWNER_NAME": "Plus Package 1",
+      "CC_CARD_NO": "Public Permission 1",
+      "CC_VALID_DATE": "Critical Source 1",
+      "CC_CVC": "Required Unit 1",
+      "CC_SECURITY_KEY": "Lite Policy 1",
+      "IS_STORED": false
+    },
+    {
+      "CUSTOMER_ID": 1,
+      "CC_OWNER_NAME": "Plus Brand 2",
+      "CC_CARD_NO": "Premium Access 2",
+      "CC_VALID_DATE": "Secondary Template 2",
+      "CC_CVC": "Mini Group 2",
+      "CC_SECURITY_KEY": "General Style 2",
+      "IS_STORED": false
+    },
+    {
+      "CUSTOMER_ID": 3,
+      "CC_OWNER_NAME": "Default Format 3",
+      "CC_CARD_NO": "International Method 3",
+      "CC_VALID_DATE": "National Style 3",
+      "CC_CVC": "Classic Edition 3",
+      "CC_SECURITY_KEY": "Starter Setting 3",
+      "IS_STORED": false
+    },
+    {
+      "CUSTOMER_ID": 2,
+      "CC_OWNER_NAME": "Compact Source 4",
+      "CC_CARD_NO": "Advanced Area 4",
+      "CC_VALID_DATE": "Secure Permission 4",
+      "CC_CVC": "Limited Template 4",
+      "CC_SECURITY_KEY": "Special Category 4",
+      "IS_STORED": true
+    },
+    {
+      "CUSTOMER_ID": 2,
+      "CC_OWNER_NAME": "Pro Policy 5",
+      "CC_CARD_NO": "Recommended Zone 5",
+      "CC_VALID_DATE": "Verified Theme 5",
+      "CC_CVC": "Secure Edition 5",
+      "CC_SECURITY_KEY": "Priority Plan 5",
+      "IS_STORED": true
+    },
+    {
+      "CUSTOMER_ID": 5,
+      "CC_OWNER_NAME": "Recommended Rule 6",
+      "CC_CARD_NO": "General Lot 6",
+      "CC_VALID_DATE": "Special Role 6",
+      "CC_CVC": "International Rule 6",
+      "CC_SECURITY_KEY": "National Rule 6",
+      "IS_STORED": false
+    }
+  ]
+}

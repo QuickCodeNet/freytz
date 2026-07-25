@@ -1,0 +1,70 @@
+﻿{
+  "LOCATIONS": [
+    {
+      "CUSTOMER_ID": 4,
+      "ADDRESS_TEXT": "431 Spring Parkway",
+      "LATITUDE": 714.10350861,
+      "LONGITUDE": 173.42982636,
+      "SUITE_NUMBER": "Global Record 1",
+      "ADDRESS_DESCRIPTION": "6786 School Terrace",
+      "ALIAS_NAME": "New Theme 1",
+      "PLACE_ID": "External Region 1",
+      "STATE_ID": 5
+    },
+    {
+      "CUSTOMER_ID": 1,
+      "ADDRESS_TEXT": "9730 Glen Court",
+      "LATITUDE": 878.13391670,
+      "LONGITUDE": 486.95937520,
+      "SUITE_NUMBER": "Classic Level 2",
+      "ADDRESS_DESCRIPTION": "3470 Broadway Parkway",
+      "ALIAS_NAME": "Preferred Format 2",
+      "PLACE_ID": "Extended Profile 2",
+      "STATE_ID": 7
+    },
+    {
+      "CUSTOMER_ID": 3,
+      "ADDRESS_TEXT": "9782 Hillside Path",
+      "LATITUDE": 701.46809924,
+      "LONGITUDE": 839.74652544,
+      "SUITE_NUMBER": "Updated Policy 3",
+      "ADDRESS_DESCRIPTION": "7401 Broadway Parkway",
+      "ALIAS_NAME": "International Status 3",
+      "PLACE_ID": "Secure Entity 3",
+      "STATE_ID": 8
+    },
+    {
+      "CUSTOMER_ID": 3,
+      "ADDRESS_TEXT": "3916 Aspen Circle",
+      "LATITUDE": 332.68377619,
+      "LONGITUDE": 288.61997150,
+      "SUITE_NUMBER": "Premium Package 4",
+      "ADDRESS_DESCRIPTION": "4221 Park Road",
+      "ALIAS_NAME": "Enterprise Entity 4",
+      "PLACE_ID": "Professional Group 4",
+      "STATE_ID": 8
+    },
+    {
+      "CUSTOMER_ID": 4,
+      "ADDRESS_TEXT": "5052 Coast Square",
+      "LATITUDE": 451.43566907,
+      "LONGITUDE": 428.50712846,
+      "SUITE_NUMBER": "Verified Status 5",
+      "ADDRESS_DESCRIPTION": "32 Spring Parkway",
+      "ALIAS_NAME": "Pro Profile 5",
+      "PLACE_ID": "Secondary Preference 5",
+      "STATE_ID": 5
+    },
+    {
+      "CUSTOMER_ID": 4,
+      "ADDRESS_TEXT": "6670 Station Boulevard",
+      "LATITUDE": 449.63912640,
+      "LONGITUDE": 382.74251641,
+      "SUITE_NUMBER": "International Group 6",
+      "ADDRESS_DESCRIPTION": "9488 South Way",
+      "ALIAS_NAME": "Modern Entity 6",
+      "PLACE_ID": "Regional State 6",
+      "STATE_ID": 2
+    }
+  ]
+}

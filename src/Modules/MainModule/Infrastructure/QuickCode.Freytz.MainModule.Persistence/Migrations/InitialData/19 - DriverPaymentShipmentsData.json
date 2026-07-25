@@ -1,0 +1,28 @@
+﻿{
+  "DRIVER_PAYMENT_SHIPMENTS": [
+    {
+      "DRIVER_PAYMENT_ID": 2,
+      "SHIPMENT_ID": 3
+    },
+    {
+      "DRIVER_PAYMENT_ID": 4,
+      "SHIPMENT_ID": 2
+    },
+    {
+      "DRIVER_PAYMENT_ID": 5,
+      "SHIPMENT_ID": 3
+    },
+    {
+      "DRIVER_PAYMENT_ID": 3,
+      "SHIPMENT_ID": 5
+    },
+    {
+      "DRIVER_PAYMENT_ID": 1,
+      "SHIPMENT_ID": 6
+    },
+    {
+      "DRIVER_PAYMENT_ID": 4,
+      "SHIPMENT_ID": 1
+    }
+  ]
+}

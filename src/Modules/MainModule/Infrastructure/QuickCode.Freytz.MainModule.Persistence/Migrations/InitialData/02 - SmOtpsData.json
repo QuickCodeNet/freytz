@@ -1,0 +1,60 @@
+﻿{
+  "SM_OTPS": [
+    {
+      "GSM_NUMBER": "+1-627-857-8740",
+      "SMS_CODE": "GEN-0001",
+      "SMS_DATE": "2024-10-16T15:29:37.8424448Z",
+      "SMS_VALID_SECOND": 124,
+      "MESSAGE_SID": "Public Record 1"
+    },
+    {
+      "GSM_NUMBER": "+1-386-495-8165",
+      "SMS_CODE": "REG-0002",
+      "SMS_DATE": "2025-12-05T04:26:15.577487Z",
+      "SMS_VALID_SECOND": 35,
+      "MESSAGE_SID": "Secondary Theme 2"
+    },
+    {
+      "GSM_NUMBER": "+1-549-797-8644",
+      "SMS_CODE": "ENT-0003",
+      "SMS_DATE": "2024-07-14T05:43:34.1232407Z",
+      "SMS_VALID_SECOND": 70,
+      "MESSAGE_SID": "New Preference 3"
+    },
+    {
+      "GSM_NUMBER": "+1-555-606-5352",
+      "SMS_CODE": "ULT-0004",
+      "SMS_DATE": "2024-08-01T13:41:58.3923444Z",
+      "SMS_VALID_SECOND": 942,
+      "MESSAGE_SID": "Professional Package 4"
+    },
+    {
+      "GSM_NUMBER": "+1-614-297-8314",
+      "SMS_CODE": "FEA-0005",
+      "SMS_DATE": "2025-10-24T04:23:47.0061343Z",
+      "SMS_VALID_SECOND": 678,
+      "MESSAGE_SID": "Preferred State 5"
+    },
+    {
+      "GSM_NUMBER": "+1-458-919-4151",
+      "SMS_CODE": "LOC-0006",
+      "SMS_DATE": "2025-01-31T08:44:54.1684765Z",
+      "SMS_VALID_SECOND": 284,
+      "MESSAGE_SID": "Advanced Group 6"
+    },
+    {
+      "GSM_NUMBER": "+1-439-358-2353",
+      "SMS_CODE": "VER-0007",
+      "SMS_DATE": "2025-03-07T06:59:24.0912411Z",
+      "SMS_VALID_SECOND": 412,
+      "MESSAGE_SID": "Custom Method 7"
+    },
+    {
+      "GSM_NUMBER": "+1-899-998-7320",
+      "SMS_CODE": "FEA-0008",
+      "SMS_DATE": "2025-04-12T22:23:56.1884522Z",
+      "SMS_VALID_SECOND": 780,
+      "MESSAGE_SID": "Internal Access 8"
+    }
+  ]
+}

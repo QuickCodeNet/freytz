@@ -1,0 +1,82 @@
+﻿{
+  "PAYMENTS": [
+    {
+      "PAYMENT_TYPE": "Cash",
+      "PAYMENT_STATUS": "Captured",
+      "PAYMENT_TIME": "2025-03-01T15:54:35.6475178Z",
+      "AMOUNT": 4863.77,
+      "TAX_AMOUNT": 3115.21,
+      "TOTAL_AMOUNT": 4655.10,
+      "CREDIT_CARD_ID": 4,
+      "CC_PAYMENT_TIME": "2024-11-26T20:51:20.807679Z",
+      "CC_REF_NO": "PUB-0001",
+      "PAYMENT_REF": "Bank Transfer",
+      "CAPTURED_AMOUNT": 4944.71
+    },
+    {
+      "PAYMENT_TYPE": "Cash",
+      "PAYMENT_STATUS": "Failed",
+      "PAYMENT_TIME": "2025-09-10T05:03:09.9746502Z",
+      "AMOUNT": 2247.83,
+      "TAX_AMOUNT": 2195.45,
+      "TOTAL_AMOUNT": 299.60,
+      "CREDIT_CARD_ID": 2,
+      "CC_PAYMENT_TIME": "2025-12-11T22:59:52.1807421Z",
+      "CC_REF_NO": "NAT-0002",
+      "PAYMENT_REF": "Wire Transfer",
+      "CAPTURED_AMOUNT": 788.95
+    },
+    {
+      "PAYMENT_TYPE": "Wallet",
+      "PAYMENT_STATUS": "Captured",
+      "PAYMENT_TIME": "2024-05-06T10:09:21.2415379Z",
+      "AMOUNT": 2020.09,
+      "TAX_AMOUNT": 1105.31,
+      "TOTAL_AMOUNT": 4274.63,
+      "CREDIT_CARD_ID": 5,
+      "CC_PAYMENT_TIME": "2025-05-04T12:58:36.4489829Z",
+      "CC_REF_NO": "OPT-0003",
+      "PAYMENT_REF": "Bank Transfer",
+      "CAPTURED_AMOUNT": 214.68
+    },
+    {
+      "PAYMENT_TYPE": "BankTransfer",
+      "PAYMENT_STATUS": "Cancelled",
+      "PAYMENT_TIME": "2025-07-06T03:26:30.2217162Z",
+      "AMOUNT": 2181.65,
+      "TAX_AMOUNT": 2987.25,
+      "TOTAL_AMOUNT": 2677.88,
+      "CREDIT_CARD_ID": 4,
+      "CC_PAYMENT_TIME": "2025-03-23T20:45:25.7096251Z",
+      "CC_REF_NO": "ADV-0004",
+      "PAYMENT_REF": "Cash",
+      "CAPTURED_AMOUNT": 3533.16
+    },
+    {
+      "PAYMENT_TYPE": "BankTransfer",
+      "PAYMENT_STATUS": "Captured",
+      "PAYMENT_TIME": "2025-07-16T13:28:44.1521137Z",
+      "AMOUNT": 1455.68,
+      "TAX_AMOUNT": 4401.77,
+      "TOTAL_AMOUNT": 791.74,
+      "CREDIT_CARD_ID": 5,
+      "CC_PAYMENT_TIME": "2024-04-24T14:54:03.3888431Z",
+      "CC_REF_NO": "INT-0005",
+      "PAYMENT_REF": "PayPal",
+      "CAPTURED_AMOUNT": 2273.66
+    },
+    {
+      "PAYMENT_TYPE": "CreditCard",
+      "PAYMENT_STATUS": "Failed",
+      "PAYMENT_TIME": "2024-03-22T07:56:45.2143602Z",
+      "AMOUNT": 3999.91,
+      "TAX_AMOUNT": 1100.12,
+      "TOTAL_AMOUNT": 3554.79,
+      "CREDIT_CARD_ID": 5,
+      "CC_PAYMENT_TIME": "2025-05-20T18:32:33.1507326Z",
+      "CC_REF_NO": "PRO-0006",
+      "PAYMENT_REF": "Credit Card",
+      "CAPTURED_AMOUNT": 3324.44
+    }
+  ]
+}

@@ -1,0 +1,372 @@
+﻿@using QuickCode.Freytz.Portal.Models.MainModule
+@model MainModule.DriverData
+<div class="modal-content portal-entity-modal" data-operation="Update">
+    <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Driver Update Form</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+        </button>
+    </div>
+    <div class="modal-body">
+     <div class="card" IsPageAvailable="true">
+        <div class="card-body">
+            <form bc-label-width-sm="4" bc-horizontal="true" id="formUpdate" action="Update" method="post" class="needs-validation portal-entity-form" bc-validation="true">
+                @Html.AntiForgeryToken()
+                <form-group>
+	<input type="text" bc-label="Id" asp-for="SelectedItem.Id" bc-static="true" />
+</form-group>
+
+<form-group>
+	<input asp-for="SelectedItem.Name" placeholder="Enter your Name" bc-label="Name" type="Text"  bc-required="true" bc-tooltip="Enter your Name" bc-validation="true" />
+</form-group>
+
+<form-group>
+	<input asp-for="SelectedItem.Surname" placeholder="Enter your Surname" bc-label="Surname" type="Text"  bc-required="true" bc-tooltip="Enter your Surname" bc-validation="true" />
+</form-group>
+
+<form-group>
+	<input asp-for="SelectedItem.DriverLicenseId" placeholder="Enter your DriverLicenseId" bc-label="Driver License Id" type="Text"  bc-required="true" bc-tooltip="Enter your DriverLicenseId" bc-validation="true" />
+</form-group>
+
+<form-group>
+	<input asp-for="SelectedItem.Email" placeholder="Enter your Email" bc-label="Email" type="email"  bc-required="true" bc-tooltip="Enter your Email" bc-validation="true" />
+</form-group>
+
+<form-group>
+	<input asp-for="SelectedItem.Password" placeholder="Enter your Password" bc-label="Password" type="Text"  bc-required="true" bc-tooltip="Enter your Password" bc-validation="true" />
+</form-group>
+
+<form-group>
+	<input asp-for="SelectedItem.Gsm" placeholder="Enter your Gsm" bc-label="Gsm" type="tel"  bc-required="true" bc-tooltip="Enter your Gsm" bc-validation="true" />
+</form-group>
+
+<div class="form-group row">                                                      
+    <label class="col-md-4 control-label">Driver Address</label>                    
+    <div class="col-md-8">                                                        
+        <div class="input-group">                                                 
+            @Html.TextAreaFor(m => m.SelectedItem.DriverAddress,                      
+            new { rows = "20", style = "height:200px;",              
+            placeholder = Html.DisplayNameFor(m => m.SelectedItem.DriverAddress),     
+            @class = "form-control input-lg" })                   
+        </div>                                                                      
+    </div>                                                                          
+</div>                                                                              
+
+<form-group>
+	<input asp-for="SelectedItem.AddressState" placeholder="Enter your AddressState" bc-label="Address State" type="Text"  bc-required="true" bc-tooltip="Enter your AddressState" bc-validation="true" />
+</form-group>
+
+<form-group>
+	<select bc-label="State Id" class="form-select searchable-select" asp-for="SelectedItem.StateId" asp-items="@Model.GetComboBoxList("States", Model.SelectedItem.StateId)"  data-placeholder="Search for StateId..."></select>
+</form-group>
+
+<form-group>
+	<select bc-label="Driver Status" class="form-select searchable-select" asp-for="SelectedItem.DriverStatus" asp-items="Html.GetEnumSelectList<MainModuleApi.DriverStatus>()" data-placeholder="Search for DriverStatus..."></select>
+</form-group>
+
+<form-group>
+	<select bc-label="Vehicle Type Id" class="form-select searchable-select" asp-for="SelectedItem.VehicleTypeId" asp-items="@Model.GetComboBoxList("VehicleTypes", Model.SelectedItem.VehicleTypeId)"  data-placeholder="Search for VehicleTypeId..."></select>
+</form-group>
+
+<form-group>
+    <label class="col-sm-4 col-form-label">Photo</label>
+    <span class="col-sm-8">
+         <a href="@(Model.SelectedItem.Photo == null || Model.SelectedItem.Photo.Length == 0 ? "/images/no_image.png" : Model.SelectedItem.Photo)" data-toggle="lightbox" data-type="image" >
+             <img id = 'SelectedItem_PhotoImg' class="lazyload" src="/images/loading.svg" data-src="@(Model.SelectedItem.Photo == null || Model.SelectedItem.Photo.Length == 0 ? "/images/no_image.png" : Model.SelectedItem.Photo)" style="height:auto;  width:auto; max-height: 250px; max-width: 350px; margin-bottom: -10px; margin-top: 0px; display: block;margin-right: auto;" bc-thumbnail="true" bc-round="true" />
+         </a>
+    </span>
+ </form-group>
+ <form-group>
+     <input asp-for="SelectedItem.Photo" placeholder="Enter your SelectedItem.Photo" class="opButtonImageUpload" type="file"   bc-label=" " bc-tooltip="Enter your SelectedItem.Photo"  />
+</form-group>
+
+
+<form-group>
+    <label class="col-sm-4 col-form-label">Driver License Photo</label>
+    <span class="col-sm-8">
+         <a href="@(Model.SelectedItem.DriverLicensePhoto == null || Model.SelectedItem.DriverLicensePhoto.Length == 0 ? "/images/no_image.png" : Model.SelectedItem.DriverLicensePhoto)" data-toggle="lightbox" data-type="image" >
+             <img id = 'SelectedItem_DriverLicensePhotoImg' class="lazyload" src="/images/loading.svg" data-src="@(Model.SelectedItem.DriverLicensePhoto == null || Model.SelectedItem.DriverLicensePhoto.Length == 0 ? "/images/no_image.png" : Model.SelectedItem.DriverLicensePhoto)" style="height:auto;  width:auto; max-height: 250px; max-width: 350px; margin-bottom: -10px; margin-top: 0px; display: block;margin-right: auto;" bc-thumbnail="true" bc-round="true" />
+         </a>
+    </span>
+ </form-group>
+ <form-group>
+     <input asp-for="SelectedItem.DriverLicensePhoto" placeholder="Enter your SelectedItem.DriverLicensePhoto" class="opButtonImageUpload" type="file"   bc-label=" " bc-tooltip="Enter your SelectedItem.DriverLicensePhoto"  />
+</form-group>
+
+
+<form-group>
+	<input asp-for="SelectedItem.VehiclePlate" placeholder="Enter your VehiclePlate" bc-label="Vehicle Plate" type="Text"  bc-required="true" bc-tooltip="Enter your VehiclePlate" bc-validation="true" />
+</form-group>
+
+<form-group>
+	<input asp-for="SelectedItem.VehicleBrand" placeholder="Enter your VehicleBrand" bc-label="Vehicle Brand" type="Text"  bc-required="true" bc-tooltip="Enter your VehicleBrand" bc-validation="true" />
+</form-group>
+
+<form-group>
+    <label class="col-sm-4 col-form-label">Vehicle Insurance</label>
+    <span class="col-sm-8">
+         <a href="@(Model.SelectedItem.VehicleInsurance == null || Model.SelectedItem.VehicleInsurance.Length == 0 ? "/images/no_image.png" : Model.SelectedItem.VehicleInsurance)" data-toggle="lightbox" data-type="image" >
+             <img id = 'SelectedItem_VehicleInsuranceImg' class="lazyload" src="/images/loading.svg" data-src="@(Model.SelectedItem.VehicleInsurance == null || Model.SelectedItem.VehicleInsurance.Length == 0 ? "/images/no_image.png" : Model.SelectedItem.VehicleInsurance)" style="height:auto;  width:auto; max-height: 250px; max-width: 350px; margin-bottom: -10px; margin-top: 0px; display: block;margin-right: auto;" bc-thumbnail="true" bc-round="true" />
+         </a>
+    </span>
+ </form-group>
+ <form-group>
+     <input asp-for="SelectedItem.VehicleInsurance" placeholder="Enter your SelectedItem.VehicleInsurance" class="opButtonImageUpload" type="file"   bc-label=" " bc-tooltip="Enter your SelectedItem.VehicleInsurance"  />
+</form-group>
+
+
+<form-group>
+    <label class="col-sm-4 col-form-label">Vehicle Registration</label>
+    <span class="col-sm-8">
+         <a href="@(Model.SelectedItem.VehicleRegistration == null || Model.SelectedItem.VehicleRegistration.Length == 0 ? "/images/no_image.png" : Model.SelectedItem.VehicleRegistration)" data-toggle="lightbox" data-type="image" >
+             <img id = 'SelectedItem_VehicleRegistrationImg' class="lazyload" src="/images/loading.svg" data-src="@(Model.SelectedItem.VehicleRegistration == null || Model.SelectedItem.VehicleRegistration.Length == 0 ? "/images/no_image.png" : Model.SelectedItem.VehicleRegistration)" style="height:auto;  width:auto; max-height: 250px; max-width: 350px; margin-bottom: -10px; margin-top: 0px; display: block;margin-right: auto;" bc-thumbnail="true" bc-round="true" />
+         </a>
+    </span>
+ </form-group>
+ <form-group>
+     <input asp-for="SelectedItem.VehicleRegistration" placeholder="Enter your SelectedItem.VehicleRegistration" class="opButtonImageUpload" type="file"   bc-label=" " bc-tooltip="Enter your SelectedItem.VehicleRegistration"  />
+</form-group>
+
+
+<form-group>
+	<input asp-for="SelectedItem.SocialSecurityNumber" placeholder="Enter your SocialSecurityNumber" bc-label="Social Security Number" type="Text"  bc-required="true" bc-tooltip="Enter your SocialSecurityNumber" bc-validation="true" />
+</form-group>
+
+<form-group>
+	<select bc-label="Device Type" class="form-select searchable-select" asp-for="SelectedItem.DeviceType" asp-items="Html.GetEnumSelectList<MainModuleApi.DeviceType>()" data-placeholder="Search for DeviceType..."></select>
+</form-group>
+
+<form-group>
+	<input asp-for="SelectedItem.DeviceId" placeholder="Enter your DeviceId" bc-label="Device Id" type="Text"  bc-required="true" bc-tooltip="Enter your DeviceId" bc-validation="true" />
+</form-group>
+
+<form-group>
+	<input asp-for="SelectedItem.FirebaseId" placeholder="Enter your FirebaseId" bc-label="Firebase Id" type="Text"  bc-required="true" bc-tooltip="Enter your FirebaseId" bc-validation="true" />
+</form-group>
+
+<form-group>
+	<input asp-for="SelectedItem.LastLocationId" placeholder="Enter your LastLocationId" bc-label="Last Location Id" type="Text"  bc-required="true" bc-tooltip="Enter your LastLocationId" bc-validation="true" />
+</form-group>
+
+<form-group>
+	<select bc-label="Status" class="form-select searchable-select" asp-for="SelectedItem.Status" asp-items="Html.GetEnumSelectList<MainModuleApi.SystemStatus>()" data-placeholder="Search for Status..."></select>
+</form-group>
+
+<form-group>
+	<input asp-for="SelectedItem.MaxDistance" placeholder="Enter your MaxDistance" bc-label="Max Distance" type="Text"  bc-required="true" bc-tooltip="Enter your MaxDistance" bc-validation="true" />
+</form-group>
+
+<form-group>
+	<input asp-for="SelectedItem.PaymentAccountInfo" placeholder="Enter your PaymentAccountInfo" bc-label="Payment Account Info" type="Text"  bc-required="true" bc-tooltip="Enter your PaymentAccountInfo" bc-validation="true" />
+</form-group>
+
+
+                <div id="actionResultDiv">
+                    <h5 id="actionResultMessage">
+                        Text Result
+                    </h5>
+                </div>
+                <div class="portal-entity-footer">
+                    <div class="portal-entity-actions">
+                 <button type="button" data-bs-dismiss="modal" class="btn btn-portal-secondary" bc-color="Secondary">Cancel</button>
+<button type="reset" class="btn btn-portal-ghost" bc-outline="true" bc-color="Info">Clear</button>
+<button type="submit" formmethod="post" formaction="/MainModuleDrivers/Update" class="btn btn-portal-primary" bc-color="Primary">Update</button>
+
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="card" IsPageAvailable="false">
+        @await Html.PartialAsync("_NotAuthorized")
+    </div>
+</div>
+</div>
+<script src="/js/bootstrap-toggle.js"></script>
+<script>
+        var fileData = {};
+        $('.textarea-editor').summernote(
+        {
+            height: 200
+        });
+       
+        window.addEventListener('load', (event) => {
+            init();
+        });
+
+        $("img.lazyload").lazyload();
+
+        function checkBoxChanged(cbox) {
+            console.log('Changed ' + cbox.id);
+            console.log('Changed ' + cbox.checked);
+            var itemId = cbox.id.replace("cbox_", "").replace(".", "_");
+            $("#" + itemId).val(cbox.checked);
+        }
+
+        $('.opButtonImageUpload').change(function (e) {
+            var formData = new FormData($("#formUpdate")[0]);
+            var reader = new FileReader();
+            var imageId = '#' + this.id + 'Img';
+            var realImageId = '' + this.id;
+            imageId = imageId.replace('.', '_');
+            
+            reader.onload = function (event) {
+              var image = new Image();
+          
+              image.onload=function(){
+                  var imageMaxSize=1200;
+                  var fileType = this.src.split(';')[0].split(':')[1];
+                  
+                  if(fileType.split('/').length>1 && fileType.split('/')[1] != 'gif'){
+                      var canvas = document.createElement('canvas'),
+                          max_size = imageMaxSize,// TODO : pull max size from a site config
+                          width = image.width,
+                          height = image.height;
+                      if (width > height) {
+                          if (width > max_size) {
+                              height *= max_size / width;
+                              width = max_size;
+                          }
+                      } else {
+                          if (height > max_size) {
+                              width *= max_size / height;
+                              height = max_size;
+                          }
+                      }
+                      canvas.width = width;
+                      canvas.height = height;
+    
+                      canvas.getContext('2d').drawImage(image, 0, 0, width, height);
+                      $(imageId).attr("src", canvas.toDataURL());
+                      var resizedImage = createBlob(canvas.toDataURL());
+                      var fileType = this.src.split(';')[0].split(':')[1];
+                      var options = {
+                            maxSizeMB: 1,
+                            maxWidthOrHeight: imageMaxSize,
+                            useWebWorker: true,
+                            fileType: fileType,
+                            initialQuality: 0.5
+                      }
+                  
+                      imageCompression(resizedImage, options)
+                            .then(function (compressedFile) {
+                              fileData[realImageId] =  compressedFile;
+                            })
+                            .catch(function (error) {
+                              console.log(error.message);
+                            });
+                    }
+                  
+              } 
+
+              image.src=event.target.result;
+            };
+
+            reader.readAsDataURL(this.files[0]);
+        });
+
+        function createBlob(dataURL) {
+          var BASE64_MARKER = ';base64,';
+          if (dataURL.indexOf(BASE64_MARKER) == -1) {
+            var parts = dataURL.split(',');
+            var contentType = parts[0].split(':')[1];
+            var raw = decodeURIComponent(parts[1]);
+            return new Blob([raw], { type: contentType });
+          }
+          
+          var parts = dataURL.split(BASE64_MARKER);
+          var contentType = parts[0].split(':')[1];
+          var raw = window.atob(parts[1]);
+          var rawLength = raw.length;
+
+          var uInt8Array = new Uint8Array(rawLength);
+
+          for (var i = 0; i < rawLength; ++i) {
+            uInt8Array[i] = raw.charCodeAt(i);
+          }
+
+          return new Blob([uInt8Array], { type: contentType });
+        }
+
+        var forms = document.getElementsByClassName('needs-validation');
+        $("#formUpdate").on('submit', function (e) {
+            $("#actionResultDiv").hide();
+            if ($("#formUpdate").valid()) {
+                var formData = new FormData(this);
+                e.preventDefault(); // prevent the form's normal submission
+                $("#actionResultDiv").show();
+                $("#actionResultMessage").css('color', 'black');
+                $("#actionResultMessage").text("Please wait...");
+                Object.keys(fileData).forEach(function(fileKey) {
+                    formData.set(fileKey, fileData[fileKey]);
+                });
+                
+                addYamlEditorsToFormData(formData);
+    
+                let button = document.querySelector('button[type="submit"]');
+                let formActionUrl = button.getAttribute('formaction');   
+                
+                $.ajax({
+                    url: formActionUrl,
+                    type: "POST",
+                    dataType: "JSON",
+                    data: formData,
+                    processData: false,
+                    contentType: false,
+                    success: function (response, status)
+                    {
+                        $("#actionResultDiv").show();
+                        $("#actionResultMessage").css('color', 'green');
+                        $("#actionResultMessage").text('Successfully Completed');
+
+                        var operation = ($('#formUpdate').closest('.portal-entity-modal').attr('data-operation')
+                            || 'Update'
+                            || '').toString();
+                        var successMessage = (typeof getPortalCrudSuccessMessage === 'function')
+                            ? getPortalCrudSuccessMessage(operation)
+                            : 'Operation completed successfully.';
+                        if (typeof queuePortalToast === 'function') {
+                            queuePortalToast(successMessage, 'success');
+                        }
+
+                        document.location.reload(true);
+                        setTimeout(function () { $('#itemDetailsModal').modal('toggle'); }, 1100);
+                    },
+                    error: function (xhr, desc, error)
+                    {
+                        $("#actionResultMessage").css('color', 'red');
+                        if (xhr.responseJSON && xhr.responseJSON.redirectUrl) {
+                            window.location = xhr.responseJSON.redirectUrl;
+                            return;
+                        }
+                        var msg = (xhr.responseJSON && xhr.responseJSON.message)
+                            ? xhr.responseJSON.message
+                            : (error || desc || 'Request failed');
+                        $("#actionResultMessage").text(msg);
+                        if (typeof showPortalToast === 'function') {
+                            showPortalToast(msg, 'error');
+                        }
+                    }
+                });  
+            }
+        })
+
+        var validation = Array.prototype.filter.call(forms, function (form) {
+            form.addEventListener('submit', function (event) {
+
+                if (form.checkValidity() === false) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                }
+                form.classList.add('was-validated');
+            }, false);
+        });
+
+        setTimeout(function () {
+            var validation = Array.prototype.filter.call(forms, function (form) {
+                $("#actionResultDiv").hide();
+                form.classList.add('was-validated');
+            });
+        }, 50);
+        
+        initSearchableSelects(document.getElementById('itemDetailsContainer') || document);
+</script>

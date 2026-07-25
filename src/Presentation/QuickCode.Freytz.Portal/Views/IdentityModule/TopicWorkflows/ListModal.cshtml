@@ -1,0 +1,127 @@
+@using QuickCode.Freytz.Portal.Models.IdentityModule
+@model IdentityModule.TopicWorkflowData
+@{
+    string title =  "IdentityModule.TopicWorkflows List".SplitCamelCaseToString();
+    string headerKey = "Header";
+    TempData["Title"] = title;
+    int startIndex = ((Model.CurrentPage - 1) * Model.PageSize) + 1;
+    int endIndex = ((Model.CurrentPage ) * Model.PageSize);
+    if (endIndex > Model.NumberOfRecord) {
+        endIndex = Model.NumberOfRecord;
+    }
+
+    var pagerData = new PagerData() { CurrentPage = Model.CurrentPage, NumberOfRecord = Model.NumberOfRecord, PageSize = Model.PageSize, TotalPage = Model.TotalPage, StartIndex = startIndex, EndIndex = endIndex } ;
+}
+<div class="modal-content">
+    <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Kafka Events - Topic Workflows</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    </div>
+    <div class="modal-body">
+        <div class="card" IsPageAvailable="true">
+            <div class="card-body">
+                <div class="container-fluid" IsPageAvailable="true">
+                    <form method="post" id="formList">
+                        @Html.AntiForgeryToken()
+                        <div class="card text shadow mb-4">
+            
+                            <div class="card-body">
+                                <h1 class="card-title">@title</h1>
+                                <p class="card-text">You can manage your IdentityModule.TopicWorkflows table.</p>
+                                <vc:insert-button controller-name="" action-name=""></vc:insert-button>
+                                <hr class="col-xs-12">
+                                @if (Model.List.Count == 0)
+                                {
+                                    <div class="alert alert-danger" role="alert">
+                                        No Data available in IdentityModule.TopicWorkflows table.
+                                    </div>
+                                }
+                                else
+                                {
+                                    <vc:pager pager-data=pagerData></vc:pager>
+                                    <table bc-border="Bordered" bc-striped="true" bc-hover="true" class="table-responsive" bc-theme="Light">
+                                        <thead bc-theme="Dark">
+                                        <tr>
+                                            <vc:operation-buttons item-id=@headerKey controller-name="" action-name=""></vc:operation-buttons>
+                                            <th style="min-width: 50px;">Id</th>
+                                            <th>Kafka Event Id</th>
+                                            <th style="width: 95%;">Workflow Content</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        @foreach (var item in Model.List)
+                                        {
+                                            <tr>
+                                                <vc:operation-buttons item-id=@item.GetKey() controller-name="" action-name=""></vc:operation-buttons>
+                                                <td>@item.Id</td>
+                                                <td>@string.Format("{0}", Model.ComboList["KafkaEvents"].GetListItemByItemId(item.KafkaEventsTopicName))</td>
+                                                <td>
+                                                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                                        <li class="nav-item" role="presentation">
+                                                            <a class="nav-link active" id="yaml-tab" data-bs-toggle="tab" href="#yaml" role="tab" aria-controls="home" aria-selected="true">Workflow Yaml</a>
+                                                        </li>
+                                                        <li class="nav-item" role="presentation">
+                                                            <a class="nav-link" id="uml-diagram-tab" data-bs-toggle="tab" href="#uml-diagram" role="tab" aria-controls="profile" aria-selected="false">Uml Diagram</a>
+                                                        </li>
+                                                        <li class="nav-item" role="presentation">
+                                                            <a class="nav-link" id="uml-tab" data-bs-toggle="tab" href="#uml" role="tab" aria-controls="profile" aria-selected="false">Uml Code</a>
+                                                        </li>
+                                                    </ul>
+                                                    <div class="tab-content" id="workflowTabContent">
+                                                        <div class="tab-pane fade show active" id="yaml" role="tabpanel" aria-labelledby="yaml-tab">
+                                                            <div id="yamlEditorRO_WorkflowContent_@item.Id" class="yamleditor-class border" style="width:100%; height: 700px; overflow: hidden; white-space: pre-wrap;">@item.WorkflowContent</div>
+                                                        </div>
+                                                        <div class="tab-pane fade" id="uml-diagram" role="tabpanel" aria-labelledby="uml-diagram-tab">
+                                                            <img src="" data-src="@string.Format("/IdentityModuleTopicWorkflows/GetUmlDiagram/{0}", item.Id)" class="lazyload preview-image img-fluid" alt="UML Diagram"
+                                                                 style="height: 600px; overflow: auto; background: url('/images/loading.svg') center center no-repeat; background-size: 100px 100px;"  />
+                                                        </div>
+                                                        <div class="tab-pane fade" id="uml" role="tabpanel" aria-labelledby="uml-tab">
+                                                            <div id="umlEditorRO_WorkflowContent_@item.Id" class="umleditor-class border uml-content" data-item-id="@item.Id" style="width:100%; height: 600px; overflow: auto;"></div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        }
+                                        </tbody>
+                                    </table>
+                                }
+                            </div>
+                            @if (Model.List.Count > 0)
+                            {
+                                <div class="card-footer text-muted">
+                                    <vc:pager pager-data=pagerData></vc:pager>
+                                </div>
+                            }
+                        </div>
+                        <input type="hidden" asp-for="CurrentPage" />
+                        <input type="hidden" asp-for="SelectedKey" />
+                    </form>
+                </div>
+                <div class="container-fluid" IsPageAvailable="false">
+                    @await Html.PartialAsync("_NotAuthorized")
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="/js/bootstrap-toggle.js"></script>
+<script src="/js/site.js"></script>
+<script type="text/javascript">
+    $("img.lazyload").lazyload();
+    $('.uml-content').each(function() {
+        var itemId = $(this).data('item-id');
+        var elementId = this.id;
+        $.ajax({
+            url: '/IdentityModuleTopicWorkflows/GetUml/' + itemId,
+            type: 'GET',
+            success: function(data) {
+                let editor = ace.edit(elementId);
+                editor.session.setValue(data);
+            },
+            error: function() {
+                targetDiv.text('UML içeriği yüklenirken bir hata oluştu.');
+            }
+        });
+    });
+</script>
+

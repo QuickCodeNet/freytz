@@ -1,0 +1,1569 @@
+{
+  "schemaSnapshotVersion": 1,
+  "moduleName": "MainModule",
+  "databaseProvider": "mssql",
+  "generatedAtUtc": "2026-07-25T19:30:46.2916722+00:00",
+  "tables": [
+    {
+      "schema": "dbo",
+      "physicalTableName": "AUDIT_LOGS",
+      "entityClassStem": "AuditLog",
+      "columns": [
+        {
+          "name": "ACTION",
+          "sqlType": "nvarchar(50)",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "CHANGED_COLUMNS",
+          "sqlType": "nvarchar(max)",
+          "isNullable": true,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "CHANGE_SUMMARY",
+          "sqlType": "nvarchar(max)",
+          "isNullable": true,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "CORRELATION_ID",
+          "sqlType": "nvarchar(100)",
+          "isNullable": true,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "DURATION_MS",
+          "sqlType": "int",
+          "isNullable": true,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "ENTITY_ID",
+          "sqlType": "nvarchar(250)",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "ENTITY_NAME",
+          "sqlType": "nvarchar(250)",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "ERROR_MESSAGE",
+          "sqlType": "nvarchar(max)",
+          "isNullable": true,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "HASH",
+          "sqlType": "nvarchar(128)",
+          "isNullable": true,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "ID",
+          "sqlType": "uniqueidentifier",
+          "isNullable": false,
+          "isPrimaryKey": true,
+          "isIdentity": false
+        },
+        {
+          "name": "IP_ADDRESS",
+          "sqlType": "nvarchar(50)",
+          "isNullable": true,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "IS_CHANGED",
+          "sqlType": "bit",
+          "isNullable": true,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "IS_SUCCESS",
+          "sqlType": "bit",
+          "isNullable": true,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "NEW_VALUES",
+          "sqlType": "nvarchar(max)",
+          "isNullable": true,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "OLD_VALUES",
+          "sqlType": "nvarchar(max)",
+          "isNullable": true,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "REQUEST_MODULE",
+          "sqlType": "nvarchar(150)",
+          "isNullable": true,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "REQUEST_PATH",
+          "sqlType": "nvarchar(500)",
+          "isNullable": true,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "STATUS_CODE",
+          "sqlType": "int",
+          "isNullable": true,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "TIMESTAMP",
+          "sqlType": "datetime2(7)",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "USER_AGENT",
+          "sqlType": "nvarchar(500)",
+          "isNullable": true,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "USER_GROUP",
+          "sqlType": "nvarchar(250)",
+          "isNullable": true,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "USER_ID",
+          "sqlType": "nvarchar(250)",
+          "isNullable": true,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "USER_NAME",
+          "sqlType": "nvarchar(250)",
+          "isNullable": true,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        }
+      ]
+    },
+    {
+      "schema": "dbo",
+      "physicalTableName": "CREDIT_CARDS",
+      "entityClassStem": "CreditCard",
+      "columns": [
+        {
+          "name": "CC_CARD_NO",
+          "sqlType": "nvarchar(1000)",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "CC_CVC",
+          "sqlType": "nvarchar(1000)",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "CC_OWNER_NAME",
+          "sqlType": "nvarchar(250)",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "CC_SECURITY_KEY",
+          "sqlType": "nvarchar(1000)",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "CC_VALID_DATE",
+          "sqlType": "nvarchar(1000)",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "CUSTOMER_ID",
+          "sqlType": "int",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "ID",
+          "sqlType": "int",
+          "isNullable": false,
+          "isPrimaryKey": true,
+          "isIdentity": true
+        },
+        {
+          "name": "IS_STORED",
+          "sqlType": "bit",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        }
+      ]
+    },
+    {
+      "schema": "dbo",
+      "physicalTableName": "CUSTOMERS",
+      "entityClassStem": "Customer",
+      "columns": [
+        {
+          "name": "ADDRESS",
+          "sqlType": "nvarchar(max)",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "COMPANY_NAME",
+          "sqlType": "nvarchar(1000)",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "DEVICE_ID",
+          "sqlType": "nvarchar(1000)",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "DEVICE_TYPE",
+          "sqlType": "nvarchar(50)",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "EMAIL",
+          "sqlType": "nvarchar(500)",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "FIREBASE_ID",
+          "sqlType": "nvarchar(1000)",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "GSM",
+          "sqlType": "nvarchar(50)",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "ID",
+          "sqlType": "int",
+          "isNullable": false,
+          "isPrimaryKey": true,
+          "isIdentity": true
+        },
+        {
+          "name": "NAME",
+          "sqlType": "nvarchar(250)",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "PASSWORD",
+          "sqlType": "nvarchar(1000)",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "PHOTO",
+          "sqlType": "nvarchar(500)",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "PROFILE_ID",
+          "sqlType": "nvarchar(250)",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "STATE_ID",
+          "sqlType": "int",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "STATUS",
+          "sqlType": "nvarchar(50)",
+          "isNullable": true,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "SURNAME",
+          "sqlType": "nvarchar(250)",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        }
+      ]
+    },
+    {
+      "schema": "dbo",
+      "physicalTableName": "CUSTOMER_LOGIN_ATTEMPTS",
+      "entityClassStem": "CustomerLoginAttempt",
+      "columns": [
+        {
+          "name": "ATTEMPT_RESULT",
+          "sqlType": "nvarchar(50)",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "CLIENT_IP",
+          "sqlType": "nvarchar(50)",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "CUSTOMER_ID",
+          "sqlType": "int",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "ID",
+          "sqlType": "int",
+          "isNullable": false,
+          "isPrimaryKey": true,
+          "isIdentity": true
+        },
+        {
+          "name": "LOGIN_DATE",
+          "sqlType": "datetime2(7)",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        }
+      ]
+    },
+    {
+      "schema": "dbo",
+      "physicalTableName": "DRIVERS",
+      "entityClassStem": "Driver",
+      "columns": [
+        {
+          "name": "ADDRESS_STATE",
+          "sqlType": "nvarchar(50)",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "DEVICE_ID",
+          "sqlType": "nvarchar(1000)",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "DEVICE_TYPE",
+          "sqlType": "nvarchar(50)",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "DRIVER_ADDRESS",
+          "sqlType": "nvarchar(max)",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "DRIVER_LICENSE_ID",
+          "sqlType": "nvarchar(250)",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "DRIVER_LICENSE_PHOTO",
+          "sqlType": "nvarchar(500)",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "DRIVER_STATUS",
+          "sqlType": "nvarchar(50)",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "EMAIL",
+          "sqlType": "nvarchar(500)",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "FIREBASE_ID",
+          "sqlType": "nvarchar(1000)",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "GSM",
+          "sqlType": "nvarchar(50)",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "ID",
+          "sqlType": "int",
+          "isNullable": false,
+          "isPrimaryKey": true,
+          "isIdentity": true
+        },
+        {
+          "name": "LAST_LOCATION_ID",
+          "sqlType": "int",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "MAX_DISTANCE",
+          "sqlType": "int",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "NAME",
+          "sqlType": "nvarchar(250)",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "PASSWORD",
+          "sqlType": "nvarchar(1000)",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "PAYMENT_ACCOUNT_INFO",
+          "sqlType": "nvarchar(1000)",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "PHOTO",
+          "sqlType": "nvarchar(500)",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "SOCIAL_SECURITY_NUMBER",
+          "sqlType": "nvarchar(50)",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "STATE_ID",
+          "sqlType": "int",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "STATUS",
+          "sqlType": "nvarchar(50)",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "SURNAME",
+          "sqlType": "nvarchar(250)",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "VEHICLE_BRAND",
+          "sqlType": "nvarchar(250)",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "VEHICLE_INSURANCE",
+          "sqlType": "nvarchar(500)",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "VEHICLE_PLATE",
+          "sqlType": "nvarchar(50)",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "VEHICLE_REGISTRATION",
+          "sqlType": "nvarchar(500)",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "VEHICLE_TYPE_ID",
+          "sqlType": "int",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        }
+      ]
+    },
+    {
+      "schema": "dbo",
+      "physicalTableName": "DRIVER_COMMISSIONS",
+      "entityClassStem": "DriverCommission",
+      "columns": [
+        {
+          "name": "COMMISSION",
+          "sqlType": "decimal(18,2)",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "END_DATE",
+          "sqlType": "datetime2(7)",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "ID",
+          "sqlType": "int",
+          "isNullable": false,
+          "isPrimaryKey": true,
+          "isIdentity": true
+        },
+        {
+          "name": "START_DATE",
+          "sqlType": "datetime2(7)",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        }
+      ]
+    },
+    {
+      "schema": "dbo",
+      "physicalTableName": "DRIVER_LOCATIONS",
+      "entityClassStem": "DriverLocation",
+      "columns": [
+        {
+          "name": "ACCURACY",
+          "sqlType": "decimal(18,8)",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "BEARING",
+          "sqlType": "decimal(18,8)",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "DRIVER_ID",
+          "sqlType": "int",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "DRIVER_LOCATION_DATE",
+          "sqlType": "datetime2(7)",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "ID",
+          "sqlType": "int",
+          "isNullable": false,
+          "isPrimaryKey": true,
+          "isIdentity": true
+        },
+        {
+          "name": "LATITUDE",
+          "sqlType": "decimal(18,8)",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "LOCATION_DATE",
+          "sqlType": "datetime2(7)",
+          "isNullable": true,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "LONGITUDE",
+          "sqlType": "decimal(18,8)",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "SPEED",
+          "sqlType": "decimal(18,8)",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        }
+      ]
+    },
+    {
+      "schema": "dbo",
+      "physicalTableName": "DRIVER_PAYMENTS",
+      "entityClassStem": "DriverPayment",
+      "columns": [
+        {
+          "name": "DRIVER_ID",
+          "sqlType": "int",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "ID",
+          "sqlType": "int",
+          "isNullable": false,
+          "isPrimaryKey": true,
+          "isIdentity": true
+        },
+        {
+          "name": "PAYMENT_ACCOUNT",
+          "sqlType": "nvarchar(1000)",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "PAYMENT_AMOUNT",
+          "sqlType": "decimal(18,2)",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "PAYMENT_DATE",
+          "sqlType": "datetime2(7)",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "PAYMENT_DESCRIPTION",
+          "sqlType": "nvarchar(max)",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "USER_ID",
+          "sqlType": "int",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        }
+      ]
+    },
+    {
+      "schema": "dbo",
+      "physicalTableName": "DRIVER_PAYMENT_SHIPMENTS",
+      "entityClassStem": "DriverPaymentShipment",
+      "columns": [
+        {
+          "name": "DRIVER_PAYMENT_ID",
+          "sqlType": "int",
+          "isNullable": false,
+          "isPrimaryKey": true,
+          "isIdentity": false
+        },
+        {
+          "name": "SHIPMENT_ID",
+          "sqlType": "int",
+          "isNullable": false,
+          "isPrimaryKey": true,
+          "isIdentity": false
+        }
+      ]
+    },
+    {
+      "schema": "dbo",
+      "physicalTableName": "LOCATIONS",
+      "entityClassStem": "Location",
+      "columns": [
+        {
+          "name": "ADDRESS_DESCRIPTION",
+          "sqlType": "nvarchar(max)",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "ADDRESS_TEXT",
+          "sqlType": "nvarchar(max)",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "ALIAS_NAME",
+          "sqlType": "nvarchar(250)",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "CUSTOMER_ID",
+          "sqlType": "int",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "ID",
+          "sqlType": "int",
+          "isNullable": false,
+          "isPrimaryKey": true,
+          "isIdentity": true
+        },
+        {
+          "name": "LATITUDE",
+          "sqlType": "decimal(18,8)",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "LONGITUDE",
+          "sqlType": "decimal(18,8)",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "PLACE_ID",
+          "sqlType": "nvarchar(250)",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "STATE_ID",
+          "sqlType": "int",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "SUITE_NUMBER",
+          "sqlType": "nvarchar(50)",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        }
+      ]
+    },
+    {
+      "schema": "dbo",
+      "physicalTableName": "PAYMENTS",
+      "entityClassStem": "Payment",
+      "columns": [
+        {
+          "name": "AMOUNT",
+          "sqlType": "decimal(18,2)",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "CAPTURED_AMOUNT",
+          "sqlType": "decimal(18,2)",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "CC_PAYMENT_TIME",
+          "sqlType": "datetime2(7)",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "CC_REF_NO",
+          "sqlType": "nvarchar(250)",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "CREDIT_CARD_ID",
+          "sqlType": "int",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "ID",
+          "sqlType": "int",
+          "isNullable": false,
+          "isPrimaryKey": true,
+          "isIdentity": true
+        },
+        {
+          "name": "PAYMENT_REF",
+          "sqlType": "nvarchar(250)",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "PAYMENT_STATUS",
+          "sqlType": "nvarchar(50)",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "PAYMENT_TIME",
+          "sqlType": "datetime2(7)",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "PAYMENT_TYPE",
+          "sqlType": "nvarchar(50)",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "TAX_AMOUNT",
+          "sqlType": "decimal(18,2)",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "TOTAL_AMOUNT",
+          "sqlType": "decimal(18,2)",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        }
+      ]
+    },
+    {
+      "schema": "dbo",
+      "physicalTableName": "PRICE_MATRICES",
+      "entityClassStem": "PriceMatrix",
+      "columns": [
+        {
+          "name": "ID",
+          "sqlType": "int",
+          "isNullable": false,
+          "isPrimaryKey": true,
+          "isIdentity": true
+        },
+        {
+          "name": "RANGE_END",
+          "sqlType": "decimal(18,2)",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "RANGE_PRICE",
+          "sqlType": "decimal(18,2)",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "ROUND_TRIP_PRICE",
+          "sqlType": "decimal(18,2)",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "STATE_ID",
+          "sqlType": "int",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "VEHICLE_TYPE_ID",
+          "sqlType": "int",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        }
+      ]
+    },
+    {
+      "schema": "dbo",
+      "physicalTableName": "RECIPIENTS",
+      "entityClassStem": "Recipient",
+      "columns": [
+        {
+          "name": "CUSTOMER_ID",
+          "sqlType": "int",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "EMAIL",
+          "sqlType": "nvarchar(500)",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "GSM",
+          "sqlType": "nvarchar(50)",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "ID",
+          "sqlType": "int",
+          "isNullable": false,
+          "isPrimaryKey": true,
+          "isIdentity": true
+        },
+        {
+          "name": "INSTRUCTIONS",
+          "sqlType": "nvarchar(max)",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "IS_STORED",
+          "sqlType": "bit",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "NAME",
+          "sqlType": "nvarchar(250)",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        }
+      ]
+    },
+    {
+      "schema": "dbo",
+      "physicalTableName": "SENDERS",
+      "entityClassStem": "Sender",
+      "columns": [
+        {
+          "name": "CUSTOMER_ID",
+          "sqlType": "int",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "EMAIL",
+          "sqlType": "nvarchar(500)",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "GSM",
+          "sqlType": "nvarchar(50)",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "ID",
+          "sqlType": "int",
+          "isNullable": false,
+          "isPrimaryKey": true,
+          "isIdentity": true
+        },
+        {
+          "name": "IS_STORED",
+          "sqlType": "bit",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "NAME",
+          "sqlType": "nvarchar(250)",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        }
+      ]
+    },
+    {
+      "schema": "dbo",
+      "physicalTableName": "SHIPMENTS",
+      "entityClassStem": "Shipment",
+      "columns": [
+        {
+          "name": "CREATE_DATE",
+          "sqlType": "datetime2(7)",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "CUSTOMER_ID",
+          "sqlType": "int",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "DRIVER_ID",
+          "sqlType": "int",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "DRIVER_INSTRUCTIONS",
+          "sqlType": "nvarchar(max)",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "FINISH_DATE",
+          "sqlType": "datetime2(7)",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "ID",
+          "sqlType": "int",
+          "isNullable": false,
+          "isPrimaryKey": true,
+          "isIdentity": true
+        },
+        {
+          "name": "PAYMENT_ID",
+          "sqlType": "int",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "PLANNED_ARRIVE_TIME",
+          "sqlType": "datetime2(7)",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "PLANNED_DURATION",
+          "sqlType": "nvarchar(50)",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "SHIPMENT_STATUS",
+          "sqlType": "nvarchar(50)",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "SHIPMENT_TYPE",
+          "sqlType": "nvarchar(50)",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "START_DATE",
+          "sqlType": "datetime2(7)",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "STATE_ID",
+          "sqlType": "int",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "TOTAL_DISTANCE",
+          "sqlType": "decimal(18,2)",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "VEHICLE_TYPE_ID",
+          "sqlType": "int",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        }
+      ]
+    },
+    {
+      "schema": "dbo",
+      "physicalTableName": "SHIPMENT_LOCATIONS",
+      "entityClassStem": "ShipmentLocation",
+      "columns": [
+        {
+          "name": "ACTIVITY_TIME",
+          "sqlType": "datetime2(7)",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "ID",
+          "sqlType": "int",
+          "isNullable": false,
+          "isPrimaryKey": true,
+          "isIdentity": true
+        },
+        {
+          "name": "IS_COMPLETED",
+          "sqlType": "bit",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "LOCATION_ID",
+          "sqlType": "int",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "LOCATION_STATUS",
+          "sqlType": "nvarchar(50)",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "PACKAGE_ACTIVITY",
+          "sqlType": "nvarchar(50)",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "PACKAGE_ID",
+          "sqlType": "int",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "SHIPMENT_ID",
+          "sqlType": "int",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "SHIPMENT_ORDER",
+          "sqlType": "int",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        }
+      ]
+    },
+    {
+      "schema": "dbo",
+      "physicalTableName": "SHIPMENT_PACKAGES",
+      "entityClassStem": "ShipmentPackage",
+      "columns": [
+        {
+          "name": "ID",
+          "sqlType": "int",
+          "isNullable": false,
+          "isPrimaryKey": true,
+          "isIdentity": true
+        },
+        {
+          "name": "PACKAGE_DESCRIPTION",
+          "sqlType": "nvarchar(1000)",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "PACKAGE_PHOTO",
+          "sqlType": "nvarchar(500)",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "RECIPIENT_ID",
+          "sqlType": "int",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "SENDER_ID",
+          "sqlType": "int",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "SHIPMENT_ID",
+          "sqlType": "int",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        }
+      ]
+    },
+    {
+      "schema": "dbo",
+      "physicalTableName": "SM_INFOS",
+      "entityClassStem": "SmInfo",
+      "columns": [
+        {
+          "name": "GSM_NUMBER",
+          "sqlType": "nvarchar(50)",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "ID",
+          "sqlType": "int",
+          "isNullable": false,
+          "isPrimaryKey": true,
+          "isIdentity": true
+        },
+        {
+          "name": "MESSAGE",
+          "sqlType": "nvarchar(1000)",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "MESSAGE_SID",
+          "sqlType": "nvarchar(250)",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "SMS_DATE",
+          "sqlType": "datetime2(7)",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        }
+      ]
+    },
+    {
+      "schema": "dbo",
+      "physicalTableName": "SM_OTPS",
+      "entityClassStem": "SmOtp",
+      "columns": [
+        {
+          "name": "GSM_NUMBER",
+          "sqlType": "nvarchar(50)",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "ID",
+          "sqlType": "int",
+          "isNullable": false,
+          "isPrimaryKey": true,
+          "isIdentity": true
+        },
+        {
+          "name": "MESSAGE_SID",
+          "sqlType": "nvarchar(250)",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "SMS_CODE",
+          "sqlType": "nvarchar(250)",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "SMS_DATE",
+          "sqlType": "datetime2(7)",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "SMS_VALID_SECOND",
+          "sqlType": "int",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        }
+      ]
+    },
+    {
+      "schema": "dbo",
+      "physicalTableName": "SM_OTP_VALIDATIONS",
+      "entityClassStem": "SmOtpValidation",
+      "columns": [
+        {
+          "name": "GSM_NUMBER",
+          "sqlType": "nvarchar(50)",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "ID",
+          "sqlType": "int",
+          "isNullable": false,
+          "isPrimaryKey": true,
+          "isIdentity": true
+        },
+        {
+          "name": "RESULT",
+          "sqlType": "nvarchar(50)",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "SMS_OTP_ID",
+          "sqlType": "int",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "TRY_COUNT",
+          "sqlType": "int",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "USER_SMS_CODE",
+          "sqlType": "nvarchar(250)",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        }
+      ]
+    },
+    {
+      "schema": "dbo",
+      "physicalTableName": "STATES",
+      "entityClassStem": "State",
+      "columns": [
+        {
+          "name": "ID",
+          "sqlType": "int",
+          "isNullable": false,
+          "isPrimaryKey": true,
+          "isIdentity": true
+        },
+        {
+          "name": "NAME",
+          "sqlType": "nvarchar(250)",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "SHORT_NAME",
+          "sqlType": "nvarchar(50)",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "STATUS",
+          "sqlType": "nvarchar(50)",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "TIME_ZONE",
+          "sqlType": "nvarchar(250)",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        }
+      ]
+    },
+    {
+      "schema": "dbo",
+      "physicalTableName": "USER_STATES",
+      "entityClassStem": "UserState",
+      "columns": [
+        {
+          "name": "STATE_ID",
+          "sqlType": "int",
+          "isNullable": false,
+          "isPrimaryKey": true,
+          "isIdentity": false
+        },
+        {
+          "name": "USER_ID",
+          "sqlType": "int",
+          "isNullable": false,
+          "isPrimaryKey": true,
+          "isIdentity": false
+        }
+      ]
+    },
+    {
+      "schema": "dbo",
+      "physicalTableName": "VEHICLE_TYPES",
+      "entityClassStem": "VehicleType",
+      "columns": [
+        {
+          "name": "CAPACITY",
+          "sqlType": "int",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "ID",
+          "sqlType": "int",
+          "isNullable": false,
+          "isPrimaryKey": true,
+          "isIdentity": true
+        },
+        {
+          "name": "IMAGE_PATH",
+          "sqlType": "nvarchar(500)",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "IS_DELETED",
+          "sqlType": "bit",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "NAME",
+          "sqlType": "nvarchar(250)",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        },
+        {
+          "name": "ORDER",
+          "sqlType": "int",
+          "isNullable": false,
+          "isPrimaryKey": false,
+          "isIdentity": false
+        }
+      ]
+    }
+  ]
+}

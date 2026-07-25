@@ -1,0 +1,586 @@
+@model GetPortalPageAccessGrantData
+@using System.Collections.Generic
+@using System.Linq
+@{
+string title = "Portal Page Access Grant Manager";
+var moduleNames = new List<string>();
+var accordionId = "";
+var counter = 0;
+TempData["Title"] = title;
+}
+<div class="container-fluid" IsPageAvailable="true">
+    <form method="post" id="formList">
+        @Html.AntiForgeryToken()
+        <div class="card text shadow mb-4">
+
+            <div class="card-body">
+                <h2 class="card-title">@title</h2>
+                <p class="card-text">You can manage your Portal Page Permission and CRUD operations.</p>
+
+                <hr class="col-xs-12">
+                @if (Model.Items.PortalPageDefinitions.Count == 0)
+                {
+                <div class="alert alert-danger" role="alert">
+                    No Data available in Portal Permissions table.
+                </div>
+                }
+                else
+                {
+                <div class="row mb-4">
+                    <div class="col-md-4">
+                        <label for="permissionGroupSelect" class="form-label font-weight-bold">Permission Group Name</label>
+                        <select id="permissionGroupSelect" class="form-select searchable-select" asp-for="SelectedGroupName" asp-items="@Model.ComboList["PermissionGroups"].SetListWithSelected(Model.SelectedGroupName)" data-placeholder="Search for Group Name..." onchange="submitform();"></select>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="searchInput" class="form-label font-weight-bold">Search</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                    <span class="input-group-text" style="background: #f8f9fa; border-right: none;">
+                                        <i class="fas fa-search" style="color: #6c757d;"></i>
+                                    </span>
+                            </div>
+                            <input type="text" id="searchInput" class="form-control" placeholder="Search by page name, permissions, module..." style="border-left: none;" />
+                        </div>
+                    </div>
+                </div>
+                <!-- Search Statistics -->
+                <div id="searchStatistics" class="row mb-3" style="display: none;">
+                    <div class="col-12">
+                        <div class="alert alert-info mb-0" style="padding: 12px 16px; border-radius: 8px;">
+                            <div class="d-flex align-items-center justify-content-between flex-wrap">
+                                <div class="d-flex align-items-center flex-wrap">
+                                    <i class="fas fa-info-circle me-2"></i>
+                                    <span id="searchStatsText" style="font-size: 0.9rem;"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- No Results Message -->
+                <div id="noResultsMessage" class="row mb-4" style="display: none;">
+                    <div class="col-12">
+                        <div class="alert text-center" style="padding: 40px 20px; border-radius: 8px; background-color: #f8f9fa; border: 1px solid #e9ecef; border-left: 4px solid #6c757d;">
+                            <i class="fas fa-search" style="font-size: 3rem; color: #6c757d; margin-bottom: 15px; display: block; opacity: 0.7;"></i>
+                            <h5 style="color: #495057; margin-bottom: 10px; font-weight: 500;">No Results Found</h5>
+                            <p style="color: #6c757d; margin: 0;">No portal pages found matching your search criteria.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion" id="accordionPortalPageModules">
+                    @foreach (var moduleName in Model.Items.PortalPageDefinitions.Select(x => x.ModuleName).Distinct().OrderBy(i => i))
+                    {
+                    if (!moduleNames.Contains(moduleName))
+                    {
+                    counter++;
+                    moduleNames.Add(moduleName);
+                    var moduleHeaderId = $"portalPageHeadingModule{moduleName}".Replace(" ", "").Replace(".", "");
+                    var moduleCollapseId = $"portalPageCollapseModule{moduleName}".Replace(" ", "").Replace(".", "");
+                    var moduleItemsCount = Model.Items.PortalPageDefinitions.Where(x => x.ModuleName == moduleName).Count();
+                    var firstItemInModule = Model.Items.PortalPageDefinitions.Where(x => x.ModuleName == moduleName).FirstOrDefault();
+
+                    <div class="card mb-4" style="border: 1px solid #e5e7eb; box-shadow: 0 4px 12px rgba(0,0,0,0.08); border-radius: 12px; overflow: hidden;">
+                        <div class="card-header" id="@moduleHeaderId" style="background: linear-gradient(135deg, #6b7280 0%, #4b5563 100%); border: none; padding: 0; border-bottom: 2px solid #374151;">
+                            <button class="btn btn-link w-100 text-left text-white collapse-toggle-btn module-header-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#@moduleCollapseId" aria-expanded="false" aria-controls="@moduleCollapseId">
+                                <div class="d-flex align-items-center justify-content-between module-header-container">
+                                        <span class="module-title-text">
+                                            <i class="fas fa-chevron-right me-2 collapse-icon" style="font-size: 0.8rem; transition: transform 0.3s;"></i>
+                                            <i class="fas fa-cube me-2"></i>@moduleName
+                                        </span>
+                                    <span class="badge bg-light rounded-pill module-count-badge module-actions" style="font-size: 0.9rem; padding: 6px 12px;" data-total="@moduleItemsCount" data-module="@moduleName">
+                                            @Html.Raw($"{moduleItemsCount} pages")
+                                        </span>
+                                </div>
+                            </button>
+                        </div>
+
+                        <div id="@moduleCollapseId" class="collapse @Html.Raw(counter==1 ? " show" : "")" aria-labelledby="@moduleHeaderId" data-parent="#accordionPortalPageModules">
+                            <div class="card-body" style="padding: 24px; background: #f9fafb; border-top: 1px solid #e5e7eb;">
+                                <div class="row no-search-results-@moduleCollapseId" style="display: none;">
+                                    <div class="col-12">
+                                        <div class="text-center" style="padding: 30px 20px; margin-bottom: 0;">
+                                            <i class="fas fa-search" style="color: #adb5bd; font-size: 2rem; margin-bottom: 10px;"></i>
+                                            <p style="color: #6c757d; font-size: 0.95rem; margin: 0;">No pages found matching your search criteria.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row searchable-cards-container">
+                                    @foreach (var item in Model.Items.PortalPageDefinitions.Where(x => x.ModuleName == moduleName).OrderBy(x => x.ModelName))
+                                    {
+                                    <div class="col-lg-6 col-md-6 col-12 mb-3 searchable-card" data-module="@moduleName" data-page="@item.ModelName.ToLower()" data-permissions="@string.Join(" ", item.PortalPagePermissionTypes.Select(pt => pt.PortalPagePermissionType.ToString())).ToLower()">
+                                        <div class="card" style="border: 1px solid #e5e7eb; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); transition: all 0.3s ease; background: #ffffff;">
+                                            <div class="card-body p-3">
+                                                <div class="mb-3">
+                                                    <small class="text-muted d-block mb-1" style="font-weight: 600;">Page Name:</small>
+                                                    <span style="font-weight: 600; color: #333; font-size: 1rem;">@string.Format("{0}", item.ModelName)</span>
+                                                </div>
+                                                <div>
+                                                    <small class="text-muted d-block mb-2" style="font-weight: 600;">Permissions:</small>
+                                                    <div class="d-flex flex-wrap">
+                                                        @foreach (var itemType in item.PortalPagePermissionTypes)
+                                                        {
+                                                        <div class="me-2 mb-2 d-flex align-items-center">
+                                                            @{
+                                                            var permissionTypeName = itemType.PortalPagePermissionType.ToString();
+                                                            var checkboxId = $"cbox_{Model.Items.PermissionGroupName}_{item.PortalPagePermissionName}_{permissionTypeName}";
+                                                            }
+                                                            <label style="margin-right: 8px; margin-bottom: 0; font-size: 0.75rem; font-weight: 500; color: #333; cursor: default; pointer-events: none;">@permissionTypeName</label>
+                                                            <div class="ios-switch-wrapper">
+                                                                @if (itemType.Value)
+                                                                {
+                                                                <input class="ios-switch" type="checkbox" id="@checkboxId" checked />
+                                                                }
+                                                                else
+                                                                {
+                                                                <input class="ios-switch" type="checkbox" id="@checkboxId" />
+                                                                }
+                                                            </div>
+                                                        </div>
+                                                        }
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    }
+                    }
+                </div>
+                }
+            </div>
+
+        </div>
+
+    </form>
+
+    <div class="modal fade bd-example-modal-lg" id="itemDetailsModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document" id="itemDetailsContainer">
+        </div>
+    </div>
+
+    <!-- Toast container -->
+    <div aria-live="polite" aria-atomic="true" style="position: relative; min-height: 200px;">
+        <div class="toast-container" style="position: fixed; top: 20px; right: 20px; z-index: 9999;">
+            <div id="successToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-autohide="true" data-delay="3000">
+                <div class="toast-header" style="background-color: #d4edda; color: #155724;">
+                    <i class="fas fa-check-circle me-2"></i>
+                    <strong class="me-auto">Success</strong>
+                    <button type="button" class="ms-2 mb-1 close" data-bs-dismiss="toast" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="toast-body" style="background-color: #d4edda; color: #155724;">
+                    Permission updated successfully.
+                </div>
+            </div>
+            <div id="errorToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-autohide="true" data-delay="5000">
+                <div class="toast-header" style="background-color: #f8d7da; color: #721c24;">
+                    <i class="fas fa-exclamation-circle me-2"></i>
+                    <strong class="me-auto">Error</strong>
+                    <button type="button" class="ms-2 mb-1 close" data-bs-dismiss="toast" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="toast-body" style="background-color: #f8d7da; color: #721c24;">
+                    An error occurred while updating the permission.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid" IsPageAvailable="false">
+    @await Html.PartialAsync("_NotAuthorized")
+</div>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="/js/lazyload.js"></script>
+<script type="text/javascript">
+    $("img.lazyload").lazyload();
+
+    // Force CSS to recognize checked state - trigger reflow
+
+    // Initialize icons for initially open collapses
+    $(document).ready(function() {
+        // iOS Switch initialization
+        $('.ios-switch').each(function() {
+            var $wrapper = $(this).closest('.ios-switch-wrapper');
+            if ($(this).is(':checked')) {
+                $wrapper.addClass('checked');
+            } else {
+                $wrapper.removeClass('checked');
+            }
+        });
+
+        // Update on change - handle both UI update and permission update
+        $(document).on('change', '.ios-switch', function(e) {
+            var $switch = $(this);
+            var $wrapper = $switch.closest('.ios-switch-wrapper');
+
+            // Update wrapper class for visual state
+            if ($switch.is(':checked')) {
+                $wrapper.addClass('checked');
+            } else {
+                $wrapper.removeClass('checked');
+            }
+
+            // Call checkBoxChanged only once - prevent duplicate calls
+            // Use a flag to prevent multiple calls in the same event cycle
+            if (!$switch.data('processing')) {
+                $switch.data('processing', true);
+                checkBoxChanged(this);
+                // Reset flag after a short delay
+                setTimeout(function() {
+                    $switch.data('processing', false);
+                }, 100);
+            }
+        });
+
+        // Allow clicking on wrapper to toggle switch - iOS compatible with touch events
+        var touchStartTime = 0;
+        var touchStartTarget = null;
+
+        // Handle checkbox touch - allow natural behavior but prevent wrapper handler
+        $(document).on('touchstart', '.ios-switch', function(e) {
+            // Allow checkbox's natural behavior
+            // Just prevent it from bubbling to wrapper
+            e.stopPropagation();
+        });
+
+        $(document).on('touchstart', '.ios-switch-wrapper', function(e) {
+            // Only track touch if it's on wrapper itself, not on checkbox or label
+            var $target = $(e.target);
+            if (!$target.is('.ios-switch') && !$target.is('label') && !$target.closest('.ios-switch').length) {
+                touchStartTime = Date.now();
+                touchStartTarget = $(this);
+                e.preventDefault();
+            }
+        });
+
+        // Handle checkbox touchend - allow natural behavior
+        $(document).on('touchend', '.ios-switch', function(e) {
+            // Allow checkbox's natural behavior
+            // Just prevent it from bubbling to wrapper
+            e.stopPropagation();
+        });
+
+        $(document).on('touchend', '.ios-switch-wrapper', function(e) {
+            var touchEndTime = Date.now();
+            var touchDuration = touchEndTime - touchStartTime;
+            var $target = $(this);
+
+            // Only trigger if it's a quick tap (not a swipe) and same target
+            if (touchDuration < 300 && touchStartTarget && touchStartTarget[0] === $target[0]) {
+                // Only handle if touch is directly on wrapper, not on checkbox or label
+                if (!$(e.target).is('.ios-switch') && !$(e.target).is('label')) {
+                    var $switch = $target.find('.ios-switch');
+                    // Don't toggle if switch is disabled
+                    if ($switch.is(':disabled')) {
+                        touchStartTarget = null;
+                        return false;
+                    }
+                    $switch.prop('checked', !$switch.prop('checked')).trigger('change');
+                }
+            }
+            touchStartTarget = null;
+            e.preventDefault();
+        });
+
+        // Prevent label click from triggering checkbox
+        $(document).on('click', 'label', function(e) {
+            // Only prevent if it's a label near ios-switch
+            if ($(this).closest('.ios-switch-wrapper').length > 0 || $(this).next('.ios-switch-wrapper').length > 0) {
+                e.preventDefault();
+                e.stopPropagation();
+                return false;
+            }
+        });
+
+        // Handle checkbox click - allow natural behavior but prevent wrapper handler
+        $(document).on('click', '.ios-switch', function(e) {
+            // Allow checkbox's natural behavior (checking/unchecking)
+            // Prevent it from bubbling to wrapper so wrapper's click handler doesn't interfere
+            // But don't prevent default - let the checkbox toggle naturally
+            e.stopPropagation();
+            // Note: The checkbox will naturally change its checked state
+            // The change event will fire automatically, which will:
+            // 1. Update the wrapper's 'checked' class (via change handler)
+            // 2. Call checkBoxChanged function (via onchange attribute)
+        });
+
+        $(document).on('click', '.ios-switch-wrapper', function(e) {
+            // For non-touch devices, keep click handler
+            if (!('ontouchstart' in window)) {
+                // Only handle if click is directly on wrapper, not on checkbox or label
+                // Check if the click target is the wrapper itself or a child that's not the checkbox
+                var $target = $(e.target);
+                var $wrapper = $(this);
+
+                // If click is on checkbox itself, let it handle naturally (don't interfere)
+                if ($target.is('.ios-switch') || $target.closest('.ios-switch').length > 0) {
+                    return; // Let checkbox handle its own click
+                }
+
+                // If click is on label, prevent it
+                if ($target.is('label')) {
+                    return;
+                }
+
+                // Only handle clicks directly on wrapper (empty space around checkbox)
+                var $switch = $wrapper.find('.ios-switch');
+                // Don't toggle if switch is disabled
+                if ($switch.is(':disabled')) {
+                    return false;
+                }
+                $switch.prop('checked', !$switch.prop('checked')).trigger('change');
+            }
+        });
+
+        $('.collapse.show').each(function() {
+            var collapseId = '#' + $(this).attr('id');
+            var $icon = $('[data-bs-target="' + collapseId + '"]').find('.collapse-icon');
+            $icon.removeClass('fa-chevron-right').addClass('fa-chevron-down');
+        });
+    });
+
+    // Toggle icon on collapse button click
+    $(document).on('click', '[data-bs-toggle="collapse"]', function() {
+        var target = $(this).data('bs-target') || $(this).attr('data-bs-target');
+        var $icon = $(this).find('.collapse-icon');
+
+        if ($icon.length > 0 && target) {
+            var $targetEl = $(target);
+            // Toggle icon immediately based on current state (before animation)
+            if ($targetEl.hasClass('show')) {
+                // Will close, change to right
+                $icon.removeClass('fa-chevron-down').addClass('fa-chevron-right');
+            } else {
+                // Will open, change to down
+                $icon.removeClass('fa-chevron-right').addClass('fa-chevron-down');
+            }
+        }
+    });
+
+    $(document).on('click', '[data-toggle="lightbox"]', function(event) {
+        event.preventDefault();
+        var targetId = '';
+        $(this).ekkoLightbox({
+            onShown: function(lb) {
+                $(targetId).addClass('lbackground');
+            },
+            onShow: function(lb) {
+                targetId = '#' + lb.delegateTarget.id
+                $(targetId).addClass('lbackground');
+            },
+            onHidden: function(){
+                $(targetId).removeClass('lbackground');
+                if ($('.modal:visible').length) {
+                    $('body').addClass('modal-open');
+                    $('#itemDetailsModal').focus();
+                }
+
+            }
+        });
+    });
+
+    function submitform() {
+        $('#formList').submit();
+    }
+
+
+    function checkBoxChanged(cbox) {
+        console.log('Changed' + cbox.id);
+        var values = cbox.id.replace("cbox_", "").split("_");
+        var UpdatePermissionGroupRequestData =  {
+            "permissionGroupName": values[0],
+            "portalPagePermissionName": values[1] + values[2],
+            "portalPagePermissionType": values[2],
+            "value": cbox.checked ? 1 : 0
+        };
+
+        // Get page name and permission type from the card
+        var $card = $(cbox).closest('.searchable-card');
+        var pageName = $card.attr('data-page') || values[1];
+        var permissionType = values[2] || 'Permission';
+        var statusText = cbox.checked ? 'granted' : 'revoked';
+        var permissionText = pageName + ' (' + permissionType + ')';
+
+        var url = '@Url.Action("UpdatePermission")';
+        $.ajax({
+            type: "POST",
+            url: url,
+            data: UpdatePermissionGroupRequestData,
+            dataType: 'json',
+            success: function (data) {
+                console.log('Success Updated ' + cbox.id);
+                // Show success toast with specific permission
+                $('#successToast .toast-body').text('Permission ' + statusText + ' for: ' + permissionText);
+                $('#successToast').toast('show');
+            },
+            error: function (xhr, textStatus, error) {
+                console.log(xhr.statusText);
+                console.log(textStatus);
+                console.log(error);
+                // Show error toast
+                var errorMessage = 'An error occurred while updating permission for: ' + permissionText;
+                if (xhr.responseJSON && xhr.responseJSON.message) {
+                    errorMessage = xhr.responseJSON.message;
+                } else if (error) {
+                    errorMessage = 'Error: ' + error + ' (for: ' + permissionText + ')';
+                }
+                $('#errorToast .toast-body').text(errorMessage);
+                $('#errorToast').toast('show');
+            },
+        });
+    }
+
+    // Store all cards data on page load - this is our source of truth
+    var allCardsData = [];
+
+    // Search functionality
+    $(document).ready(function() {
+        // On page load, store all cards data
+        $('.searchable-card').each(function() {
+            var $card = $(this);
+            allCardsData.push({
+                element: $card,
+                pageName: ($card.attr('data-page') || '').toLowerCase()
+            });
+        });
+
+        // Reset function - resets everything to initial state
+        function resetSearch() {
+            // Show ALL cards and modules
+            $('#accordionPortalPageModules > .card.mb-4').css('display', '');
+            allCardsData.forEach(function(cardData) {
+                cardData.element.css('display', '');
+            });
+
+            // Reset badge counts
+            $('.module-count-badge').each(function() {
+                var $badge = $(this);
+                var total = $badge.attr('data-total');
+                $badge.text(total + ' pages');
+            });
+
+            // Hide "no results" messages
+            $('[class*="no-search-results-"]').hide();
+            $('.searchable-cards-container').show();
+
+            // Hide search statistics and no results message
+            $('#searchStatistics').hide();
+            $('#noResultsMessage').hide();
+            $('#accordionPortalPageModules').show();
+
+            // Restore data-parent for accordion behavior
+            $('#accordionPortalPageModules .collapse').each(function() {
+                var $collapse = $(this);
+                if (!$collapse.attr('data-parent')) {
+                    $collapse.attr('data-parent', '#accordionPortalPageModules');
+                }
+            });
+        }
+
+        $('#searchInput').on('keyup input paste', function() {
+            var searchText = $(this).val().toLowerCase().trim();
+
+            // STEP 1: ALWAYS reset first - call reset function
+            resetSearch();
+
+            // STEP 2: Now filter if search text exists
+            if (searchText.length > 0) {
+                // Temporarily remove data-parent to allow all collapses to be open at once
+                $('#accordionPortalPageModules .collapse').each(function() {
+                    var $collapse = $(this);
+                    $collapse.removeAttr('data-parent');
+                    if (!$collapse.hasClass('show')) {
+                        $collapse.collapse('show');
+                    }
+                });
+                // Update icons after collapse animation completes
+                setTimeout(function() {
+                    $('#accordionPortalPageModules .collapse.show').each(function() {
+                        var collapseId = '#' + $(this).attr('id');
+                        var $icon = $('[data-bs-target="' + collapseId + '"]').find('.collapse-icon');
+                        if ($icon.length > 0) {
+                            $icon.removeClass('fa-chevron-right').addClass('fa-chevron-down');
+                        }
+                    });
+                }, 350);
+
+                // Filter using stored data - work from allCardsData array (only search by pageName)
+                allCardsData.forEach(function(cardData) {
+                    if (cardData.pageName.indexOf(searchText) === -1) {
+                        cardData.element.css('display', 'none');
+                    }
+                });
+
+                // Update module counts and hide modules with no matches
+                var totalModules = 0;
+                var visibleModules = 0;
+                var totalPages = 0;
+                var visiblePages = 0;
+
+                $('#accordionPortalPageModules > .card.mb-4').each(function() {
+                    var $moduleCard = $(this);
+                    var $badge = $moduleCard.find('.module-count-badge');
+                    var total = parseInt($badge.attr('data-total')) || 0;
+                    totalModules++;
+                    totalPages += total;
+
+                    var visibleCards = 0;
+                    $moduleCard.find('.searchable-card').each(function() {
+                        if ($(this).css('display') !== 'none') {
+                            visibleCards++;
+                        }
+                    });
+
+                    var $moduleCollapse = $moduleCard.find('.collapse').first();
+                    var moduleCollapseId = $moduleCollapse.attr('id');
+
+                    // Update badge text
+                    $badge.text(visibleCards + ' / ' + total + ' pages');
+
+                    // Hide module card if no matches
+                    if (visibleCards === 0 && searchText.length > 0) {
+                        $moduleCard.css('display', 'none');
+                    } else {
+                        $moduleCard.css('display', '');
+                        visibleModules++;
+                        visiblePages += visibleCards;
+                    }
+                });
+
+                // Update search statistics
+                if (searchText.length > 0) {
+                    var statsText = 'Searched in <strong>' + totalModules + '</strong> module' + (totalModules !== 1 ? 's' : '') +
+                        ' and <strong>' + totalPages + '</strong> page' + (totalPages !== 1 ? 's' : '') +
+                        '. Found <strong>' + visibleModules + '</strong> module' + (visibleModules !== 1 ? 's' : '') +
+                        ' and <strong>' + visiblePages + '</strong> page' + (visiblePages !== 1 ? 's' : '') + '.';
+                    $('#searchStatsText').html(statsText);
+                    $('#searchStatistics').show();
+
+                    // Show "no results" message if nothing found
+                    if (visibleModules === 0) {
+                        $('#noResultsMessage').show();
+                        $('#accordionPortalPageModules').hide();
+                    } else {
+                        $('#noResultsMessage').hide();
+                        $('#accordionPortalPageModules').show();
+                    }
+                } else {
+                    // No search - hide statistics and no results message
+                    $('#searchStatistics').hide();
+                    $('#noResultsMessage').hide();
+                    $('#accordionPortalPageModules').show();
+                }
+            } else {
+                // No search text - hide statistics and no results message
+                $('#searchStatistics').hide();
+                $('#noResultsMessage').hide();
+                $('#accordionPortalPageModules').show();
+            }
+        });
+    });
+</script>

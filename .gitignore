@@ -1,0 +1,15 @@
+.vs
+bin
+obj
+QuickCode.Freytz.Api/bin
+QuickCode.Freytz.Api/obj
+QuickCode.Freytz.Portal/bin
+QuickCode.Freytz.Portal/obj
+QuickCode.Freytz.Web/bin
+QuickCode.Freytz.Web/obj
+QuickCode.Freytz.DataLayer/bin
+QuickCode.Freytz.DataLayer/obj
+.DS_Store
+/src/.idea
+.env
+**/.env

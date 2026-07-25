@@ -1,0 +1,540 @@
+﻿{
+  "PortalMenus": [
+    {
+      "Key": "IdentityModule_IdentityModule",
+      "Name": "IdentityModule",
+      "Text": "IdentityModule",
+      "Tooltip": "IdentityModule",
+      "ActionName": "",
+      "OrderNo": 100,
+      "ParentName": "IdentityModule"
+    },
+    {
+      "Key": "IdentityModule_ApiMethodAccessGrants",
+      "Name": "ApiMethodAccessGrants",
+      "Text": "ApiMethodAccessGrants",
+      "Tooltip": "ApiMethodAccessGrants",
+      "ActionName": "/IdentityModuleApiMethodAccessGrants/List",
+      "OrderNo": 100,
+      "ParentName": "IdentityModule"
+    },
+    {
+      "Key": "IdentityModule_ApiMethodDefinitions",
+      "Name": "ApiMethodDefinitions",
+      "Text": "ApiMethodDefinitions",
+      "Tooltip": "ApiMethodDefinitions",
+      "ActionName": "/IdentityModuleApiMethodDefinitions/List",
+      "OrderNo": 101,
+      "ParentName": "IdentityModule"
+    },
+    {
+      "Key": "IdentityModule_AspNetRoles",
+      "Name": "AspNetRoles",
+      "Text": "AspNetRoles",
+      "Tooltip": "AspNetRoles",
+      "ActionName": "/IdentityModuleAspNetRoles/List",
+      "OrderNo": 102,
+      "ParentName": "IdentityModule"
+    },
+    {
+      "Key": "IdentityModule_AspNetRoleClaims",
+      "Name": "AspNetRoleClaims",
+      "Text": "AspNetRoleClaims",
+      "Tooltip": "AspNetRoleClaims",
+      "ActionName": "/IdentityModuleAspNetRoleClaims/List",
+      "OrderNo": 103,
+      "ParentName": "IdentityModule"
+    },
+    {
+      "Key": "IdentityModule_AspNetUsers",
+      "Name": "AspNetUsers",
+      "Text": "AspNetUsers",
+      "Tooltip": "AspNetUsers",
+      "ActionName": "/IdentityModuleAspNetUsers/List",
+      "OrderNo": 104,
+      "ParentName": "IdentityModule"
+    },
+    {
+      "Key": "IdentityModule_AspNetUserClaims",
+      "Name": "AspNetUserClaims",
+      "Text": "AspNetUserClaims",
+      "Tooltip": "AspNetUserClaims",
+      "ActionName": "/IdentityModuleAspNetUserClaims/List",
+      "OrderNo": 105,
+      "ParentName": "IdentityModule"
+    },
+    {
+      "Key": "IdentityModule_AspNetUserLogins",
+      "Name": "AspNetUserLogins",
+      "Text": "AspNetUserLogins",
+      "Tooltip": "AspNetUserLogins",
+      "ActionName": "/IdentityModuleAspNetUserLogins/List",
+      "OrderNo": 106,
+      "ParentName": "IdentityModule"
+    },
+    {
+      "Key": "IdentityModule_AspNetUserRoles",
+      "Name": "AspNetUserRoles",
+      "Text": "AspNetUserRoles",
+      "Tooltip": "AspNetUserRoles",
+      "ActionName": "/IdentityModuleAspNetUserRoles/List",
+      "OrderNo": 107,
+      "ParentName": "IdentityModule"
+    },
+    {
+      "Key": "IdentityModule_AspNetUserTokens",
+      "Name": "AspNetUserTokens",
+      "Text": "AspNetUserTokens",
+      "Tooltip": "AspNetUserTokens",
+      "ActionName": "/IdentityModuleAspNetUserTokens/List",
+      "OrderNo": 108,
+      "ParentName": "IdentityModule"
+    },
+    {
+      "Key": "IdentityModule_AuditLogs",
+      "Name": "AuditLogs",
+      "Text": "AuditLogs",
+      "Tooltip": "AuditLogs",
+      "ActionName": "/IdentityModuleAuditLogs/List",
+      "OrderNo": 109,
+      "ParentName": "IdentityModule"
+    },
+    {
+      "Key": "IdentityModule_ColumnTypes",
+      "Name": "ColumnTypes",
+      "Text": "ColumnTypes",
+      "Tooltip": "ColumnTypes",
+      "ActionName": "/IdentityModuleColumnTypes/List",
+      "OrderNo": 110,
+      "ParentName": "IdentityModule"
+    },
+    {
+      "Key": "IdentityModule_KafkaEvents",
+      "Name": "KafkaEvents",
+      "Text": "KafkaEvents",
+      "Tooltip": "KafkaEvents",
+      "ActionName": "/IdentityModuleKafkaEvents/List",
+      "OrderNo": 111,
+      "ParentName": "IdentityModule"
+    },
+    {
+      "Key": "IdentityModule_Models",
+      "Name": "Models",
+      "Text": "Models",
+      "Tooltip": "Models",
+      "ActionName": "/IdentityModuleModels/List",
+      "OrderNo": 112,
+      "ParentName": "IdentityModule"
+    },
+    {
+      "Key": "IdentityModule_Modules",
+      "Name": "Modules",
+      "Text": "Modules",
+      "Tooltip": "Modules",
+      "ActionName": "/IdentityModuleModules/List",
+      "OrderNo": 113,
+      "ParentName": "IdentityModule"
+    },
+    {
+      "Key": "IdentityModule_PermissionGroups",
+      "Name": "PermissionGroups",
+      "Text": "PermissionGroups",
+      "Tooltip": "PermissionGroups",
+      "ActionName": "/IdentityModulePermissionGroups/List",
+      "OrderNo": 114,
+      "ParentName": "IdentityModule"
+    },
+    {
+      "Key": "IdentityModule_PortalMenus",
+      "Name": "PortalMenus",
+      "Text": "PortalMenus",
+      "Tooltip": "PortalMenus",
+      "ActionName": "/IdentityModulePortalMenus/List",
+      "OrderNo": 115,
+      "ParentName": "IdentityModule"
+    },
+    {
+      "Key": "IdentityModule_PortalPageAccessGrants",
+      "Name": "PortalPageAccessGrants",
+      "Text": "PortalPageAccessGrants",
+      "Tooltip": "PortalPageAccessGrants",
+      "ActionName": "/IdentityModulePortalPageAccessGrants/List",
+      "OrderNo": 116,
+      "ParentName": "IdentityModule"
+    },
+    {
+      "Key": "IdentityModule_PortalPageDefinitions",
+      "Name": "PortalPageDefinitions",
+      "Text": "PortalPageDefinitions",
+      "Tooltip": "PortalPageDefinitions",
+      "ActionName": "/IdentityModulePortalPageDefinitions/List",
+      "OrderNo": 117,
+      "ParentName": "IdentityModule"
+    },
+    {
+      "Key": "IdentityModule_RefreshTokens",
+      "Name": "RefreshTokens",
+      "Text": "RefreshTokens",
+      "Tooltip": "RefreshTokens",
+      "ActionName": "/IdentityModuleRefreshTokens/List",
+      "OrderNo": 118,
+      "ParentName": "IdentityModule"
+    },
+    {
+      "Key": "IdentityModule_TableComboboxSettings",
+      "Name": "TableComboboxSettings",
+      "Text": "TableComboboxSettings",
+      "Tooltip": "TableComboboxSettings",
+      "ActionName": "/IdentityModuleTableComboboxSettings/List",
+      "OrderNo": 119,
+      "ParentName": "IdentityModule"
+    },
+    {
+      "Key": "IdentityModule_TopicWorkflows",
+      "Name": "TopicWorkflows",
+      "Text": "TopicWorkflows",
+      "Tooltip": "TopicWorkflows",
+      "ActionName": "/IdentityModuleTopicWorkflows/List",
+      "OrderNo": 120,
+      "ParentName": "IdentityModule"
+    },
+    {
+      "Key": "MainModule_MainModule",
+      "Name": "MainModule",
+      "Text": "MainModule",
+      "Tooltip": "MainModule",
+      "ActionName": "",
+      "OrderNo": 121,
+      "ParentName": "MainModule"
+    },
+    {
+      "Key": "MainModule_AuditLogs",
+      "Name": "AuditLogs",
+      "Text": "AuditLogs",
+      "Tooltip": "AuditLogs",
+      "ActionName": "/MainModuleAuditLogs/List",
+      "OrderNo": 121,
+      "ParentName": "MainModule"
+    },
+    {
+      "Key": "MainModule_CreditCards",
+      "Name": "CreditCards",
+      "Text": "CreditCards",
+      "Tooltip": "CreditCards",
+      "ActionName": "/MainModuleCreditCards/List",
+      "OrderNo": 122,
+      "ParentName": "MainModule"
+    },
+    {
+      "Key": "MainModule_Customers",
+      "Name": "Customers",
+      "Text": "Customers",
+      "Tooltip": "Customers",
+      "ActionName": "/MainModuleCustomers/List",
+      "OrderNo": 123,
+      "ParentName": "MainModule"
+    },
+    {
+      "Key": "MainModule_CustomerLoginAttempts",
+      "Name": "CustomerLoginAttempts",
+      "Text": "CustomerLoginAttempts",
+      "Tooltip": "CustomerLoginAttempts",
+      "ActionName": "/MainModuleCustomerLoginAttempts/List",
+      "OrderNo": 124,
+      "ParentName": "MainModule"
+    },
+    {
+      "Key": "MainModule_Drivers",
+      "Name": "Drivers",
+      "Text": "Drivers",
+      "Tooltip": "Drivers",
+      "ActionName": "/MainModuleDrivers/List",
+      "OrderNo": 125,
+      "ParentName": "MainModule"
+    },
+    {
+      "Key": "MainModule_DriverCommissions",
+      "Name": "DriverCommissions",
+      "Text": "DriverCommissions",
+      "Tooltip": "DriverCommissions",
+      "ActionName": "/MainModuleDriverCommissions/List",
+      "OrderNo": 126,
+      "ParentName": "MainModule"
+    },
+    {
+      "Key": "MainModule_DriverLocations",
+      "Name": "DriverLocations",
+      "Text": "DriverLocations",
+      "Tooltip": "DriverLocations",
+      "ActionName": "/MainModuleDriverLocations/List",
+      "OrderNo": 127,
+      "ParentName": "MainModule"
+    },
+    {
+      "Key": "MainModule_DriverPayments",
+      "Name": "DriverPayments",
+      "Text": "DriverPayments",
+      "Tooltip": "DriverPayments",
+      "ActionName": "/MainModuleDriverPayments/List",
+      "OrderNo": 128,
+      "ParentName": "MainModule"
+    },
+    {
+      "Key": "MainModule_DriverPaymentShipments",
+      "Name": "DriverPaymentShipments",
+      "Text": "DriverPaymentShipments",
+      "Tooltip": "DriverPaymentShipments",
+      "ActionName": "/MainModuleDriverPaymentShipments/List",
+      "OrderNo": 129,
+      "ParentName": "MainModule"
+    },
+    {
+      "Key": "MainModule_Locations",
+      "Name": "Locations",
+      "Text": "Locations",
+      "Tooltip": "Locations",
+      "ActionName": "/MainModuleLocations/List",
+      "OrderNo": 130,
+      "ParentName": "MainModule"
+    },
+    {
+      "Key": "MainModule_Payments",
+      "Name": "Payments",
+      "Text": "Payments",
+      "Tooltip": "Payments",
+      "ActionName": "/MainModulePayments/List",
+      "OrderNo": 131,
+      "ParentName": "MainModule"
+    },
+    {
+      "Key": "MainModule_PriceMatrices",
+      "Name": "PriceMatrices",
+      "Text": "PriceMatrices",
+      "Tooltip": "PriceMatrices",
+      "ActionName": "/MainModulePriceMatrices/List",
+      "OrderNo": 132,
+      "ParentName": "MainModule"
+    },
+    {
+      "Key": "MainModule_Recipients",
+      "Name": "Recipients",
+      "Text": "Recipients",
+      "Tooltip": "Recipients",
+      "ActionName": "/MainModuleRecipients/List",
+      "OrderNo": 133,
+      "ParentName": "MainModule"
+    },
+    {
+      "Key": "MainModule_Senders",
+      "Name": "Senders",
+      "Text": "Senders",
+      "Tooltip": "Senders",
+      "ActionName": "/MainModuleSenders/List",
+      "OrderNo": 134,
+      "ParentName": "MainModule"
+    },
+    {
+      "Key": "MainModule_Shipments",
+      "Name": "Shipments",
+      "Text": "Shipments",
+      "Tooltip": "Shipments",
+      "ActionName": "/MainModuleShipments/List",
+      "OrderNo": 135,
+      "ParentName": "MainModule"
+    },
+    {
+      "Key": "MainModule_ShipmentLocations",
+      "Name": "ShipmentLocations",
+      "Text": "ShipmentLocations",
+      "Tooltip": "ShipmentLocations",
+      "ActionName": "/MainModuleShipmentLocations/List",
+      "OrderNo": 136,
+      "ParentName": "MainModule"
+    },
+    {
+      "Key": "MainModule_ShipmentPackages",
+      "Name": "ShipmentPackages",
+      "Text": "ShipmentPackages",
+      "Tooltip": "ShipmentPackages",
+      "ActionName": "/MainModuleShipmentPackages/List",
+      "OrderNo": 137,
+      "ParentName": "MainModule"
+    },
+    {
+      "Key": "MainModule_SmInfos",
+      "Name": "SmInfos",
+      "Text": "SmInfos",
+      "Tooltip": "SmInfos",
+      "ActionName": "/MainModuleSmInfos/List",
+      "OrderNo": 138,
+      "ParentName": "MainModule"
+    },
+    {
+      "Key": "MainModule_SmOtps",
+      "Name": "SmOtps",
+      "Text": "SmOtps",
+      "Tooltip": "SmOtps",
+      "ActionName": "/MainModuleSmOtps/List",
+      "OrderNo": 139,
+      "ParentName": "MainModule"
+    },
+    {
+      "Key": "MainModule_SmOtpValidations",
+      "Name": "SmOtpValidations",
+      "Text": "SmOtpValidations",
+      "Tooltip": "SmOtpValidations",
+      "ActionName": "/MainModuleSmOtpValidations/List",
+      "OrderNo": 140,
+      "ParentName": "MainModule"
+    },
+    {
+      "Key": "MainModule_States",
+      "Name": "States",
+      "Text": "States",
+      "Tooltip": "States",
+      "ActionName": "/MainModuleStates/List",
+      "OrderNo": 141,
+      "ParentName": "MainModule"
+    },
+    {
+      "Key": "MainModule_UserStates",
+      "Name": "UserStates",
+      "Text": "UserStates",
+      "Tooltip": "UserStates",
+      "ActionName": "/MainModuleUserStates/List",
+      "OrderNo": 142,
+      "ParentName": "MainModule"
+    },
+    {
+      "Key": "MainModule_VehicleTypes",
+      "Name": "VehicleTypes",
+      "Text": "VehicleTypes",
+      "Tooltip": "VehicleTypes",
+      "ActionName": "/MainModuleVehicleTypes/List",
+      "OrderNo": 143,
+      "ParentName": "MainModule"
+    }
+  ],
+  "TableComboboxSettings": [
+    {
+      "TableName": "ApiMethodDefinition",
+      "IdColumn": "Key",
+      "TextColumns": "HttpMethod, UrlPath",
+      "StringFormat": "{0} - {1}"
+    },
+    {
+      "TableName": "AspNetRole",
+      "IdColumn": "Id",
+      "TextColumns": "Name",
+      "StringFormat": "{0}"
+    },
+    {
+      "TableName": "AspNetUser",
+      "IdColumn": "Id",
+      "TextColumns": "Id, FirstName, LastName",
+      "StringFormat": "{0} - {1} {2}"
+    },
+    {
+      "TableName": "KafkaEvent",
+      "IdColumn": "TopicName",
+      "TextColumns": "TopicName",
+      "StringFormat": "{0}"
+    },
+    {
+      "TableName": "Module",
+      "IdColumn": "Name",
+      "TextColumns": "Name",
+      "StringFormat": "{0}"
+    },
+    {
+      "TableName": "Model",
+      "IdColumn": "Name",
+      "TextColumns": "Name, ModuleName",
+      "StringFormat": "{0} - {1}"
+    },
+    {
+      "TableName": "PermissionGroup",
+      "IdColumn": "Name",
+      "TextColumns": "Name",
+      "StringFormat": "{0}"
+    },
+    {
+      "TableName": "PortalPageDefinition",
+      "IdColumn": "Key",
+      "TextColumns": "Key",
+      "StringFormat": "{0}"
+    },
+    {
+      "TableName": "Customer",
+      "IdColumn": "Id",
+      "TextColumns": "Name",
+      "StringFormat": "{0}"
+    },
+    {
+      "TableName": "CreditCard",
+      "IdColumn": "Id",
+      "TextColumns": "CcOwnerName",
+      "StringFormat": "{0}"
+    },
+    {
+      "TableName": "State",
+      "IdColumn": "Id",
+      "TextColumns": "Name",
+      "StringFormat": "{0}"
+    },
+    {
+      "TableName": "VehicleType",
+      "IdColumn": "Id",
+      "TextColumns": "Name",
+      "StringFormat": "{0}"
+    },
+    {
+      "TableName": "Driver",
+      "IdColumn": "Id",
+      "TextColumns": "Name",
+      "StringFormat": "{0}"
+    },
+    {
+      "TableName": "DriverPayment",
+      "IdColumn": "Id",
+      "TextColumns": "PaymentAccount",
+      "StringFormat": "{0}"
+    },
+    {
+      "TableName": "Location",
+      "IdColumn": "Id",
+      "TextColumns": "AddressText",
+      "StringFormat": "{0}"
+    },
+    {
+      "TableName": "Payment",
+      "IdColumn": "Id",
+      "TextColumns": "CcRefNo",
+      "StringFormat": "{0}"
+    },
+    {
+      "TableName": "Recipient",
+      "IdColumn": "Id",
+      "TextColumns": "Name",
+      "StringFormat": "{0}"
+    },
+    {
+      "TableName": "Sender",
+      "IdColumn": "Id",
+      "TextColumns": "Name",
+      "StringFormat": "{0}"
+    },
+    {
+      "TableName": "Shipment",
+      "IdColumn": "Id",
+      "TextColumns": "PlannedDuration",
+      "StringFormat": "{0}"
+    },
+    {
+      "TableName": "SmOtp",
+      "IdColumn": "Id",
+      "TextColumns": "GsmNumber",
+      "StringFormat": "{0}"
+    }
+  ]
+}

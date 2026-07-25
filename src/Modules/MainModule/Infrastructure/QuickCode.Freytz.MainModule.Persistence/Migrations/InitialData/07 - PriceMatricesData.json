@@ -1,0 +1,46 @@
+﻿{
+  "PRICE_MATRICES": [
+    {
+      "RANGE_PRICE": 1138.03,
+      "ROUND_TRIP_PRICE": 679.91,
+      "RANGE_END": 244.40,
+      "STATE_ID": 1,
+      "VEHICLE_TYPE_ID": 8
+    },
+    {
+      "RANGE_PRICE": 1841.51,
+      "ROUND_TRIP_PRICE": 1616.96,
+      "RANGE_END": 766.04,
+      "STATE_ID": 7,
+      "VEHICLE_TYPE_ID": 3
+    },
+    {
+      "RANGE_PRICE": 767.98,
+      "ROUND_TRIP_PRICE": 4540.47,
+      "RANGE_END": 159.11,
+      "STATE_ID": 2,
+      "VEHICLE_TYPE_ID": 8
+    },
+    {
+      "RANGE_PRICE": 2872.77,
+      "ROUND_TRIP_PRICE": 321.35,
+      "RANGE_END": 93.66,
+      "STATE_ID": 4,
+      "VEHICLE_TYPE_ID": 4
+    },
+    {
+      "RANGE_PRICE": 3369.61,
+      "ROUND_TRIP_PRICE": 3020.15,
+      "RANGE_END": 420.77,
+      "STATE_ID": 1,
+      "VEHICLE_TYPE_ID": 4
+    },
+    {
+      "RANGE_PRICE": 4417.59,
+      "ROUND_TRIP_PRICE": 2422.82,
+      "RANGE_END": 60.48,
+      "STATE_ID": 2,
+      "VEHICLE_TYPE_ID": 8
+    }
+  ]
+}

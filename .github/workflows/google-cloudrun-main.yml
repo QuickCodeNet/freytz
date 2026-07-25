@@ -1,0 +1,54 @@
+name: Freytz Build and Deploy
+
+on:
+  push:
+    branches: [ 'main' ]
+
+env:
+  QUICKCODE_SESSION_ID: ${{ secrets.QUICKCODE_SESSION_ID }}
+  BUILD_AND_PUSH_CONTAINER_SECRET: ${{ secrets.BUILD_AND_PUSH_CONTAINER_GATEWAY }}
+
+jobs:         
+  event-listener-service:
+    name: Kafka Event Listener Api
+    uses: ./.github/workflows/google-cloudrun-event-listener-service.yml
+    secrets: inherit
+
+  gateway:
+    name: Gateway Api
+    uses: ./.github/workflows/google-cloudrun-gateway.yml
+    secrets: inherit
+  
+  portal:
+    name: Admin Portal
+    uses: ./.github/workflows/google-cloudrun-portal.yml
+    secrets: inherit
+
+  identity-module:
+    name: Identity Module Api
+    uses: ./.github/workflows/google-cloudrun-identity-module.yml
+    secrets: inherit
+
+  main-module:
+    name: Main Module Api
+    uses: ./.github/workflows/google-cloudrun-main-module.yml
+    secrets: inherit
+
+
+  complete:
+    name: Complete Deployments
+    runs-on: ubuntu-latest
+    needs:
+      - event-listener-service
+      - gateway
+      - portal
+      - identity-module
+      - main-module
+    if: always()
+    steps:
+      - name: Complete Notification
+        uses: nick-fields/retry@v2
+        with:
+          command: curl "https://api.quickcode.net/api/GenerateSite/CompleteGeneration?actionId=${{ env.BUILD_AND_PUSH_CONTAINER_SECRET }}&sessionId=${{ env.QUICKCODE_SESSION_ID }}&message=${{ job.status }}"
+          max_attempts: 3
+          timeout_minutes: 2

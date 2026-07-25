@@ -1,0 +1,146 @@
+services:
+  freytz-pg-data:
+    ports:
+      - "${PGSQL_PORT:-5432}:5432"
+    environment:
+      - POSTGRES_USER=docker
+      - POSTGRES_PASSWORD=dockerf
+    volumes:
+      - quickcode-freytz-pg-data:/var/lib/postgresql
+  
+  freytz-mysql-data:
+    ports:
+      - "${MYSQL_PORT:-3306}:3306"
+    volumes:
+      - quickcode-freytz-mysql-data:/var/lib/mysql
+      - "~/sql-scripts/setup.sql:/docker-entrypoint-initdb.d/1.sql"
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=RootDocker!
+      - MYSQL_USER=docker
+      - MYSQL_PASSWORD=dockerf
+
+  freytz-sql-data:
+    environment:
+      - MSSQL_SA_PASSWORD=Pass@word
+      - ACCEPT_EULA=Y
+      - MSSQL_PID=Developer
+    ports:
+      - "${SQL_PORT:-5433}:1433"
+    volumes:
+      - quickcode-freytz-sql-data:/var/opt/mssql
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "/opt/mssql-tools18/bin/sqlcmd -S localhost -U SA -P \"$$MSSQL_SA_PASSWORD\" -C -Q \"SELECT 1\" || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 40s
+
+  freytz-elasticsearch:
+    environment:
+      - xpack.security.enabled=false
+      - discovery.type=single-node
+    deploy:
+      resources:
+        limits:
+          memory: 1GB
+    ports:
+      - "${ELASTIC_PORT:-9200}:9200"
+    volumes:
+      - quickcode-freytz-elasticsearch-data:/usr/share/elasticsearch/data
+    restart: always
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+    healthcheck:
+      test: curl -s http://freytz-elasticsearch:9200 >/dev/null || exit 1
+      interval: 10s
+      timeout: 5s
+      retries: 10
+
+  freytz-kibana:
+    environment:
+      - ELASTICSEARCH_HOSTS=http://freytz-elasticsearch:9200
+    ports:
+      - "${KIBANA_PORT:-5601}:5601"
+    volumes:
+      - quickcode-freytz-kibana-data:/usr/share/kibana/data
+    restart: always
+    depends_on:
+      - freytz-elasticsearch
+
+  quickcode-freytz-gateway-api:
+    env_file:
+      - .env
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Local
+      - ASPNETCORE_URLS=http://+
+      - GATEWAY_JWT_PRIVATE_KEY=${GATEWAY_JWT_PRIVATE_KEY}
+      - GATEWAY_INTERNAL_TOKEN_KEY=${GATEWAY_INTERNAL_TOKEN_KEY}
+    ports:
+      - "${GATEWAY_PORT:-6060}:80"
+
+  quickcode-freytz-identity-module-api:
+    env_file:
+      - .env
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Local
+      - ASPNETCORE_URLS=http://+
+      - GATEWAY_JWT_PUBLIC_KEY=${GATEWAY_JWT_PUBLIC_KEY}
+      - USER_JWT_PRIVATE_KEY=${USER_JWT_PRIVATE_KEY}
+    ports:
+      - "6001:80"
+
+
+  quickcode-freytz-main-module-api:
+    env_file:
+      - .env
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Local
+      - ASPNETCORE_URLS=http://+
+      - GATEWAY_JWT_PUBLIC_KEY=${GATEWAY_JWT_PUBLIC_KEY}
+      
+    ports:
+      - "6002:80"
+
+
+#[-WEB-]
+  quickcode-freytz-portal:
+    env_file:
+      - .env
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Local
+      - ASPNETCORE_URLS=http://+
+      - AZURE_ACCOUNT_NAME=${AZURE_ACCOUNT_NAME:-quickcodeblobstorage}
+      - AZURE_ACCOUNT_KEY=${AZURE_ACCOUNT_KEY}
+      - AZURE_BLOB_CONTAINER_NAME=${AZURE_BLOB_CONTAINER_NAME:-images}
+    ports:
+      - "${PORTAL_PORT:-6020}:80"
+      
+  quickcode-freytz-event-listener-service:
+    env_file:
+      - .env
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Local
+      - ASPNETCORE_URLS=http://+
+      - GATEWAY_INTERNAL_TOKEN_KEY=${GATEWAY_INTERNAL_TOKEN_KEY}
+    ports:
+      - "${EVENT_LISTENER_PORT:-6100}:80"
+      
+volumes:
+  quickcode-freytz-pg-data:
+    external: false
+    
+  quickcode-freytz-mysql-data:
+    external: false
+    
+  quickcode-freytz-sql-data:
+    external: false
+    
+  quickcode-freytz-elasticsearch-data:
+    external: false
+    
+  quickcode-freytz-kibana-data:
+    external: false

@@ -1,0 +1,101 @@
+services:
+  freytz-pg-data:
+    container_name: "freytz-pg-data"
+    image: postgres:18
+
+  freytz-sql-data:
+    container_name: "freytz-sql-data"
+    image: mcr.microsoft.com/mssql/server:2025-latest
+    
+  freytz-mysql-data:
+    container_name: "freytz-mysql-data"
+    image: mysql:8.3
+
+  freytz-elasticsearch:
+    container_name: freytz-elasticsearch
+    image: docker.elastic.co/elasticsearch/elasticsearch:8.11.0
+
+  freytz-kibana:
+    container_name: freytz-kibana
+    image: docker.elastic.co/kibana/kibana:8.11.0
+
+  quickcode-freytz-gateway-api:
+    container_name: "quickcode-freytz-gateway-api"
+    image: ${DOCKER_REGISTRY-}quickcode-freytz-gateway-api
+    build:
+      context: .
+      dockerfile: Presentation/QuickCode.Freytz.Gateway/Dockerfile
+
+  quickcode-freytz-identity-module-api:
+    container_name: "quickcode-freytz-identity-module-api"
+    image: ${DOCKER_REGISTRY-}quickcode-freytz-identity-module-api
+    build:
+      context: . 
+      dockerfile: Modules/IdentityModule/Presentation/QuickCode.Freytz.IdentityModule.Api/Dockerfile
+    depends_on:
+      freytz-sql-data:
+        condition: service_healthy
+      freytz-pg-data:
+        condition: service_started
+      
+
+  quickcode-freytz-main-module-api:
+    container_name: "quickcode-freytz-main-module-api"
+    image: ${DOCKER_REGISTRY-}quickcode-freytz-main-module-api
+    build:
+      context: . 
+      dockerfile: Modules/MainModule/Presentation/QuickCode.Freytz.MainModule.Api/Dockerfile
+    depends_on:
+      freytz-sql-data:
+        condition: service_healthy
+      freytz-pg-data:
+        condition: service_started
+      
+
+#[-WEB-]
+  
+  freytz-zookeeper:
+    image: confluentinc/cp-zookeeper:7.5.0
+    container_name: freytz-zookeeper
+    ports:
+      - "${ZOOKEEPER_PORT:-2181}:2181"
+    environment:
+      ZOOKEEPER_CLIENT_PORT: 2181
+      ZOOKEEPER_TICK_TIME: 2000
+
+  freytz-kafka:
+    image: confluentinc/cp-kafka:7.5.0
+    container_name: freytz-kafka
+    depends_on:
+      - freytz-zookeeper
+    ports:
+      - "${KAFKA_PORT:-9092}:9092"
+    environment:
+      KAFKA_BROKER_ID: 1
+      KAFKA_ZOOKEEPER_CONNECT: freytz-zookeeper:2181
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://freytz-kafka:9092
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+
+  freytz-kafdrop:
+    image: obsidiandynamics/kafdrop:latest
+    container_name: freytz-kafdrop
+    ports:
+      - "${KAFDROP_PORT:-9000}:9000"
+    depends_on:
+      - freytz-kafka
+    environment:
+      KAFKA_BROKERCONNECT: freytz-kafka:9092
+        
+  quickcode-freytz-portal:
+    container_name: "quickcode-freytz-portal"
+    image: ${DOCKER_REGISTRY-}quickcode-freytz-portal
+    build:
+      context: .
+      dockerfile: Presentation/QuickCode.Freytz.Portal/Dockerfile
+      
+  quickcode-freytz-event-listener-service:
+    container_name: "quickcode-freytz-event-listener-service"
+    image: ${DOCKER_REGISTRY-}quickcode-freytz-event-listener-service
+    build:
+      context: .
+      dockerfile: Services/QuickCode.Freytz.EventListenerService/Dockerfile

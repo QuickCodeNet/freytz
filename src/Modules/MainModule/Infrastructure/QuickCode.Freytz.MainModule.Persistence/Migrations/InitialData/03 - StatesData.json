@@ -1,0 +1,52 @@
+﻿{
+  "STATES": [
+    {
+      "NAME": "Verified Batch 1",
+      "SHORT_NAME": "Recommended Setting 1",
+      "TIME_ZONE": "Priority State 1",
+      "STATUS": "Active"
+    },
+    {
+      "NAME": "Compact Profile 2",
+      "SHORT_NAME": "Classic Mode 2",
+      "TIME_ZONE": "Private Edition 2",
+      "STATUS": "Suspended"
+    },
+    {
+      "NAME": "Internal Option 3",
+      "SHORT_NAME": "Regional Channel 3",
+      "TIME_ZONE": "Optional Level 3",
+      "STATUS": "Deleted"
+    },
+    {
+      "NAME": "Mini Model 4",
+      "SHORT_NAME": "Primary Layout 4",
+      "TIME_ZONE": "Public Type 4",
+      "STATUS": "Deleted"
+    },
+    {
+      "NAME": "Updated Style 5",
+      "SHORT_NAME": "Legacy Model 5",
+      "TIME_ZONE": "Legacy Category 5",
+      "STATUS": "Suspended"
+    },
+    {
+      "NAME": "Featured Zone 6",
+      "SHORT_NAME": "Priority Setting 6",
+      "TIME_ZONE": "Advanced Package 6",
+      "STATUS": "Inactive"
+    },
+    {
+      "NAME": "Recommended Style 7",
+      "SHORT_NAME": "Priority Rule 7",
+      "TIME_ZONE": "Compact Area 7",
+      "STATUS": "Suspended"
+    },
+    {
+      "NAME": "Professional Target 8",
+      "SHORT_NAME": "Priority Format 8",
+      "TIME_ZONE": "Express Protocol 8",
+      "STATUS": "Active"
+    }
+  ]
+}

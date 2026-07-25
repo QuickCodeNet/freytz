@@ -1,0 +1,52 @@
+﻿{
+  "DRIVER_PAYMENTS": [
+    {
+      "DRIVER_ID": 4,
+      "PAYMENT_ACCOUNT": "Google Pay",
+      "PAYMENT_AMOUNT": 3943.49,
+      "PAYMENT_DATE": "2024-03-05T01:11:28.6823525Z",
+      "PAYMENT_DESCRIPTION": "Query batch profit publish widget session result funnel reminder notes session.",
+      "USER_ID": 126
+    },
+    {
+      "DRIVER_ID": 1,
+      "PAYMENT_ACCOUNT": "Debit Card",
+      "PAYMENT_AMOUNT": 4095.28,
+      "PAYMENT_DATE": "2024-03-07T01:19:23.1237946Z",
+      "PAYMENT_DESCRIPTION": "System comment milestone status funnel task discount account vendor profile active.",
+      "USER_ID": 413
+    },
+    {
+      "DRIVER_ID": 5,
+      "PAYMENT_ACCOUNT": "Store Credit",
+      "PAYMENT_AMOUNT": 3548.37,
+      "PAYMENT_DATE": "2024-11-17T21:01:52.1948803Z",
+      "PAYMENT_DESCRIPTION": "Retention value ledger cohort result retention.",
+      "USER_ID": 835
+    },
+    {
+      "DRIVER_ID": 6,
+      "PAYMENT_ACCOUNT": "Bank Transfer",
+      "PAYMENT_AMOUNT": 2071.20,
+      "PAYMENT_DATE": "2024-12-29T09:00:03.3386813Z",
+      "PAYMENT_DESCRIPTION": "Revenue draft meeting cycle event event status template discount.",
+      "USER_ID": 526
+    },
+    {
+      "DRIVER_ID": 3,
+      "PAYMENT_ACCOUNT": "Debit Card",
+      "PAYMENT_AMOUNT": 1917.27,
+      "PAYMENT_DATE": "2024-04-12T05:07:57.8040688Z",
+      "PAYMENT_DESCRIPTION": "Campaign draft retention promo query notes.",
+      "USER_ID": 985
+    },
+    {
+      "DRIVER_ID": 1,
+      "PAYMENT_ACCOUNT": "Store Credit",
+      "PAYMENT_AMOUNT": 1428.42,
+      "PAYMENT_DATE": "2024-01-10T22:33:32.2288605Z",
+      "PAYMENT_DESCRIPTION": "Pipeline publish product meeting conversion milestone import agreement schedule.",
+      "USER_ID": 907
+    }
+  ]
+}
