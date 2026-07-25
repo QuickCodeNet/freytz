@@ -21,12 +21,14 @@ namespace QuickCode.Freytz.MainModule.Application.Features.ShipmentPackage
     public class GetWithSenderQuery : IRequest<Response<List<GetWithSenderResponseDto>>>
     {
         public int ShipmentPackagesSenderId { get; set; }
+        public int SendersId { get; set; }
         public int? pageNumber { get; set; }
         public int? pageSize { get; set; }
 
         public GetWithSenderQuery(int shipmentPackagesSenderId, int sendersId, int? pageNumber, int? pageSize)
         {
             this.ShipmentPackagesSenderId = shipmentPackagesSenderId;
+            this.SendersId = sendersId;
             this.pageNumber = pageNumber;
             this.pageSize = pageSize;
         }

@@ -21,10 +21,18 @@ namespace QuickCode.Freytz.MainModule.Application.Features.Shipment
     public class GetGrossRevenueReportQuery : IRequest<Response<GetGrossRevenueReportResponseDto>>
     {
         public int PaymentsId { get; set; }
+        public int ShipmentsPaymentId { get; set; }
+        public int ShipmentsStateId { get; set; }
+        public DateTime ShipmentsCreateDateFrom { get; set; }
+        public DateTime ShipmentsCreateDateTo { get; set; }
 
         public GetGrossRevenueReportQuery(int paymentsId, int shipmentsPaymentId, int shipmentsStateId, DateTime shipmentsCreateDateFrom, DateTime shipmentsCreateDateTo)
         {
             this.PaymentsId = paymentsId;
+            this.ShipmentsPaymentId = shipmentsPaymentId;
+            this.ShipmentsStateId = shipmentsStateId;
+            this.ShipmentsCreateDateFrom = shipmentsCreateDateFrom;
+            this.ShipmentsCreateDateTo = shipmentsCreateDateTo;
         }
 
         public class GetGrossRevenueReportHandler : IRequestHandler<GetGrossRevenueReportQuery, Response<GetGrossRevenueReportResponseDto>>

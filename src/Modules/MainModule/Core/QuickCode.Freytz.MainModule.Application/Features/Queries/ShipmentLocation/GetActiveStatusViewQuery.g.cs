@@ -21,12 +21,14 @@ namespace QuickCode.Freytz.MainModule.Application.Features.ShipmentLocation
     public class GetActiveStatusViewQuery : IRequest<Response<List<GetActiveStatusViewResponseDto>>>
     {
         public int ShipmentLocationsShipmentId { get; set; }
+        public int ShipmentsId { get; set; }
         public int? pageNumber { get; set; }
         public int? pageSize { get; set; }
 
         public GetActiveStatusViewQuery(int shipmentLocationsShipmentId, int shipmentsId, int? pageNumber, int? pageSize)
         {
             this.ShipmentLocationsShipmentId = shipmentLocationsShipmentId;
+            this.ShipmentsId = shipmentsId;
             this.pageNumber = pageNumber;
             this.pageSize = pageSize;
         }

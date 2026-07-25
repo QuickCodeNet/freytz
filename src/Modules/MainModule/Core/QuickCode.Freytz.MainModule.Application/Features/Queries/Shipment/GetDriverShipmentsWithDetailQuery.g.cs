@@ -22,6 +22,9 @@ namespace QuickCode.Freytz.MainModule.Application.Features.Shipment
     {
         public int CustomersId { get; set; }
         public int PaymentsId { get; set; }
+        public int ShipmentsDriverId { get; set; }
+        public int ShipmentsCustomerId { get; set; }
+        public int ShipmentsPaymentId { get; set; }
         public int? pageNumber { get; set; }
         public int? pageSize { get; set; }
 
@@ -29,6 +32,9 @@ namespace QuickCode.Freytz.MainModule.Application.Features.Shipment
         {
             this.CustomersId = customersId;
             this.PaymentsId = paymentsId;
+            this.ShipmentsDriverId = shipmentsDriverId;
+            this.ShipmentsCustomerId = shipmentsCustomerId;
+            this.ShipmentsPaymentId = shipmentsPaymentId;
             this.pageNumber = pageNumber;
             this.pageSize = pageSize;
         }

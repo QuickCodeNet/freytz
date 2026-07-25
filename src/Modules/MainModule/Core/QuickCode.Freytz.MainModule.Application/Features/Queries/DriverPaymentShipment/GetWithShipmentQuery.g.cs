@@ -21,12 +21,14 @@ namespace QuickCode.Freytz.MainModule.Application.Features.DriverPaymentShipment
     public class GetWithShipmentQuery : IRequest<Response<List<GetWithShipmentResponseDto>>>
     {
         public int DriverPaymentShipmentsShipmentId { get; set; }
+        public int ShipmentsId { get; set; }
         public int? pageNumber { get; set; }
         public int? pageSize { get; set; }
 
         public GetWithShipmentQuery(int driverPaymentShipmentsShipmentId, int shipmentsId, int? pageNumber, int? pageSize)
         {
             this.DriverPaymentShipmentsShipmentId = driverPaymentShipmentsShipmentId;
+            this.ShipmentsId = shipmentsId;
             this.pageNumber = pageNumber;
             this.pageSize = pageSize;
         }

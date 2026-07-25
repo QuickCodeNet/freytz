@@ -26,6 +26,10 @@ namespace QuickCode.Freytz.MainModule.Application.Features.DriverPayment
         public int DriverPaymentShipmentShipmentId { get; set; }
         public DateTime DriverPaymentPaymentDateFrom { get; set; }
         public DateTime DriverPaymentPaymentDateTo { get; set; }
+        public int ShipmentId { get; set; }
+        public int ShipmentStateId { get; set; }
+        public DateTime DriverPaymentsPaymentDateFrom { get; set; }
+        public DateTime DriverPaymentsPaymentDateTo { get; set; }
         public int? pageNumber { get; set; }
         public int? pageSize { get; set; }
 
@@ -37,6 +41,10 @@ namespace QuickCode.Freytz.MainModule.Application.Features.DriverPayment
             this.DriverPaymentShipmentShipmentId = driverPaymentShipmentShipmentId;
             this.DriverPaymentPaymentDateFrom = driverPaymentPaymentDateFrom;
             this.DriverPaymentPaymentDateTo = driverPaymentPaymentDateTo;
+            this.ShipmentId = shipmentId;
+            this.ShipmentStateId = shipmentStateId;
+            this.DriverPaymentsPaymentDateFrom = driverPaymentsPaymentDateFrom;
+            this.DriverPaymentsPaymentDateTo = driverPaymentsPaymentDateTo;
             this.pageNumber = pageNumber;
             this.pageSize = pageSize;
         }

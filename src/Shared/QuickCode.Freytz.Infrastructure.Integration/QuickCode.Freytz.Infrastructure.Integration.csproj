@@ -43,6 +43,9 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
     </None>
   </ItemGroup>
+  <PropertyGroup>
+    <QuickCodeSiteSrcDir Condition="'$(QuickCodeSiteSrcDir)' == ''">$([System.IO.Path]::GetFullPath('$(MSBuildProjectDirectory)/../../'))</QuickCodeSiteSrcDir>
+  </PropertyGroup>
   <Target Name="NSwag__IdentityModule" BeforeTargets="AfterBuild" Condition="'$(GenerateCode)' == 'True'">
     <Exec Condition="Exists('$(ModuleNswagIdentityModuleUrl)') And $([MSBuild]::IsOSPlatform('Linux'))" WorkingDirectory="$(MSBuildProjectDirectory)/Nswag/Configs/" Command="flock -w 300 /tmp/quickcode-nswag.lock $(NSwagExe_Net100) run nswag_config.json /variables:Configuration=$(Configuration),NswagUrl=$(ModuleNswagIdentityModuleUrl),ProjectDir=$(ProjectDir),ProjectName=IdentityModuleApi" ContinueOnError="false" />
     <Exec Condition="Exists('$(ModuleNswagIdentityModuleUrl)') And !$([MSBuild]::IsOSPlatform('Linux'))" WorkingDirectory="$(MSBuildProjectDirectory)/Nswag/Configs/" Command="$(NSwagExe_Net100) run nswag_config.json /variables:Configuration=$(Configuration),NswagUrl=$(ModuleNswagIdentityModuleUrl),ProjectDir=$(ProjectDir),ProjectName=IdentityModuleApi" ContinueOnError="false" />

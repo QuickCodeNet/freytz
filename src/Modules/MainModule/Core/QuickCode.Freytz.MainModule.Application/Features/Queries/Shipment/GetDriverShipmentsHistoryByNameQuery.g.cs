@@ -22,6 +22,10 @@ namespace QuickCode.Freytz.MainModule.Application.Features.Shipment
     {
         public int DriversId { get; set; }
         public string DriversName { get; set; }
+        public int ShipmentsDriverId { get; set; }
+        public int ShipmentsStateId { get; set; }
+        public DateTime ShipmentsCreateDateFrom { get; set; }
+        public DateTime ShipmentsCreateDateTo { get; set; }
         public int? pageNumber { get; set; }
         public int? pageSize { get; set; }
 
@@ -29,6 +33,10 @@ namespace QuickCode.Freytz.MainModule.Application.Features.Shipment
         {
             this.DriversId = driversId;
             this.DriversName = driversName;
+            this.ShipmentsDriverId = shipmentsDriverId;
+            this.ShipmentsStateId = shipmentsStateId;
+            this.ShipmentsCreateDateFrom = shipmentsCreateDateFrom;
+            this.ShipmentsCreateDateTo = shipmentsCreateDateTo;
             this.pageNumber = pageNumber;
             this.pageSize = pageSize;
         }
